@@ -376,24 +376,29 @@ path.leaflet-interactive:focus {
   margin-top: -1px;
 }
 
-.footer-attribution {
+.topbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  padding: 10px;
-  border-top: 1px solid #eee;
-  background: #fafafa;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right img {
+  height: 18px;
+  opacity: 0.8;
+}
+
+.header-right img:hover {
+  opacity: 1;
+}
+
+.data-label {
   font-size: 12px;
   color: #666;
-}
-
-.footer-attribution img {
-  height: 20px;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.footer-attribution img:hover {
-  opacity: 1;
+  margin-right: 5px;
 }
