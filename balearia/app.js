@@ -1039,11 +1039,10 @@ function renderChart() {
               return [
                 `Hs PdE: ${formatNumber(f.wavePde)} m`,
                 `Hs Cop: ${formatNumber(f.waveCopernicus)} m`,
-                `Tp Cop: ${formatNumber(f.tpCopernicus)} s`,
                 `Hs Obs: ${formatNumber(f.waveObs)} m`,
+                `Tp Cop: ${formatNumber(f.tpCopernicus)} s`,
                 `Wind obs: ${formatNumber(f.windObs)} m/s`,
-                `Wind model: ${formatNumber(f.windSpeed)} m/s`,
-                `Wind dir model: ${formatNumber(f.windDir, 0)}°`
+                `Wind model: ${formatNumber(f.windSpeed)} m/s`
               ];
             }
           }
