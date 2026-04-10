@@ -24,8 +24,8 @@ DOWNLOAD_DIR = Path("copernicus_boyas_tmp")
 OUTPUT_JSON = "4_olas_boyas.json"
 
 # Recomendado: usar variables de entorno reales
-COPERNICUS_USERNAME = os.environ["COPERNICUS_USERNAME"]
-COPERNICUS_PASSWORD = os.environ["COPERNICUS_PASSWORD"]
+USERNAME = os.environ["COPERNICUS_USERNAME"]
+PASSWORD = os.environ["COPERNICUS_PASSWORD"]
 
 DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
