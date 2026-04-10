@@ -449,8 +449,23 @@ Promise.all([
 
     initMarkers();
     initRoutes();
+
+    const defaultLocation = locations.find(
+      loc => loc.name?.toLowerCase() === "boya2"
+    );
+
+    if (defaultLocation) {
+      selectedLocation = defaultLocation;
+      selectedRoute = null;
+
+      if (defaultLocation.coords) {
+        map.setView(defaultLocation.coords, 7);
+      }
+    }
+
     updateHourLabel();
     updateInfoPanel();
+    renderChart();
   })
   .catch(err => {
     console.error(err);
@@ -483,8 +498,6 @@ function initMarkers() {
   markers.forEach(({ marker }) => map.removeLayer(marker));
   markers = [];
 
-  let defaultMarker = null;
-
   locations.forEach(loc => {
     const isObsPoint = loc.name?.toLowerCase().startsWith("boya");
 
@@ -503,28 +516,6 @@ function initMarkers() {
         weight: 1
       }).addTo(map);
     }
-
-    marker.bindTooltip(loc.name, { direction: "top", offset: [0, -6] });
-
-    marker.on("click", () => {
-      selectedLocation = loc;
-      selectedRoute = null;
-      updateRouteStyles();
-      updateInfoPanel();
-      renderChart();
-    });
-
-    if (loc.name?.toLowerCase() === "boya2") {
-      defaultMarker = marker;
-    }
-
-    markers.push({ marker, loc, isObsPoint });
-  });
-
-  if (defaultMarker) {
-    defaultMarker.fire("click");
-  }
-}
 
     marker.bindTooltip(loc.name, { direction: "top", offset: [0, -6] });
 
@@ -751,39 +742,38 @@ const pdeWaveArrowsPlugin = {
 
 function renderChart() {
   if (!selectedLocation || !waveChartCanvas) return;
-   if (chartTitle) {
+  if (chartTitle) {
     chartTitle.textContent = selectedLocation?.name
       ? selectedLocation.name
       : "Marine forecast";
   }
 
   const forecast = selectedLocation.forecast;
-const firstTimeMs = forecast.length ? new Date(forecast[0].time).getTime() : null;
+  const firstTimeMs = forecast.length ? new Date(forecast[0].time).getTime() : null;
 
-let xAxisMin = null;
-let xAxisMax = null;
+  let xAxisMin = null;
+  let xAxisMax = null;
 
-if (firstTimeMs !== null) {
-  const firstDate = new Date(firstTimeMs);
+  if (firstTimeMs !== null) {
+    const firstDate = new Date(firstTimeMs);
 
-  xAxisMin = Date.UTC(
-    firstDate.getUTCFullYear(),
-    firstDate.getUTCMonth(),
-    firstDate.getUTCDate(),
-    0, 0, 0, 0
-  );
+    xAxisMin = Date.UTC(
+      firstDate.getUTCFullYear(),
+      firstDate.getUTCMonth(),
+      firstDate.getUTCDate(),
+      0, 0, 0, 0
+    );
 
-  // desde ayer 00h hasta hoy+4d 21h
-  // es decir: primer día + 5 días, a las 21:00
-  xAxisMax = Date.UTC(
-    firstDate.getUTCFullYear(),
-    firstDate.getUTCMonth(),
-    firstDate.getUTCDate() + 5,
-    21, 0, 0, 0
-  );
-}
+    // desde ayer 00h hasta hoy+4d 21h
+    // es decir: primer día + 5 días, a las 21:00
+    xAxisMax = Date.UTC(
+      firstDate.getUTCFullYear(),
+      firstDate.getUTCMonth(),
+      firstDate.getUTCDate() + 5,
+      21, 0, 0, 0
+    );
+  }
 
-  
   const hsPort = forecast.map(f => ({ x: f.time, y: f.wavePort }));
   const hsPde = forecast.map(f => ({ x: f.time, y: f.wavePde }));
   const hsCop = forecast.map(f => ({ x: f.time, y: f.waveCopernicus }));
@@ -796,161 +786,161 @@ if (firstTimeMs !== null) {
     waveChart.destroy();
   }
 
- const daySeparatorPlugin = {
-  id: "daySeparatorPlugin",
-  afterDraw(chart) {
-    const { ctx, chartArea, scales } = chart;
-    const xScale = scales.x;
-    const forecast = chart.config.options?.plugins?.daySeparatorPlugin?.forecast || [];
+  const daySeparatorPlugin = {
+    id: "daySeparatorPlugin",
+    afterDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      const xScale = scales.x;
+      const forecast = chart.config.options?.plugins?.daySeparatorPlugin?.forecast || [];
 
-    if (!xScale || !forecast.length) return;
+      if (!xScale || !forecast.length) return;
 
-    const dayGroups = [];
-    let currentGroup = null;
+      const dayGroups = [];
+      let currentGroup = null;
 
-    for (let i = 0; i < forecast.length; i++) {
-      const t = forecast[i]?.time;
-      if (!t) continue;
+      for (let i = 0; i < forecast.length; i++) {
+        const t = forecast[i]?.time;
+        if (!t) continue;
 
-      const d = new Date(t);
-      const dayKey = `${d.getUTCFullYear()}-${d.getUTCMonth()}-${d.getUTCDate()}`;
+        const d = new Date(t);
+        const dayKey = `${d.getUTCFullYear()}-${d.getUTCMonth()}-${d.getUTCDate()}`;
 
-      if (!currentGroup || currentGroup.dayKey !== dayKey) {
-        currentGroup = {
-          dayKey,
-          startIndex: i,
-          endIndex: i,
-          date: new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()))
-        };
-        dayGroups.push(currentGroup);
-      } else {
-        currentGroup.endIndex = i;
+        if (!currentGroup || currentGroup.dayKey !== dayKey) {
+          currentGroup = {
+            dayKey,
+            startIndex: i,
+            endIndex: i,
+            date: new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()))
+          };
+          dayGroups.push(currentGroup);
+        } else {
+          currentGroup.endIndex = i;
+        }
       }
-    }
 
-    if (!dayGroups.length) return;
+      if (!dayGroups.length) return;
 
-    const xMin = xScale.min;
-    const xMax = xScale.max;
-    if (xMin == null || xMax == null) return;
+      const xMin = xScale.min;
+      const xMax = xScale.max;
+      if (xMin == null || xMax == null) return;
 
-    const todayRef = new Date();
-    const todayUtc = new Date(Date.UTC(
-      todayRef.getUTCFullYear(),
-      todayRef.getUTCMonth(),
-      todayRef.getUTCDate()
-    ));
+      const todayRef = new Date();
+      const todayUtc = new Date(Date.UTC(
+        todayRef.getUTCFullYear(),
+        todayRef.getUTCMonth(),
+        todayRef.getUTCDate()
+      ));
 
-    function diffDays(dateA, dateB) {
-      return Math.round((dateA - dateB) / 86400000);
-    }
+      function diffDays(dateA, dateB) {
+        return Math.round((dateA - dateB) / 86400000);
+      }
 
-    function getDayLabel(dayDate) {
-      const d = diffDays(dayDate, todayUtc);
-      if (d === -1) return "ayer";
-      if (d === 0) return "hoy";
-      if (d > 0) return `+${d}d`;
-      return `${d}d`;
-    }
+      function getDayLabel(dayDate) {
+        const d = diffDays(dayDate, todayUtc);
+        if (d === -1) return "ayer";
+        if (d === 0) return "hoy";
+        if (d > 0) return `+${d}d`;
+        return `${d}d`;
+      }
 
-    function clamp(val, min, max) {
-      return Math.max(min, Math.min(max, val));
-    }
+      function clamp(val, min, max) {
+        return Math.max(min, Math.min(max, val));
+      }
 
-    ctx.save();
+      ctx.save();
 
-    // ============================
-    // 0) SOMBREADO DE HOY
-    // ============================
+      // ============================
+      // 0) SOMBREADO DE HOY
+      // ============================
 
-    const startToday = Date.UTC(
-      todayRef.getUTCFullYear(),
-      todayRef.getUTCMonth(),
-      todayRef.getUTCDate(),
-      0, 0, 0, 0
-    );
-
-    const startTomorrow = Date.UTC(
-      todayRef.getUTCFullYear(),
-      todayRef.getUTCMonth(),
-      todayRef.getUTCDate() + 1,
-      0, 0, 0, 0
-    );
-
-    const shadeStart = Math.max(startToday, xMin);
-    const shadeEnd = Math.min(startTomorrow, xMax);
-
-    if (shadeEnd > shadeStart) {
-      const leftEdge = xScale.getPixelForValue(shadeStart);
-      const rightEdge = xScale.getPixelForValue(shadeEnd);
-
-      ctx.fillStyle = "rgba(37, 99, 235, 0.05)";
-      ctx.fillRect(
-        leftEdge,
-        chartArea.top,
-        rightEdge - leftEdge,
-        chartArea.bottom - chartArea.top
+      const startToday = Date.UTC(
+        todayRef.getUTCFullYear(),
+        todayRef.getUTCMonth(),
+        todayRef.getUTCDate(),
+        0, 0, 0, 0
       );
-    }
 
-    // ============================
-    // 1) SEPARADORES ENTRE DÍAS
-    // ============================
-
-    ctx.strokeStyle = "rgba(70, 70, 70, 0.22)";
-    ctx.lineWidth = 1.1;
-    ctx.setLineDash([4, 4]);
-
-    for (let i = 1; i < dayGroups.length; i++) {
-      const boundaryTime = dayGroups[i].date.getTime();
-
-      if (boundaryTime < xMin || boundaryTime > xMax) continue;
-
-      const x = xScale.getPixelForValue(boundaryTime);
-      ctx.beginPath();
-      ctx.moveTo(x, chartArea.top);
-      ctx.lineTo(x, chartArea.bottom);
-      ctx.stroke();
-    }
-
-    // ============================
-    // 2) ETIQUETAS ABAJO
-    // ============================
-
-    ctx.setLineDash([]);
-    ctx.textAlign = "center";
-    ctx.textBaseline = "top";
-    ctx.font = "600 11px sans-serif";
-
-    dayGroups.forEach((group, idx) => {
-      const startMs = Math.max(group.date.getTime(), xMin);
-
-      const nextGroup = dayGroups[idx + 1];
-      const naturalEndMs = nextGroup
-        ? nextGroup.date.getTime()
-        : (new Date(group.date.getTime() + 24 * 3600 * 1000)).getTime();
-
-      const endMs = Math.min(naturalEndMs, xMax);
-
-      if (endMs <= startMs) return;
-
-      const x1 = xScale.getPixelForValue(startMs);
-      const x2 = xScale.getPixelForValue(endMs);
-      const xMid = (x1 + x2) / 2;
-
-      const label = getDayLabel(group.date);
-
-      ctx.fillStyle = label === "hoy" ? "#111827" : "#6b7280";
-      ctx.fillText(
-        label,
-        clamp(xMid, chartArea.left + 18, chartArea.right - 18),
-        chartArea.bottom + 6
+      const startTomorrow = Date.UTC(
+        todayRef.getUTCFullYear(),
+        todayRef.getUTCMonth(),
+        todayRef.getUTCDate() + 1,
+        0, 0, 0, 0
       );
-    });
 
-    ctx.restore();
-  }
-};
+      const shadeStart = Math.max(startToday, xMin);
+      const shadeEnd = Math.min(startTomorrow, xMax);
+
+      if (shadeEnd > shadeStart) {
+        const leftEdge = xScale.getPixelForValue(shadeStart);
+        const rightEdge = xScale.getPixelForValue(shadeEnd);
+
+        ctx.fillStyle = "rgba(37, 99, 235, 0.05)";
+        ctx.fillRect(
+          leftEdge,
+          chartArea.top,
+          rightEdge - leftEdge,
+          chartArea.bottom - chartArea.top
+        );
+      }
+
+      // ============================
+      // 1) SEPARADORES ENTRE DÍAS
+      // ============================
+
+      ctx.strokeStyle = "rgba(70, 70, 70, 0.22)";
+      ctx.lineWidth = 1.1;
+      ctx.setLineDash([4, 4]);
+
+      for (let i = 1; i < dayGroups.length; i++) {
+        const boundaryTime = dayGroups[i].date.getTime();
+
+        if (boundaryTime < xMin || boundaryTime > xMax) continue;
+
+        const x = xScale.getPixelForValue(boundaryTime);
+        ctx.beginPath();
+        ctx.moveTo(x, chartArea.top);
+        ctx.lineTo(x, chartArea.bottom);
+        ctx.stroke();
+      }
+
+      // ============================
+      // 2) ETIQUETAS ABAJO
+      // ============================
+
+      ctx.setLineDash([]);
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.font = "600 11px sans-serif";
+
+      dayGroups.forEach((group, idx) => {
+        const startMs = Math.max(group.date.getTime(), xMin);
+
+        const nextGroup = dayGroups[idx + 1];
+        const naturalEndMs = nextGroup
+          ? nextGroup.date.getTime()
+          : (new Date(group.date.getTime() + 24 * 3600 * 1000)).getTime();
+
+        const endMs = Math.min(naturalEndMs, xMax);
+
+        if (endMs <= startMs) return;
+
+        const x1 = xScale.getPixelForValue(startMs);
+        const x2 = xScale.getPixelForValue(endMs);
+        const xMid = (x1 + x2) / 2;
+
+        const label = getDayLabel(group.date);
+
+        ctx.fillStyle = label === "hoy" ? "#111827" : "#6b7280";
+        ctx.fillText(
+          label,
+          clamp(xMid, chartArea.left + 18, chartArea.right - 18),
+          chartArea.bottom + 6
+        );
+      });
+
+      ctx.restore();
+    }
+  };
 
   const allHs = [
     ...hsPort.map(p => p.y),
@@ -1077,27 +1067,27 @@ if (firstTimeMs !== null) {
       },
       scales: {
         x: {
-  type: "time",
-min: xAxisMin,
-max: xAxisMax,
-  time: {
-    unit: "hour",
-    stepSize: 3,
-    round: "hour",
-    tooltipFormat: "yyyy-MM-dd HH:mm",
-    displayFormats: {
-      hour: "dd-MMM-HH'h'"
-    }
-  },
-  ticks: {
-    source: "auto",
-    stepSize: 3,
-    maxRotation: 55,
-    minRotation: 55,
-    autoSkip: false
-  },
-  grid: { color: "#eef2f7" }
-},
+          type: "time",
+          min: xAxisMin,
+          max: xAxisMax,
+          time: {
+            unit: "hour",
+            stepSize: 3,
+            round: "hour",
+            tooltipFormat: "yyyy-MM-dd HH:mm",
+            displayFormats: {
+              hour: "dd-MMM-HH'h'"
+            }
+          },
+          ticks: {
+            source: "auto",
+            stepSize: 3,
+            maxRotation: 55,
+            minRotation: 55,
+            autoSkip: false
+          },
+          grid: { color: "#eef2f7" }
+        },
         y: {
           beginAtZero: true,
           max: yMaxChart,
