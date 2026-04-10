@@ -483,6 +483,8 @@ function initMarkers() {
   markers.forEach(({ marker }) => map.removeLayer(marker));
   markers = [];
 
+  let defaultMarker = null;
+
   locations.forEach(loc => {
     const isObsPoint = loc.name?.toLowerCase().startsWith("boya");
 
@@ -501,6 +503,28 @@ function initMarkers() {
         weight: 1
       }).addTo(map);
     }
+
+    marker.bindTooltip(loc.name, { direction: "top", offset: [0, -6] });
+
+    marker.on("click", () => {
+      selectedLocation = loc;
+      selectedRoute = null;
+      updateRouteStyles();
+      updateInfoPanel();
+      renderChart();
+    });
+
+    if (loc.name?.toLowerCase() === "boya2") {
+      defaultMarker = marker;
+    }
+
+    markers.push({ marker, loc, isObsPoint });
+  });
+
+  if (defaultMarker) {
+    defaultMarker.fire("click");
+  }
+}
 
     marker.bindTooltip(loc.name, { direction: "top", offset: [0, -6] });
 
