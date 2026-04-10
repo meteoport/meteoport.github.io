@@ -1,17 +1,21 @@
-name: Meteo pipeline
+name: Balearia pipeline
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "47 3 * * *"
     - cron: "55 15 * * *"
-    
+
 permissions:
   contents: write
-  
+
 jobs:
-  run-meteo:
+  run-balearia:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./balearia
 
     steps:
       - name: Checkout repo
@@ -27,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install copernicusmarine xarray pandas numpy requests netCDF4 h5py h5netcdf
 
-      - name: Run meteo pipeline
+      - name: Run Balearia pipeline
         env:
           COPERNICUS_USERNAME: ${{ secrets.COPERNICUS_USERNAME }}
           COPERNICUS_PASSWORD: ${{ secrets.COPERNICUS_PASSWORD }}
@@ -40,13 +44,11 @@ jobs:
           python 5_descarga_viento.py
           python 6_merge_all.py
           python aux_actualizar_fechas_rutas.py
-          
-          
+
       - name: Commit updated JSON files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add *.json
-          git diff --cached --quiet || git commit -m "Update meteo data"
+          git diff --cached --quiet || git commit -m "Update Balearia meteo data"
           git push
-
