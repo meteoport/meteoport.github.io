@@ -1037,13 +1037,9 @@ function renderChart() {
               const f = forecast[idx];
 
               return [
-                `Hs Puerto: ${formatNumber(f.wavePort)} m`,
                 `Hs PdE: ${formatNumber(f.wavePde)} m`,
-                `Tp PdE: ${formatNumber(f.tpPde)} s`,
-                `Di PdE: ${formatNumber(f.dirPde, 0)}°`,
-                `Hs Copernicus: ${formatNumber(f.waveCopernicus)} m`,
-                `Tp Copernicus: ${formatNumber(f.tpCopernicus)} s`,
-                `Di Copernicus: ${formatNumber(f.dirCopernicus, 0)}°`,
+                `Hs Cop: ${formatNumber(f.waveCopernicus)} m`,
+                `Tp Cop: ${formatNumber(f.tpCopernicus)} s`,
                 `Hs Obs: ${formatNumber(f.waveObs)} m`,
                 `Wind obs: ${formatNumber(f.windObs)} m/s`,
                 `Wind model: ${formatNumber(f.windSpeed)} m/s`,
