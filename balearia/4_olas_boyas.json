@@ -1,0 +1,28 @@
+{
+  "source": "Copernicus Marine INSITU IBI NRT",
+  "dataset_id": "cmems_obs-ins_glo_phybgcwav_mynrt_na_irr",
+  "generated_at": "2026-04-10T11:17:09Z",
+  "target_day": "20260409",
+  "buoys": {
+    "boya1": [],
+    "boya2": [],
+    "boya3": [],
+    "boya4": [],
+    "boya5": [],
+    "boya6": [],
+    "boya7": [],
+    "boya8": [],
+    "boya9": [],
+    "boya10": [],
+    "boya11": [],
+    "boya12": [],
+    "boya13": [],
+    "boya14": [],
+    "boya15": [],
+    "boya16": [],
+    "boya17": [],
+    "boya18": [],
+    "boya19": [],
+    "boya20": []
+  }
+}
