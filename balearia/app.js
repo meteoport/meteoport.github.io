@@ -300,42 +300,103 @@ function buildRoutes(rawRoutes) {
 }
 
 function calculateRouteSummary(route) {
-  if (!route || !route.locations || !route.locations.length) {
+  if (!route || !route.locations || route.locations.length < 2) {
     return { hasData: false, reason: "Ruta sin puntos válidos" };
   }
 
   const startMs = new Date(route.departure_time).getTime();
   const endMs = new Date(route.arrival_time).getTime();
 
-  if (Number.isNaN(startMs) || Number.isNaN(endMs) || endMs < startMs) {
+  if (Number.isNaN(startMs) || Number.isNaN(endMs) || endMs <= startMs) {
     return { hasData: false, reason: "Ventana temporal inválida" };
+  }
+
+  // 1) Construimos los tramos y sus distancias
+  const segments = [];
+  let totalMeters = 0;
+
+  for (let i = 0; i < route.locations.length - 1; i++) {
+    const a = route.locations[i];
+    const b = route.locations[i + 1];
+
+    if (!a?.coords || !b?.coords) continue;
+
+    const segMeters = map.distance(a.coords, b.coords);
+    if (!Number.isFinite(segMeters) || segMeters <= 0) continue;
+
+    segments.push({
+      startLoc: a,
+      endLoc: b,
+      startIndex: i,
+      endIndex: i + 1,
+      lengthMeters: segMeters,
+      cumStart: totalMeters,
+      cumEnd: totalMeters + segMeters
+    });
+
+    totalMeters += segMeters;
+  }
+
+  if (!segments.length || totalMeters <= 0) {
+    return { hasData: false, reason: "No se pudo calcular la geometría de la ruta" };
+  }
+
+  // 2) Tomamos una malla temporal de referencia
+  const refForecast = route.locations[0].forecast || [];
+  if (!refForecast.length) {
+    return { hasData: false, reason: "Ruta sin datos de forecast" };
   }
 
   let best = null;
   let recordsInWindow = 0;
 
-  route.locations.forEach(loc => {
-    (loc.forecast || []).forEach(f => {
-      const t = new Date(f.time).getTime();
-      if (Number.isNaN(t)) return;
-      if (t < startMs || t > endMs) return;
+  for (let i = 0; i < refForecast.length; i++) {
+    const refTime = refForecast[i]?.time;
+    const t = new Date(refTime).getTime();
 
-      recordsInWindow += 1;
+    if (Number.isNaN(t)) continue;
+    if (t < startMs || t > endMs) continue;
 
-      if (!isValidNumber(f.wave)) return;
+    recordsInWindow += 1;
 
-      if (!best || f.wave > best.wave) {
-        best = {
-          locationName: loc.name,
-          time: f.time,
-          wave: f.wave,
-          tp: f.tp,
-          dir: f.dir,
-          waveSource: f.waveSource
-        };
+    // 3) Progreso temporal del barco [0..1]
+    const progress = (t - startMs) / (endMs - startMs);
+    const traveledMeters = progress * totalMeters;
+
+    // 4) Localizamos el tramo correspondiente
+    let activeSegment = segments[segments.length - 1];
+    for (const seg of segments) {
+      if (traveledMeters >= seg.cumStart && traveledMeters <= seg.cumEnd) {
+        activeSegment = seg;
+        break;
       }
-    });
-  });
+    }
+
+    // 5) Dentro del tramo, elegimos el punto más cercano:
+    //    si está en la primera mitad -> startLoc
+    //    si está en la segunda mitad -> endLoc
+    const segProgress = activeSegment.lengthMeters > 0
+      ? (traveledMeters - activeSegment.cumStart) / activeSegment.lengthMeters
+      : 0;
+
+    const activeLoc = segProgress < 0.5
+      ? activeSegment.startLoc
+      : activeSegment.endLoc;
+
+    const f = activeLoc?.forecast?.[i];
+    if (!f || !isValidNumber(f.wave)) continue;
+
+    if (!best || f.wave > best.wave) {
+      best = {
+        locationName: activeLoc.name,
+        time: f.time,
+        wave: f.wave,
+        tp: f.tp,
+        dir: f.dir,
+        waveSource: f.waveSource
+      };
+    }
+  }
 
   if (!recordsInWindow) {
     return { hasData: false, reason: "No hay datos en la ventana temporal de la ruta" };
