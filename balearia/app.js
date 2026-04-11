@@ -348,6 +348,23 @@ function calculateRouteSummary(route) {
   return { hasData: true, ...best };
 }
 
+function calculateRouteDistanceNm(route) {
+  if (!route?.locations || route.locations.length < 2) return null;
+
+  let totalMeters = 0;
+
+  for (let i = 0; i < route.locations.length - 1; i++) {
+    const a = route.locations[i].coords;
+    const b = route.locations[i + 1].coords;
+
+    if (!a || !b) continue;
+
+    totalMeters += map.distance(a, b);
+  }
+
+  return totalMeters / 1852; // → nm
+}
+
 function getRouteDisplayColor(route) {
   const summary = calculateRouteSummary(route);
   if (!summary.hasData) return "#64748b";
@@ -583,6 +600,21 @@ function renderRouteInfoPanel() {
   const endMs = new Date(selectedRoute.arrival_time).getTime();
 
   let durationHours = null;
+
+  const distanceNm = calculateRouteDistanceNm(selectedRoute);
+
+let avgSpeed = null;
+if (distanceNm !== null && durationHours && durationHours > 0) {
+  avgSpeed = distanceNm / durationHours;
+}
+
+const distanceLabel = distanceNm === null
+  ? "-"
+  : `${formatNumber(distanceNm, 0)} nm`;
+
+const speedLabel = avgSpeed === null
+  ? "-"
+  : `${formatNumber(avgSpeed, 1)} kn`;
   if (!Number.isNaN(startMs) && !Number.isNaN(endMs) && endMs >= startMs) {
     durationHours = (endMs - startMs) / 3600000;
   }
