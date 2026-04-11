@@ -631,6 +631,8 @@ const speedLabel = avgSpeed === null
       <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
       <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
       <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
+      <p><strong>Distancia:</strong> ${distanceLabel}</p>
+      <p><strong>Velocidad media:</strong> ${speedLabel}</p>
       <hr style="margin:10px 0;">
       <p>${escapeHtml(summary.reason)}</p>
     `;
