@@ -578,14 +578,27 @@ function renderRouteInfoPanel() {
   if (!selectedRoute) return;
 
   const summary = calculateRouteSummary(selectedRoute);
-  const pointsLabel = selectedRoute.resolvedPoints.map(p => p.name).join(" → ");
+
+  const startMs = new Date(selectedRoute.departure_time).getTime();
+  const endMs = new Date(selectedRoute.arrival_time).getTime();
+
+  let durationHours = null;
+  if (!Number.isNaN(startMs) && !Number.isNaN(endMs) && endMs >= startMs) {
+    durationHours = (endMs - startMs) / 3600000;
+  }
+
+  const hoursLabel = durationHours === null
+    ? "-"
+    : Number.isInteger(durationHours)
+      ? `${durationHours} h`
+      : `${durationHours.toFixed(1)} h`;
 
   if (!summary.hasData) {
     infoPanel.innerHTML = `
       <h3>${escapeHtml(selectedRoute.name)}</h3>
       <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
       <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-      <p><strong>Puntos:</strong> ${escapeHtml(pointsLabel)}</p>
+      <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
       <hr style="margin:10px 0;">
       <p>${escapeHtml(summary.reason)}</p>
     `;
@@ -598,7 +611,7 @@ function renderRouteInfoPanel() {
     <h3>${escapeHtml(selectedRoute.name)}</h3>
     <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
     <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-    <p><strong>Puntos:</strong> ${escapeHtml(pointsLabel)}</p>
+    <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
     <hr style="margin:10px 0;">
     <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
     <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
