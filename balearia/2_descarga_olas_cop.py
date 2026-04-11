@@ -64,7 +64,7 @@ COPERNICUS_SEARCH_OFFSETS = [0.0, 0.083, 0.166, 0.332]
 MIN_HS_VALID_RATIO = 0.50
 
 # Se deja a 1 por robustez
-MAX_WORKERS_COPERNICUS = 1
+MAX_WORKERS_COPERNICUS = 2
 
 
 # =========================
