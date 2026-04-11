@@ -198,6 +198,7 @@ def haversine_km(lon1, lat1, lon2, lat2):
 
 
 def read_points(filename: str | Path) -> List[Dict]:
+    
     points = []
 
     with open(filename, "r", encoding="utf-8") as f:
@@ -228,6 +229,9 @@ def read_points(filename: str | Path) -> List[Dict]:
             })
 
     return points
+
+def is_puerto_point(point: Dict) -> bool:
+    return "_puerto" in str(point.get("name", "")).lower()
 
 
 def is_retryable_http_error(exc: Exception) -> bool:
@@ -795,12 +799,19 @@ def main():
     if not Path(POINTS_FILE).exists():
         raise FileNotFoundError(f"No existe el archivo de puntos: {POINTS_FILE}")
 
-    points = read_points(POINTS_FILE)
-    if not points:
+    all_points = read_points(POINTS_FILE)
+    if not all_points:
         raise ValueError("No se encontraron puntos válidos en el archivo de entrada.")
 
-    print(f"Se han leído {len(points)} puntos desde {POINTS_FILE}")
+    # ❌ excluir puntos de puerto
+    points = [p for p in all_points if not is_puerto_point(p)]
+
+    print(f"Se han leído {len(all_points)} puntos desde {POINTS_FILE}")
+    print(f"Puntos PDE (sin _puerto): {len(points)}")
     print(f"Configuración workers PDE: {MAX_WORKERS_PDE}")
+
+    if not points:
+        raise ValueError("No hay puntos válidos para PDE tras excluir '_puerto'.")
 
     pde_points = download_pde_wave_data(points)
     output = build_pde_output(pde_points)
