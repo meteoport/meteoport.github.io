@@ -600,21 +600,6 @@ function renderRouteInfoPanel() {
   const endMs = new Date(selectedRoute.arrival_time).getTime();
 
   let durationHours = null;
-
-  const distanceNm = calculateRouteDistanceNm(selectedRoute);
-
-let avgSpeed = null;
-if (distanceNm !== null && durationHours !== null && durationHours > 0) {
-  avgSpeed = distanceNm / durationHours;
-}
-
-const distanceLabel = distanceNm === null
-  ? "-"
-  : `${formatNumber(distanceNm, 0)} nm`;
-
-const speedLabel = avgSpeed === null
-  ? "-"
-  : `${formatNumber(avgSpeed, 1)} kn`;
   if (!Number.isNaN(startMs) && !Number.isNaN(endMs) && endMs >= startMs) {
     durationHours = (endMs - startMs) / 3600000;
   }
@@ -625,7 +610,37 @@ const speedLabel = avgSpeed === null
       ? `${durationHours} h`
       : `${durationHours.toFixed(1)} h`;
 
+  const distanceNm = calculateRouteDistanceNm(selectedRoute);
+
+  let avgSpeed = null;
+  if (distanceNm !== null && durationHours !== null && durationHours > 0) {
+    avgSpeed = distanceNm / durationHours;
+  }
+
+  const distanceLabel = distanceNm === null
+    ? "-"
+    : `${formatNumber(distanceNm, 0)} nm`;
+
+  const speedLabel = avgSpeed === null
+    ? "-"
+    : `${formatNumber(avgSpeed, 1)} kn`;
+
   if (!summary.hasData) {
+    infoPanel.innerHTML = `
+      <h3>${escapeHtml(selectedRoute.name)}</h3>
+      <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
+      <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
+      <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
+      <p><strong>Distancia:</strong> ${distanceLabel}</p>
+      <p><strong>Velocidad media:</strong> ${speedLabel}</p>
+      <hr style="margin:10px 0;">
+      <p>${escapeHtml(summary.reason)}</p>
+    `;
+    return;
+  }
+
+  const status = getRouteStatus(summary.wave);
+
   infoPanel.innerHTML = `
     <h3>${escapeHtml(selectedRoute.name)}</h3>
     <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
@@ -634,28 +649,13 @@ const speedLabel = avgSpeed === null
     <p><strong>Distancia:</strong> ${distanceLabel}</p>
     <p><strong>Velocidad media:</strong> ${speedLabel}</p>
     <hr style="margin:10px 0;">
-    <p>${escapeHtml(summary.reason)}</p>
+    <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
+    <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
+    <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
+    <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
+    <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
+    <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
   `;
-  return;
-}
-
-const status = getRouteStatus(summary.wave);
-
-infoPanel.innerHTML = `
-  <h3>${escapeHtml(selectedRoute.name)}</h3>
-  <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
-  <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-  <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
-  <p><strong>Distancia:</strong> ${distanceLabel}</p>
-  <p><strong>Velocidad media:</strong> ${speedLabel}</p>
-  <hr style="margin:10px 0;">
-  <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
-  <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
-  <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
-  <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
-  <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
-  <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
-`;
 }
 
 function updateInfoPanel() {
