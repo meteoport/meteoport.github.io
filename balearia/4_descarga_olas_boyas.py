@@ -11,7 +11,6 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 
-
 # =========================
 # CONFIGURACIÓN
 # =========================
@@ -26,7 +25,7 @@ OUTPUT_JSON = "4_olas_boyas.json"
 # Recomendado: usar variables de entorno reales
 USERNAME = os.environ["COPERNICUS_USERNAME"]
 PASSWORD = os.environ["COPERNICUS_PASSWORD"]
-
+MAX_WORKERS_BOYAS = int(os.getenv("METEOPORT_MAX_WORKERS_BOYAS", "2"))
 DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
