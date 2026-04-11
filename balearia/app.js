@@ -604,7 +604,7 @@ function renderRouteInfoPanel() {
   const distanceNm = calculateRouteDistanceNm(selectedRoute);
 
 let avgSpeed = null;
-if (distanceNm !== null && durationHours && durationHours > 0) {
+if (distanceNm !== null && durationHours !== null && durationHours > 0) {
   avgSpeed = distanceNm / durationHours;
 }
 
