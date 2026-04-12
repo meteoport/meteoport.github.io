@@ -588,9 +588,9 @@ function initMarkers() {
     } else {
       marker = L.circleMarker(loc.coords, {
         radius: 3,
-        color: "#1f2937",
-        fillColor: "#1f2937",
-        fillOpacity: 0.9,
+        color: "#4b5563",
+        fillColor: "#4b5563",
+        fillOpacity: 0.8,
         weight: 1
       }).addTo(map);
     }
