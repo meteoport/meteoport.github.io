@@ -311,7 +311,6 @@ function calculateRouteSummary(route) {
     return { hasData: false, reason: "Ventana temporal inválida" };
   }
 
-  // 1) Construimos los tramos y sus distancias
   const segments = [];
   let totalMeters = 0;
 
@@ -341,7 +340,6 @@ function calculateRouteSummary(route) {
     return { hasData: false, reason: "No se pudo calcular la geometría de la ruta" };
   }
 
-  // 2) Tomamos una malla temporal de referencia
   const refForecast = route.locations[0].forecast || [];
   if (!refForecast.length) {
     return { hasData: false, reason: "Ruta sin datos de forecast" };
@@ -359,11 +357,9 @@ function calculateRouteSummary(route) {
 
     recordsInWindow += 1;
 
-    // 3) Progreso temporal del barco [0..1]
     const progress = (t - startMs) / (endMs - startMs);
     const traveledMeters = progress * totalMeters;
 
-    // 4) Localizamos el tramo correspondiente
     let activeSegment = segments[segments.length - 1];
     for (const seg of segments) {
       if (traveledMeters >= seg.cumStart && traveledMeters <= seg.cumEnd) {
@@ -372,9 +368,6 @@ function calculateRouteSummary(route) {
       }
     }
 
-    // 5) Dentro del tramo, elegimos el punto más cercano:
-    //    si está en la primera mitad -> startLoc
-    //    si está en la segunda mitad -> endLoc
     const segProgress = activeSegment.lengthMeters > 0
       ? (traveledMeters - activeSegment.cumStart) / activeSegment.lengthMeters
       : 0;
@@ -423,7 +416,7 @@ function calculateRouteDistanceNm(route) {
     totalMeters += map.distance(a, b);
   }
 
-  return totalMeters / 1852; // → nm
+  return totalMeters / 1852;
 }
 
 function getRouteDisplayColor(route) {
@@ -477,6 +470,148 @@ function initRoutes() {
   });
 
   updateRouteStyles();
+}
+
+// ============================
+// HELPERS RUTA <-> PUNTO
+// ============================
+
+function findRoutesForLocation(location) {
+  if (!location) return [];
+
+  return routes.filter(route =>
+    (route.locations || []).some(loc => loc?.name === location.name)
+  );
+}
+
+function calculateRouteTotalMeters(route) {
+  if (!route?.locations || route.locations.length < 2) return null;
+
+  let totalMeters = 0;
+
+  for (let i = 0; i < route.locations.length - 1; i++) {
+    const a = route.locations[i]?.coords;
+    const b = route.locations[i + 1]?.coords;
+
+    if (!a || !b) continue;
+
+    const segMeters = map.distance(a, b);
+    if (!Number.isFinite(segMeters) || segMeters <= 0) continue;
+
+    totalMeters += segMeters;
+  }
+
+  return totalMeters > 0 ? totalMeters : null;
+}
+
+function calculateDistanceToPointAlongRoute(route, locationName) {
+  if (!route?.locations || route.locations.length < 1) return null;
+
+  let cumMeters = 0;
+
+  for (let i = 0; i < route.locations.length; i++) {
+    const loc = route.locations[i];
+    if (loc?.name === locationName) {
+      return cumMeters;
+    }
+
+    if (i < route.locations.length - 1) {
+      const a = route.locations[i]?.coords;
+      const b = route.locations[i + 1]?.coords;
+
+      if (!a || !b) continue;
+
+      const segMeters = map.distance(a, b);
+      if (!Number.isFinite(segMeters) || segMeters <= 0) continue;
+
+      cumMeters += segMeters;
+    }
+  }
+
+  return null;
+}
+
+function calculateBoatPassageTime(route, location) {
+  if (!route || !location) return null;
+
+  const startMs = new Date(route.departure_time).getTime();
+  const endMs = new Date(route.arrival_time).getTime();
+
+  if (Number.isNaN(startMs) || Number.isNaN(endMs) || endMs <= startMs) {
+    return null;
+  }
+
+  const totalMeters = calculateRouteTotalMeters(route);
+  if (!totalMeters) return null;
+
+  const metersToPoint = calculateDistanceToPointAlongRoute(route, location.name);
+  if (metersToPoint === null || metersToPoint < 0) return null;
+
+  const ratio = Math.max(0, Math.min(1, metersToPoint / totalMeters));
+  const passageMs = startMs + ratio * (endMs - startMs);
+
+  return new Date(passageMs).toISOString();
+}
+
+function getLocationRouteTimingMarkers(location) {
+  if (!location) return [];
+
+  const relatedRoutes = findRoutesForLocation(location);
+  if (!relatedRoutes.length) return [];
+
+  const markers = [];
+
+  relatedRoutes.forEach(route => {
+    const departureTime = route?.departure_time || null;
+    const arrivalTime = route?.arrival_time || null;
+    const passageTime = calculateBoatPassageTime(route, location);
+
+    const routeLabel = route.name || "Ruta";
+
+    if (departureTime) {
+      markers.push({
+        type: "departure",
+        routeId: route.id ?? routeLabel,
+        routeName: routeLabel,
+        pointName: location.name,
+        time: departureTime,
+        shortLabel: "S",
+        color: "#6b7280",
+        lineDash: [6, 4],
+        lineWidth: 1.2
+      });
+    }
+
+    if (passageTime) {
+      markers.push({
+        type: "passage",
+        routeId: route.id ?? routeLabel,
+        routeName: routeLabel,
+        pointName: location.name,
+        time: passageTime,
+        shortLabel: "P",
+        color: "#111827",
+        lineDash: [],
+        lineWidth: 1.8
+      });
+    }
+
+    if (arrivalTime) {
+      markers.push({
+        type: "arrival",
+        routeId: route.id ?? routeLabel,
+        routeName: routeLabel,
+        pointName: location.name,
+        time: arrivalTime,
+        shortLabel: "L",
+        color: "#9ca3af",
+        lineDash: [3, 3],
+        lineWidth: 1.2
+      });
+    }
+  });
+
+  return markers;
 }
 
 // ============================
@@ -769,6 +904,65 @@ const verticalCursorPlugin = {
 };
 
 // ============================
+// CHART PLUGIN: TIMING MARKERS
+// ============================
+
+const routeTimingMarkersPlugin = {
+  id: "routeTimingMarkersPlugin",
+  afterDraw(chart, args, options) {
+    const markers = options?.markers || [];
+    if (!markers.length) return;
+
+    const xScale = chart.scales.x;
+    const chartArea = chart.chartArea;
+    const ctx = chart.ctx;
+
+    if (!xScale || !chartArea || !ctx) return;
+
+    const xMin = xScale.min;
+    const xMax = xScale.max;
+    if (xMin == null || xMax == null) return;
+
+    const multiRoute = new Set(markers.map(m => m.routeId)).size > 1;
+
+    ctx.save();
+    ctx.textBaseline = "top";
+    ctx.font = "600 10px sans-serif";
+
+    markers.forEach((marker, idx) => {
+      const t = new Date(marker.time).getTime();
+      if (Number.isNaN(t)) return;
+      if (t < xMin || t > xMax) return;
+
+      const x = xScale.getPixelForValue(t);
+      const labelY = chartArea.top + 4 + ((idx % 3) * 11);
+
+      ctx.save();
+      ctx.strokeStyle = marker.color || "#111827";
+      ctx.lineWidth = marker.lineWidth ?? 1.2;
+      ctx.setLineDash(marker.lineDash || []);
+
+      ctx.beginPath();
+      ctx.moveTo(x, chartArea.top);
+      ctx.lineTo(x, chartArea.bottom);
+      ctx.stroke();
+
+      ctx.setLineDash([]);
+      ctx.fillStyle = marker.color || "#111827";
+
+      const label = multiRoute
+        ? `${marker.shortLabel}-${marker.routeName}`
+        : marker.shortLabel;
+
+      ctx.fillText(label, x + 3, labelY);
+      ctx.restore();
+    });
+
+    ctx.restore();
+  }
+};
+
+// ============================
 // CHART PLUGIN: WAVE ARROWS
 // ============================
 
@@ -852,6 +1046,7 @@ const pdeWaveArrowsPlugin = {
 
 function renderChart() {
   if (!selectedLocation || !waveChartCanvas) return;
+
   if (chartTitle) {
     chartTitle.textContent = selectedLocation?.name
       ? selectedLocation.name
@@ -859,6 +1054,7 @@ function renderChart() {
   }
 
   const forecast = selectedLocation.forecast;
+  const routeTimingMarkers = getLocationRouteTimingMarkers(selectedLocation);
   const firstTimeMs = forecast.length ? new Date(forecast[0].time).getTime() : null;
 
   let xAxisMin = null;
@@ -874,8 +1070,6 @@ function renderChart() {
       0, 0, 0, 0
     );
 
-    // desde ayer 00h hasta hoy+4d 21h
-    // es decir: primer día + 5 días, a las 21:00
     xAxisMax = Date.UTC(
       firstDate.getUTCFullYear(),
       firstDate.getUTCMonth(),
@@ -959,10 +1153,6 @@ function renderChart() {
 
       ctx.save();
 
-      // ============================
-      // 0) SOMBREADO DE HOY
-      // ============================
-
       const startToday = Date.UTC(
         todayRef.getUTCFullYear(),
         todayRef.getUTCMonth(),
@@ -993,10 +1183,6 @@ function renderChart() {
         );
       }
 
-      // ============================
-      // 1) SEPARADORES ENTRE DÍAS
-      // ============================
-
       ctx.strokeStyle = "rgba(70, 70, 70, 0.22)";
       ctx.lineWidth = 1.1;
       ctx.setLineDash([4, 4]);
@@ -1012,10 +1198,6 @@ function renderChart() {
         ctx.lineTo(x, chartArea.bottom);
         ctx.stroke();
       }
-
-      // ============================
-      // 2) ETIQUETAS ABAJO
-      // ============================
 
       ctx.setLineDash([]);
       ctx.textAlign = "center";
@@ -1124,7 +1306,7 @@ function renderChart() {
       },
       layout: {
         padding: {
-          top: 20,
+          top: 26,
           bottom: 28
         }
       },
@@ -1159,6 +1341,9 @@ function renderChart() {
         },
         verticalCursorPlugin: {
           selectedIndex: selectedHour
+        },
+        routeTimingMarkersPlugin: {
+          markers: routeTimingMarkers
         },
         pdeWaveArrowsPlugin: {
           datasetIndex: 2,
@@ -1204,7 +1389,12 @@ function renderChart() {
         }
       }
     },
-    plugins: [verticalCursorPlugin, pdeWaveArrowsPlugin, daySeparatorPlugin]
+    plugins: [
+      verticalCursorPlugin,
+      routeTimingMarkersPlugin,
+      pdeWaveArrowsPlugin,
+      daySeparatorPlugin
+    ]
   });
 
   window.chart = waveChart;
