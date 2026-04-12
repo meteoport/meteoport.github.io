@@ -461,7 +461,6 @@ function initRoutes() {
 
 polyline.on("click", () => {
   selectedRoute = route;
-
   updateRouteStyles();
   updateInfoPanel();
 
