@@ -580,7 +580,7 @@ function getLocationRouteTimingMarkers(location) {
       pointName: location.name,
       time: departureTime,
       shortLabel: "S",
-      color: "#8b5cf6",   // violeta
+      color: "#8b5cf6",
       lineDash: [],
       lineWidth: 2.2
     });
@@ -594,9 +594,9 @@ function getLocationRouteTimingMarkers(location) {
       pointName: location.name,
       time: passageTime,
       shortLabel: "P",
-      color: "#ec4899",   // rosa/fucsia
-      lineDash: [8, 4],
-      lineWidth: 2.4
+      color: "#374151",
+      lineDash: [],
+      lineWidth: 2.2
     });
   }
 
@@ -608,15 +608,14 @@ function getLocationRouteTimingMarkers(location) {
       pointName: location.name,
       time: arrivalTime,
       shortLabel: "L",
-      color: "#14b8a6",   // turquesa
-      lineDash: [2, 6],
+      color: "#8b5cf6",
+      lineDash: [],
       lineWidth: 2.2
     });
   }
 
   return markers;
 }
-
 // ============================
 // CARGA DATOS
 // ============================
