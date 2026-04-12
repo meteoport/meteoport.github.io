@@ -15,7 +15,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./balearia
+        working-directory: ./
 
     steps:
       - name: Checkout repo
