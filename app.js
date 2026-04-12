@@ -925,7 +925,6 @@ const routeTimingMarkersPlugin = {
     const xMax = xScale.max;
     if (xMin == null || xMax == null) return;
 
-    const label = marker.shortLabel;
     ctx.save();
     ctx.textBaseline = "top";
     ctx.font = "600 10px sans-serif";
@@ -937,6 +936,7 @@ const routeTimingMarkersPlugin = {
 
       const x = xScale.getPixelForValue(t);
       const labelY = chartArea.top + 4 + ((idx % 3) * 11);
+      const label = marker.shortLabel;
 
       ctx.save();
       ctx.strokeStyle = marker.color || "#111827";
@@ -950,8 +950,8 @@ const routeTimingMarkersPlugin = {
 
       ctx.setLineDash([]);
       ctx.fillStyle = marker.color || "#111827";
-
       ctx.fillText(label, x + 3, labelY);
+
       ctx.restore();
     });
 
