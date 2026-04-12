@@ -556,6 +556,86 @@ function calculateBoatPassageTime(route, location) {
   return new Date(passageMs).toISOString();
 }
 
+function getRouteForecastTimeBounds(route) {
+  if (!route?.locations?.length) return null;
+
+  let minMs = null;
+  let maxMs = null;
+
+  route.locations.forEach(loc => {
+    (loc.forecast || []).forEach(f => {
+      const t = new Date(f?.time).getTime();
+      if (Number.isNaN(t)) return;
+
+      if (minMs === null || t < minMs) minMs = t;
+      if (maxMs === null || t > maxMs) maxMs = t;
+    });
+  });
+
+  if (minMs === null || maxMs === null) return null;
+  return { minMs, maxMs };
+}
+
+function calculateRecommendedDelay(route, redThreshold = 3.5) {
+  if (!route || !route.locations || route.locations.length < 2) return null;
+
+  const originalStartMs = new Date(route.departure_time).getTime();
+  const originalEndMs = new Date(route.arrival_time).getTime();
+
+  if (Number.isNaN(originalStartMs) || Number.isNaN(originalEndMs) || originalEndMs <= originalStartMs) {
+    return null;
+  }
+
+  const durationMs = originalEndMs - originalStartMs;
+  const forecastBounds = getRouteForecastTimeBounds(route);
+  if (!forecastBounds) return null;
+
+  const { maxMs: forecastMaxMs } = forecastBounds;
+
+  // buscamos retraso en pasos de 1 hora
+  for (let delayHours = 1; delayHours <= 240; delayHours++) {
+    const shiftedStartMs = originalStartMs + delayHours * 3600000;
+    const shiftedEndMs = shiftedStartMs + durationMs;
+
+    // no probamos salidas que ya se salen del horizonte de forecast
+    if (shiftedEndMs > forecastMaxMs) break;
+
+    const shiftedRoute = {
+      ...route,
+      departure_time: new Date(shiftedStartMs).toISOString(),
+      arrival_time: new Date(shiftedEndMs).toISOString()
+    };
+
+    const shiftedSummary = calculateRouteSummary(shiftedRoute);
+
+    if (
+      shiftedSummary?.hasData &&
+      isValidNumber(shiftedSummary.wave) &&
+      Number(shiftedSummary.wave) <= redThreshold
+    ) {
+      return {
+        found: true,
+        delayHours,
+        suggestedDepartureTime: shiftedRoute.departure_time,
+        suggestedArrivalTime: shiftedRoute.arrival_time,
+        maxWaveOnShiftedRoute: shiftedSummary.wave,
+        criticalLocationName: shiftedSummary.locationName,
+        criticalTime: shiftedSummary.time
+      };
+    }
+  }
+
+  return {
+    found: false,
+    delayHours: null,
+    suggestedDepartureTime: null,
+    suggestedArrivalTime: null,
+    maxWaveOnShiftedRoute: null,
+    criticalLocationName: null,
+    criticalTime: null
+  };
+}
+
 function getLocationRouteTimingMarkers(location) {
   if (!location || !selectedRoute) return [];
 
@@ -837,22 +917,40 @@ function renderRouteInfoPanel() {
   }
 
   const status = getRouteStatus(summary.wave);
+  const redThreshold = THRESHOLDS.orangeMax;
+  const recommendation = isValidNumber(summary.wave) && Number(summary.wave) >= redThreshold
+  ? calculateRecommendedDelay(selectedRoute, redThreshold)
+  : null;
+  
 
   infoPanel.innerHTML = `
-    <h3>${escapeHtml(selectedRoute.name)}</h3>
-    <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
-    <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-    <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
-    <p><strong>Distancia:</strong> ${distanceLabel}</p>
-    <p><strong>Velocidad media:</strong> ${speedLabel}</p>
+  <h3>${escapeHtml(selectedRoute.name)}</h3>
+  <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
+  <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
+  <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
+  <p><strong>Distancia:</strong> ${distanceLabel}</p>
+  <p><strong>Velocidad media:</strong> ${speedLabel}</p>
+  <hr style="margin:10px 0;">
+  <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
+  <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
+  <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
+  <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
+  <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
+  <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
+
+  ${recommendation && recommendation.found ? `
     <hr style="margin:10px 0;">
-    <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
-    <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
-    <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
-    <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
-    <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
-    <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
-  `;
+    <p><strong>Retraso recomendado:</strong> ${recommendation.delayHours} h</p>
+    <p><strong>Nueva salida sugerida:</strong> ${formatDateTimeLong(recommendation.suggestedDepartureTime)}</p>
+    <p><strong>Nueva llegada estimada:</strong> ${formatDateTimeLong(recommendation.suggestedArrivalTime)}</p>
+    <p><strong>Hsmax con retraso:</strong> ${formatNumber(recommendation.maxWaveOnShiftedRoute)} m</p>
+  ` : ""}
+
+  ${recommendation && !recommendation.found ? `
+    <hr style="margin:10px 0;">
+    <p><strong>Retraso recomendado:</strong> no se encuentra una salida segura dentro del forecast disponible</p>
+  ` : ""}
+`;
 }
 
 function updateInfoPanel() {
