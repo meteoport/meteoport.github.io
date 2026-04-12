@@ -927,8 +927,7 @@ const routeTimingMarkersPlugin = {
     const xMax = xScale.max;
     if (xMin == null || xMax == null) return;
 
-    const multiRoute = new Set(markers.map(m => m.routeId)).size > 1;
-
+    const label = marker.shortLabel;
     ctx.save();
     ctx.textBaseline = "top";
     ctx.font = "600 10px sans-serif";
@@ -953,10 +952,6 @@ const routeTimingMarkersPlugin = {
 
       ctx.setLineDash([]);
       ctx.fillStyle = marker.color || "#111827";
-
-      const label = multiRoute
-        ? `${marker.shortLabel}-${marker.routeName}`
-        : marker.shortLabel;
 
       ctx.fillText(label, x + 3, labelY);
       ctx.restore();
