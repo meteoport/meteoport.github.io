@@ -459,12 +459,16 @@ function initRoutes() {
     polyline.bringToBack();
     polyline.bindTooltip(route.name, { direction: "top", sticky: true });
 
-    polyline.on("click", () => {
-      selectedRoute = route;
-      selectedLocation = null;
-      updateRouteStyles();
-      updateInfoPanel();
-    });
+polyline.on("click", () => {
+  selectedRoute = route;
+
+  updateRouteStyles();
+  updateInfoPanel();
+
+  if (selectedLocation) {
+    renderChart();
+  }
+});
 
     routeLayers.push({ route, polyline });
   });
@@ -554,62 +558,62 @@ function calculateBoatPassageTime(route, location) {
 }
 
 function getLocationRouteTimingMarkers(location) {
-  if (!location) return [];
+  if (!location || !selectedRoute) return [];
 
-  const relatedRoutes = findRoutesForLocation(location);
-  if (!relatedRoutes.length) return [];
+  const pointBelongsToRoute = (selectedRoute.locations || []).some(
+    loc => loc?.name === location.name
+  );
 
+  if (!pointBelongsToRoute) return [];
+
+  const departureTime = selectedRoute?.departure_time || null;
+  const arrivalTime = selectedRoute?.arrival_time || null;
+  const passageTime = calculateBoatPassageTime(selectedRoute, location);
+
+  const routeLabel = selectedRoute.name || "Ruta";
   const markers = [];
 
-  relatedRoutes.forEach(route => {
-    const departureTime = route?.departure_time || null;
-    const arrivalTime = route?.arrival_time || null;
-    const passageTime = calculateBoatPassageTime(route, location);
+  if (departureTime) {
+    markers.push({
+      type: "departure",
+      routeId: selectedRoute.id ?? routeLabel,
+      routeName: routeLabel,
+      pointName: location.name,
+      time: departureTime,
+      shortLabel: "S",
+      color: "#8b5cf6",   // violeta
+      lineDash: [],
+      lineWidth: 2.2
+    });
+  }
 
-    const routeLabel = route.name || "Ruta";
+  if (passageTime) {
+    markers.push({
+      type: "passage",
+      routeId: selectedRoute.id ?? routeLabel,
+      routeName: routeLabel,
+      pointName: location.name,
+      time: passageTime,
+      shortLabel: "P",
+      color: "#ec4899",   // rosa/fucsia
+      lineDash: [8, 4],
+      lineWidth: 2.4
+    });
+  }
 
-    if (departureTime) {
-      markers.push({
-        type: "departure",
-        routeId: route.id ?? routeLabel,
-        routeName: routeLabel,
-        pointName: location.name,
-        time: departureTime,
-        shortLabel: "S",
-        color: "#6b7280",
-        lineDash: [6, 4],
-        lineWidth: 1.2
-      });
-    }
-
-    if (passageTime) {
-      markers.push({
-        type: "passage",
-        routeId: route.id ?? routeLabel,
-        routeName: routeLabel,
-        pointName: location.name,
-        time: passageTime,
-        shortLabel: "P",
-        color: "#111827",
-        lineDash: [],
-        lineWidth: 1.8
-      });
-    }
-
-    if (arrivalTime) {
-      markers.push({
-        type: "arrival",
-        routeId: route.id ?? routeLabel,
-        routeName: routeLabel,
-        pointName: location.name,
-        time: arrivalTime,
-        shortLabel: "L",
-        color: "#9ca3af",
-        lineDash: [3, 3],
-        lineWidth: 1.2
-      });
-    }
-  });
+  if (arrivalTime) {
+    markers.push({
+      type: "arrival",
+      routeId: selectedRoute.id ?? routeLabel,
+      routeName: routeLabel,
+      pointName: location.name,
+      time: arrivalTime,
+      shortLabel: "L",
+      color: "#14b8a6",   // turquesa
+      lineDash: [2, 6],
+      lineWidth: 2.2
+    });
+  }
 
   return markers;
 }
