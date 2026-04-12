@@ -738,7 +738,6 @@ function initMarkers() {
 
     marker.on("click", () => {
       selectedLocation = loc;
-      selectedRoute = null;
       updateRouteStyles();
       updateInfoPanel();
       renderChart();
