@@ -425,15 +425,119 @@ function getRouteDisplayColor(route) {
   return getHexColorFromHs(summary.wave);
 }
 
+function getCanonicalRouteKey(route) {
+  const names = (route?.resolvedPoints || [])
+    .map(p => p?.name)
+    .filter(Boolean);
+
+  if (!names.length) return route?.id || Math.random().toString(36).slice(2);
+
+  const forward = names.join(">");
+  const backward = [...names].reverse().join(">");
+
+  return forward < backward ? forward : backward;
+}
+
+function buildRouteGroups(routesList) {
+  const groupsMap = new Map();
+
+  (routesList || []).forEach(route => {
+    const key = getCanonicalRouteKey(route);
+
+    if (!groupsMap.has(key)) {
+      groupsMap.set(key, []);
+    }
+
+    groupsMap.get(key).push(route);
+  });
+
+  return Array.from(groupsMap.values());
+}
+
+function getRouteGroupLabel(groupRoutes) {
+  if (!groupRoutes || !groupRoutes.length) return "Ruta";
+  if (groupRoutes.length === 1) return groupRoutes[0].name || "Ruta";
+  return "Seleccionar ruta";
+}
+
+function showRouteChoicePopup(latlng, groupRoutes) {
+  if (!groupRoutes || !groupRoutes.length) return;
+
+  const popupId = `route-popup-${Date.now()}`;
+
+  window._routePopupOptions = window._routePopupOptions || {};
+  window._routePopupOptions[popupId] = Object.fromEntries(
+    groupRoutes.map(route => [route.id, route])
+  );
+
+  window.selectRouteFromPopup = function(pId, routeId) {
+    const route = window._routePopupOptions?.[pId]?.[routeId];
+    if (!route) return;
+
+    selectedRoute = route;
+    updateRouteStyles();
+    updateInfoPanel();
+
+    if (selectedLocation) {
+      renderChart();
+    }
+
+    map.closePopup();
+
+    delete window._routePopupOptions[pId];
+  };
+
+  const buttonsHtml = groupRoutes.map(route => `
+    <button
+      onclick="window.selectRouteFromPopup('${popupId}', '${route.id}')"
+      style="
+        display:block;
+        width:100%;
+        margin:6px 0;
+        padding:8px 10px;
+        border:1px solid #d1d5db;
+        border-radius:8px;
+        background:#ffffff;
+        color:#111827;
+        text-align:left;
+        cursor:pointer;
+        font-size:13px;
+      "
+    >
+      ${escapeHtml(route.name)}
+    </button>
+  `).join("");
+
+  L.popup({
+    closeButton: true,
+    autoClose: true,
+    closeOnClick: true
+  })
+    .setLatLng(latlng)
+    .setContent(`
+      <div style="min-width:190px;">
+        <div style="font-weight:700; margin-bottom:8px; color:#111827;">
+          Selecciona ruta
+        </div>
+        ${buttonsHtml}
+      </div>
+    `)
+    .openOn(map);
+}
+
 function updateRouteStyles() {
-  routeLayers.forEach(({ route, polyline }) => {
-    const isSelected = selectedRoute && selectedRoute.id === route.id;
-    const color = getRouteDisplayColor(route);
+  routeLayers.forEach(({ routes: groupedRoutes, polyline }) => {
+    const containsSelected = !!selectedRoute &&
+      (groupedRoutes || []).some(route => route.id === selectedRoute.id);
+
+    const color = containsSelected && selectedRoute
+      ? getRouteDisplayColor(selectedRoute)
+      : getRouteDisplayColor(groupedRoutes?.[0]);
 
     polyline.setStyle({
       color,
-      weight: isSelected ? 5 : 3,
-      opacity: isSelected ? 0.95 : 0.75
+      weight: containsSelected ? 5 : 3,
+      opacity: containsSelected ? 0.95 : 0.75
     });
   });
 }
@@ -442,34 +546,49 @@ function initRoutes() {
   routeLayers.forEach(({ polyline }) => map.removeLayer(polyline));
   routeLayers = [];
 
-  routes.forEach(route => {
-    const latlngs = route.locations
+  const groupedRoutesList = buildRouteGroups(routes);
+
+  groupedRoutesList.forEach(groupRoutes => {
+    const baseRoute = groupRoutes[0];
+
+    const latlngs = (baseRoute.locations || [])
       .map(loc => loc.coords)
       .filter(coords => Array.isArray(coords) && coords.length === 2);
 
     if (latlngs.length < 2) return;
 
     const polyline = L.polyline(latlngs, {
-      color: getRouteDisplayColor(route),
+      color: getRouteDisplayColor(baseRoute),
       weight: 3,
       opacity: 0.75,
       pane: "routesPane"
     }).addTo(map);
 
     polyline.bringToBack();
-    polyline.bindTooltip(route.name, { direction: "top", sticky: true });
+    polyline.bindTooltip(getRouteGroupLabel(groupRoutes), {
+      direction: "top",
+      sticky: true
+    });
 
-polyline.on("click", () => {
-  selectedRoute = route;
-  updateRouteStyles();
-  updateInfoPanel();
+    polyline.on("click", (e) => {
+      if (groupRoutes.length === 1) {
+        selectedRoute = groupRoutes[0];
+        updateRouteStyles();
+        updateInfoPanel();
 
-  if (selectedLocation) {
-    renderChart();
-  }
-});
+        if (selectedLocation) {
+          renderChart();
+        }
+        return;
+      }
 
-    routeLayers.push({ route, polyline });
+      showRouteChoicePopup(e.latlng, groupRoutes);
+    });
+
+    routeLayers.push({
+      routes: groupRoutes,
+      polyline
+    });
   });
 
   updateRouteStyles();
