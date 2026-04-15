@@ -3,8 +3,8 @@ name: Balearia pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: "47 3 * * *"
-    - cron: "55 15 * * *"
+    - cron: "25 4 * * *"
+  
 
 permissions:
   contents: write
