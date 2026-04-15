@@ -73,12 +73,14 @@ window.map = map;
 map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
+// MAPA BASE
 const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: "&copy; OpenStreetMap &copy; CARTO",
   subdomains: "abcd",
   maxZoom: 19
 }).addTo(map);
 
+// BATIMETRÍA (sombreado)
 const bathymetryLayer = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
   layers: "GEBCO_LATEST",
   format: "image/png",
@@ -87,12 +89,23 @@ const bathymetryLayer = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
   attribution: "&copy; GEBCO"
 });
 
+// ISÓBATAS (líneas de profundidad - EMODnet)
+const bathyContours = L.tileLayer.wms("https://ows.emodnet-bathymetry.eu/wms", {
+  layers: "emodnet:contours",
+  format: "image/png",
+  transparent: true,
+  opacity: 0.6,
+  attribution: "&copy; EMODnet Bathymetry"
+});
+
+// CONTROL DE CAPAS
 L.control.layers(
   {
     "Mapa claro": baseMap
   },
   {
-    "Batimetría": bathymetryLayer
+    "Batimetría": bathymetryLayer,
+    "Isóbatas": bathyContours
   },
   {
     collapsed: true
