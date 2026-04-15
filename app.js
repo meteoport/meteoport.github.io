@@ -73,11 +73,31 @@ window.map = map;
 map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: "&copy; OpenStreetMap &copy; CARTO",
   subdomains: "abcd",
   maxZoom: 19
 }).addTo(map);
+
+const bathymetryLayer = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
+  layers: "GEBCO_LATEST",
+  format: "image/png",
+  transparent: true,
+  opacity: 0.35,
+  attribution: "&copy; GEBCO"
+});
+
+L.control.layers(
+  {
+    "Mapa claro": baseMap
+  },
+  {
+    "Batimetría": bathymetryLayer
+  },
+  {
+    collapsed: true
+  }
+).addTo(map);
 
 // ============================
 // HELPERS
