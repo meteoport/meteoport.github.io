@@ -82,7 +82,7 @@ const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}
 
 // BATIMETRÍA (sombreado)
 const bathymetryLayer = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_LATEST",
+  layers: "GEBCO_Grid",
   format: "image/png",
   transparent: true,
   opacity: 0.35,
@@ -112,9 +112,113 @@ L.control.layers(
   }
 ).addTo(map);
 
+map.on("click", (e) => {
+  showDepthAtClick(e.latlng);
+});
+
 // ============================
 // HELPERS
 // ============================
+
+function buildGebcoFeatureInfoUrl(latlng) {
+  const size = map.getSize();
+  const bounds = map.getBounds();
+  const sw = bounds.getSouthWest();
+  const ne = bounds.getNorthEast();
+
+  const point = map.latLngToContainerPoint(latlng, map.getZoom());
+
+  const params = new URLSearchParams({
+    service: "WMS",
+    request: "GetFeatureInfo",
+    version: "1.1.1",
+    layers: "GEBCO_Grid",
+    query_layers: "GEBCO_Grid",
+    styles: "",
+    bbox: `${sw.lng},${sw.lat},${ne.lng},${ne.lat}`,
+    width: Math.round(size.x),
+    height: Math.round(size.y),
+    srs: "EPSG:4326",
+    format: "image/png",
+    info_format: "text/html",
+    x: Math.round(point.x),
+    y: Math.round(point.y)
+  });
+
+  return `https://wms.gebco.net/mapserv?${params.toString()}`;
+}
+
+function extractDepthFromGebcoHtml(html) {
+  if (!html) return null;
+
+  const clean = html.replace(/\s+/g, " ");
+
+  const patterns = [
+    /-?\d+(?:\.\d+)?(?=\s*m\b)/i,
+    /value[^-0-9]*(-?\d+(?:\.\d+)?)/i,
+    /elevation[^-0-9]*(-?\d+(?:\.\d+)?)/i,
+    /gray_index[^-0-9]*(-?\d+(?:\.\d+)?)/i
+  ];
+
+  for (const re of patterns) {
+    const match = clean.match(re);
+    if (match) {
+      const num = Number(match[0].match(/-?\d+(?:\.\d+)?/)[0]);
+      if (!Number.isNaN(num)) return num;
+    }
+  }
+
+  return null;
+}
+
+async function showDepthAtClick(latlng) {
+  try {
+    const url = buildGebcoFeatureInfoUrl(latlng);
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const html = await res.text();
+    const depth = extractDepthFromGebcoHtml(html);
+
+    const depthLabel = depth === null
+      ? "Sin dato"
+      : depth < 0
+        ? `${Math.abs(depth).toFixed(0)} m`
+        : `${depth.toFixed(0)} m`;
+
+    const prefix = depth === null
+      ? "Profundidad"
+      : depth < 0
+        ? "Profundidad"
+        : "Elevación";
+
+    L.popup()
+      .setLatLng(latlng)
+      .setContent(`
+        <div style="min-width:160px;">
+          <div style="font-weight:700; margin-bottom:6px;">Batimetría</div>
+          <div><strong>${prefix}:</strong> ${depthLabel}</div>
+          <div style="margin-top:4px; color:#6b7280; font-size:12px;">
+            ${latlng.lat.toFixed(4)}, ${latlng.lng.toFixed(4)}
+          </div>
+        </div>
+      `)
+      .openOn(map);
+
+  } catch (err) {
+    console.error("Error consultando profundidad GEBCO:", err);
+
+    L.popup()
+      .setLatLng(latlng)
+      .setContent(`
+        <div style="min-width:160px;">
+          <div style="font-weight:700; margin-bottom:6px;">Batimetría</div>
+          <div>No se pudo consultar la profundidad</div>
+        </div>
+      `)
+      .openOn(map);
+  }
+}
 
 function formatNumber(val, decimals = 2) {
   if (val === null || val === undefined || Number.isNaN(val)) return "-";
