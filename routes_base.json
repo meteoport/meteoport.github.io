@@ -2,6 +2,7 @@
   {
     "id": "ruta_1",
     "name": "Val-Pal",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T21:45:00Z",
     "arrival_time": "2026-04-04T05:00:00Z",
     "points": [
@@ -17,6 +18,7 @@
   {
     "id": "ruta_2",
     "name": "Mal-Mel",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T17:00:00Z",
     "arrival_time": "2026-04-03T23:00:00Z",
     "points": [
@@ -32,6 +34,7 @@
   {
     "id": "ruta_3",
     "name": "Huel-Ten",
+    "hs_threshold": 5,
     "departure_time": "2026-04-03T16:00:00Z",
     "arrival_time": "2026-04-05T03:00:00Z",
     "points": [
@@ -55,6 +58,7 @@
   {
     "id": "ruta_4",
     "name": "Huel-laspal",
+    "hs_threshold": 5,
     "departure_time": "2026-04-03T16:00:00Z",
     "arrival_time": "2026-04-05T03:00:00Z",
     "points": [
@@ -78,6 +82,7 @@
   {
     "id": "ruta_5",
     "name": "alg-tangemed",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T07:00:00Z",
     "arrival_time": "2026-03-29T08:00:00Z",
     "points": [
@@ -92,6 +97,7 @@
   {
     "id": "ruta_6",
     "name": "alg-ceuta(T1)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T07:00:00Z",
     "arrival_time": "2026-03-29T08:00:00Z",
     "points": [
@@ -106,6 +112,7 @@
   {
     "id": "ruta_22",
     "name": "alg-ceuta(T2)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T10:00:00Z",
     "arrival_time": "2026-03-29T11:00:00Z",
     "points": [
@@ -120,6 +127,7 @@
   {
     "id": "ruta_23",
     "name": "alg-ceuta(T3)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T14:00:00Z",
     "arrival_time": "2026-03-29T15:30:00Z",
     "points": [
@@ -134,6 +142,7 @@
   {
     "id": "ruta_66",
     "name": "ceuta-alg(T1)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T06:00:00Z",
     "arrival_time": "2026-03-29T07:30:00Z",
     "points": [
@@ -148,6 +157,7 @@
   {
     "id": "ruta_67",
     "name": "ceuta-alg(T2)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T10:30:00Z",
     "arrival_time": "2026-03-29T12:00:00Z",
     "points": [
@@ -162,6 +172,7 @@
   {
     "id": "ruta_68",
     "name": "ceuta-alg(T3)",
+    "hs_threshold": 3.5,
     "departure_time": "2026-03-29T14:30:00Z",
     "arrival_time": "2026-03-29T15:30:00Z",
     "points": [
@@ -177,6 +188,7 @@
   {
     "id": "ruta_7",
     "name": "val-mostag",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T18:30:00Z",
     "arrival_time": "2026-04-04T09:00:00Z",
     "points": [
@@ -195,6 +207,7 @@
   {
     "id": "ruta_8",
     "name": "val-argel",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T18:30:00Z",
     "arrival_time": "2026-04-04T13:00:00Z",
     "points": [
@@ -212,6 +225,7 @@
   {
     "id": "ruta_9",
     "name": "den-ibi",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T17:00:00Z",
     "arrival_time": "2026-04-03T19:00:00Z",
     "points": [
@@ -226,6 +240,7 @@
   {
     "id": "ruta_10",
     "name": "den-ibisur",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T17:00:00Z",
     "arrival_time": "2026-04-03T19:00:00Z",
     "points": [
@@ -241,6 +256,7 @@
   {
     "id": "ruta_11",
     "name": "ibi-palma",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T20:00:00Z",
     "arrival_time": "2026-04-03T22:00:00Z",
     "points": [
@@ -253,6 +269,7 @@
   {
     "id": "ruta_12",
     "name": "alc-ciud",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T08:30:00Z",
     "arrival_time": "2026-04-03T09:45:00Z",
     "points": [
@@ -266,6 +283,7 @@
   {
     "id": "ruta_13",
     "name": "bar-argel",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T17:00:00Z",
     "arrival_time": "2026-04-04T13:00:00Z",
     "points": [
@@ -284,6 +302,7 @@
   {
     "id": "ruta_14",
     "name": "bar-palma",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T22:15:00Z",
     "arrival_time": "2026-04-04T05:30:00Z",
     "points": [
@@ -299,6 +318,7 @@
   {
     "id": "ruta_15",
     "name": "bar-alc",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T15:45:00Z",
     "arrival_time": "2026-04-03T19:15:00Z",
     "points": [
@@ -314,6 +334,7 @@
   {
     "id": "ruta_16",
     "name": "bar-ciud",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T15:45:00Z",
     "arrival_time": "2026-04-03T21:00:00Z",
     "points": [
@@ -329,6 +350,7 @@
   {
     "id": "ruta_17",
     "name": "mia-bim",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T08:00:00Z",
     "arrival_time": "2026-04-03T10:00:00Z",
     "points": [
@@ -341,6 +363,7 @@
   {
     "id": "ruta_18",
     "name": "Ten-Huel",
+    "hs_threshold": 5,
     "departure_time": "2026-04-03T20:30:00Z",
     "arrival_time": "2026-04-05T09:00:00Z",
     "points": [
@@ -364,6 +387,7 @@
   {
     "id": "ruta_19",
     "name": "Pal-Val",
+    "hs_threshold": 4,
     "departure_time": "2026-04-03T10:15:00Z",
     "arrival_time": "2026-04-03T18:00:00Z",
     "points": [
