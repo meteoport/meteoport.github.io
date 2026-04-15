@@ -125,16 +125,19 @@ function getColor(hs) {
   return "red";
 }
 
-function getHexColorFromHs(hs) {
+function getHexColorFromHs(hs, redThreshold = THRESHOLDS.orangeMax) {
   if (hs === null || hs === undefined || Number.isNaN(hs)) return "#94a3b8";
 
-  if (hs < THRESHOLDS.greenMax) return "#16a34a";
-  if (hs < THRESHOLDS.yellowMax) return "#eab308";
-  if (hs < THRESHOLDS.orangeMax) return "#f97316";
+  const greenThreshold = redThreshold * 0.33;
+  const yellowThreshold = redThreshold * 0.66;
+
+  if (hs < greenThreshold) return "#16a34a";
+  if (hs < yellowThreshold) return "#eab308";
+  if (hs < redThreshold) return "#f97316";
   return "#dc2626";
 }
 
-function getRouteStatus(hs) {
+function getRouteStatus(hs, redThreshold = THRESHOLDS.orangeMax) {
   if (hs === null || hs === undefined || Number.isNaN(hs)) {
     return {
       label: "Sin datos",
@@ -142,21 +145,24 @@ function getRouteStatus(hs) {
     };
   }
 
-  if (hs < 1) {
+  const greenThreshold = redThreshold * 0.33;
+  const yellowThreshold = redThreshold * 0.66;
+
+  if (hs < greenThreshold) {
     return {
       label: "Operativo",
       color: "#16a34a"
     };
   }
 
-  if (hs < 2) {
+  if (hs < yellowThreshold) {
     return {
       label: "Precaución",
       color: "#eab308"
     };
   }
 
-  if (hs < 3) {
+  if (hs < redThreshold) {
     return {
       label: "Restricción",
       color: "#f97316"
@@ -422,7 +428,9 @@ function calculateRouteDistanceNm(route) {
 function getRouteDisplayColor(route) {
   const summary = calculateRouteSummary(route);
   if (!summary.hasData) return "#64748b";
-  return getHexColorFromHs(summary.wave);
+
+  const redThreshold = route?.hs_threshold ?? THRESHOLDS.orangeMax;
+  return getHexColorFromHs(summary.wave, redThreshold);
 }
 
 function getCanonicalRouteKey(route) {
@@ -1002,6 +1010,7 @@ function renderRouteInfoPanel() {
   if (!selectedRoute) return;
 
   const summary = calculateRouteSummary(selectedRoute);
+  const redThreshold = selectedRoute?.hs_threshold ?? THRESHOLDS.orangeMax;
 
   const startMs = new Date(selectedRoute.departure_time).getTime();
   const endMs = new Date(selectedRoute.arrival_time).getTime();
@@ -1040,64 +1049,48 @@ function renderRouteInfoPanel() {
       <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
       <p><strong>Distancia:</strong> ${distanceLabel}</p>
       <p><strong>Velocidad media:</strong> ${speedLabel}</p>
+      <p><strong>Umbral Hs:</strong> ${formatNumber(redThreshold)} m</p>
       <hr style="margin:10px 0;">
       <p>${escapeHtml(summary.reason)}</p>
-      <p><strong>Umbral Hs:</strong> ${formatNumber(redThreshold)} m</p>
     `;
     return;
   }
 
-  const status = getRouteStatus(summary.wave);
-  const redThreshold = selectedRoute?.hs_threshold ?? THRESHOLDS.orangeMax;
+  const status = getRouteStatus(summary.wave, redThreshold);
   const recommendation = isValidNumber(summary.wave) && Number(summary.wave) >= redThreshold
-  ? calculateRecommendedDelay(selectedRoute, redThreshold)
-  : null;
-  
+    ? calculateRecommendedDelay(selectedRoute, redThreshold)
+    : null;
 
   infoPanel.innerHTML = `
-  <h3>${escapeHtml(selectedRoute.name)}</h3>
-  <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
-  <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-  <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
-  <p><strong>Distancia:</strong> ${distanceLabel}</p>
-  <p><strong>Velocidad media:</strong> ${speedLabel}</p>
-  <hr style="margin:10px 0;">
-  <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
-  <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
-  <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
-  <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
-  <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
-  <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
-
-  ${recommendation && recommendation.found ? `
+    <h3>${escapeHtml(selectedRoute.name)}</h3>
+    <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
+    <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
+    <p><strong>Horas:</strong> ${escapeHtml(hoursLabel)}</p>
+    <p><strong>Distancia:</strong> ${distanceLabel}</p>
+    <p><strong>Velocidad media:</strong> ${speedLabel}</p>
     <hr style="margin:10px 0;">
-    <p><strong>Retraso recomendado:</strong> ${recommendation.delayHours} h</p>
-    <p><strong>Nueva salida sugerida:</strong> ${formatDateTimeLong(recommendation.suggestedDepartureTime)}</p>
-    <p><strong>Nueva llegada estimada:</strong> ${formatDateTimeLong(recommendation.suggestedArrivalTime)}</p>
-    <p><strong>Hsmax con retraso:</strong> ${formatNumber(recommendation.maxWaveOnShiftedRoute)} m</p>
-  ` : ""}
+    <p><strong>Hsmax ruta:</strong> ${formatNumber(summary.wave)} m (${escapeHtml(summary.waveSource)})</p>
+    <p><strong>Umbral Hs:</strong> ${formatNumber(redThreshold)} m</p>
+    <p><strong>Tp asociado:</strong> ${formatNumber(summary.tp)} s</p>
+    <p><strong>Dirección asociada:</strong> ${formatNumber(summary.dir)}°</p>
+    <p><strong>Ocurre en:</strong> ${escapeHtml(summary.locationName)}</p>
+    <p><strong>Hora:</strong> ${formatDateTimeLong(summary.time)}</p>
+    <p><strong>Estado:</strong> <span style="color:${status.color}; font-weight:700;">${escapeHtml(status.label)}</span></p>
 
-  ${recommendation && !recommendation.found ? `
-    <hr style="margin:10px 0;">
-    <p><strong>Retraso recomendado:</strong> no se encuentra una salida segura dentro del forecast disponible</p>
-  ` : ""}
-`;
+    ${recommendation && recommendation.found ? `
+      <hr style="margin:10px 0;">
+      <p><strong>Retraso recomendado:</strong> ${recommendation.delayHours} h</p>
+      <p><strong>Nueva salida sugerida:</strong> ${formatDateTimeLong(recommendation.suggestedDepartureTime)}</p>
+      <p><strong>Nueva llegada estimada:</strong> ${formatDateTimeLong(recommendation.suggestedArrivalTime)}</p>
+      <p><strong>Hsmax con retraso:</strong> ${formatNumber(recommendation.maxWaveOnShiftedRoute)} m</p>
+    ` : ""}
+
+    ${recommendation && !recommendation.found ? `
+      <hr style="margin:10px 0;">
+      <p><strong>Retraso recomendado:</strong> no se encuentra una salida segura dentro del forecast disponible</p>
+    ` : ""}
+  `;
 }
-
-function updateInfoPanel() {
-  if (selectedRoute) {
-    renderRouteInfoPanel();
-    return;
-  }
-
-  if (selectedLocation) {
-    renderLocationInfoPanel();
-    return;
-  }
-
-  infoPanel.innerHTML = `<p><strong>Selecciona un punto o una ruta</strong></p>`;
-}
-
 // ============================
 // CHART PLUGIN: VERTICAL LINE
 // ============================
