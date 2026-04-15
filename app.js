@@ -1042,6 +1042,7 @@ function renderRouteInfoPanel() {
       <p><strong>Velocidad media:</strong> ${speedLabel}</p>
       <hr style="margin:10px 0;">
       <p>${escapeHtml(summary.reason)}</p>
+      <p><strong>Umbral Hs:</strong> ${formatNumber(redThreshold)} m</p>
     `;
     return;
   }
