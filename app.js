@@ -1091,6 +1091,23 @@ function renderRouteInfoPanel() {
     ` : ""}
   `;
 }
+
+function updateInfoPanel() {
+  if (selectedRoute) {
+    renderRouteInfoPanel();
+    return;
+  }
+
+  if (selectedLocation) {
+    renderLocationInfoPanel();
+    return;
+  }
+
+  infoPanel.innerHTML = `<p><strong>Selecciona un punto o una ruta</strong></p>`;
+}
+
+
+
 // ============================
 // CHART PLUGIN: VERTICAL LINE
 // ============================
