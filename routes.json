@@ -94,6 +94,7 @@
     "departure_time": "2026-04-15T07:00:00Z",
     "arrival_time": "2026-04-15T08:00:00Z",
     "points": [
+      "algeciras1_puerto",
       "algeciras2_puerto",
       "algeciras3_puerto",
       "algeciras",
@@ -107,6 +108,7 @@
     "departure_time": "2026-04-15T10:00:00Z",
     "arrival_time": "2026-04-15T11:00:00Z",
     "points": [
+      "algeciras1_puerto",
       "algeciras2_puerto",
       "algeciras3_puerto",
       "algeciras",
@@ -120,6 +122,7 @@
     "departure_time": "2026-04-15T14:00:00Z",
     "arrival_time": "2026-04-15T15:30:00Z",
     "points": [
+      "algeciras1_puerto",
       "algeciras2_puerto",
       "algeciras3_puerto",
       "algeciras",
@@ -137,7 +140,8 @@
       "algeceuta1",
       "algeciras",
       "algeciras3_puerto",
-      "algeciras2_puerto"
+      "algeciras2_puerto",
+      "algeciras1_puerto"
     ]
   },
   {
@@ -150,7 +154,8 @@
       "algeceuta1",
       "algeciras",
       "algeciras3_puerto",
-      "algeciras2_puerto"
+      "algeciras2_puerto",
+      "algeciras1_puerto"
     ]
   },
   {
@@ -163,7 +168,8 @@
       "algeceuta1",
       "algeciras",
       "algeciras3_puerto",
-      "algeciras2_puerto"
+      "algeciras2_puerto",
+      "algeciras1_puerto"
     ]
   },
   {
