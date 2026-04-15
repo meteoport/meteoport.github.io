@@ -91,9 +91,74 @@
   ,
   {
     "id": "ruta_6",
-    "name": "alg-ceuta",
+    "name": "alg-ceuta(T1)",
     "departure_time": "2026-03-29T07:00:00Z",
     "arrival_time": "2026-03-29T08:00:00Z",
+    "points": [
+      "algeciras2_puerto",
+      "algeciras3_puerto",
+      "algeciras",
+      "algeceuta1",
+      "ceuta"
+    ]
+  },
+  {
+    "id": "ruta_66",
+    "name": "ceuta-alg(T1)",
+    "departure_time": "2026-03-29T06:00:00Z",
+    "arrival_time": "2026-03-29T07:30:00Z",
+    "points": [
+      "ceuta",
+      "algeceuta1",
+      "algeciras",
+      "algeciras3_puerto",
+      "algeciras2_puerto"
+    ]
+  },
+  {
+    "id": "ruta_67",
+    "name": "ceuta-alg(T2)",
+    "departure_time": "2026-03-29T10:30:00Z",
+    "arrival_time": "2026-03-29T12:00:00Z",
+    "points": [
+      "ceuta",
+      "algeceuta1",
+      "algeciras",
+      "algeciras3_puerto",
+      "algeciras2_puerto"
+    ]
+  },
+  {
+    "id": "ruta_68",
+    "name": "ceuta-alg(T3)",
+    "departure_time": "2026-03-29T14:30:00Z",
+    "arrival_time": "2026-03-29T15:00:00Z",
+    "points": [
+      "ceuta",
+      "algeceuta1",
+      "algeciras",
+      "algeciras3_puerto",
+      "algeciras2_puerto"
+    ]
+  },
+  {
+    "id": "ruta_22",
+    "name": "alg-ceuta(T2)",
+    "departure_time": "2026-03-29T10:00:00Z",
+    "arrival_time": "2026-03-29T11:00:00Z",
+    "points": [
+      "algeciras2_puerto",
+      "algeciras3_puerto",
+      "algeciras",
+      "algeceuta1",
+      "ceuta"
+    ]
+  },
+  {
+    "id": "ruta_23",
+    "name": "alg-ceuta(T3)",
+    "departure_time": "2026-03-29T14:00:00Z",
+    "arrival_time": "2026-03-29T15:30:00Z",
     "points": [
       "algeciras2_puerto",
       "algeciras3_puerto",
