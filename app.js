@@ -426,9 +426,7 @@ function getRouteDisplayColor(route) {
 }
 
 function getCanonicalRouteKey(route) {
-  const names = (route?.resolvedPoints || [])
-    .map(p => p?.name)
-    .filter(Boolean);
+  const names = (route?.points || []).filter(Boolean);
 
   if (!names.length) return route?.id || Math.random().toString(36).slice(2);
 
