@@ -1047,7 +1047,7 @@ function renderRouteInfoPanel() {
   }
 
   const status = getRouteStatus(summary.wave);
-  const redThreshold = THRESHOLDS.orangeMax;
+  const redThreshold = selectedRoute?.hs_threshold ?? THRESHOLDS.orangeMax;
   const recommendation = isValidNumber(summary.wave) && Number(summary.wave) >= redThreshold
   ? calculateRecommendedDelay(selectedRoute, redThreshold)
   : null;
