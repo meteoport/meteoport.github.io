@@ -546,6 +546,17 @@ function initRoutes() {
 
   const groupedRoutesList = buildRouteGroups(routes);
 
+  console.log("RUTAS CARGADAS:", routes.map(r => ({
+    id: r.id,
+    name: r.name,
+    points: r.points
+  })));
+
+  console.log("GRUPOS DE RUTAS:", groupedRoutesList.map(group => ({
+    count: group.length,
+    names: group.map(r => r.name)
+  })));
+
   groupedRoutesList.forEach(groupRoutes => {
     const baseRoute = groupRoutes[0];
 
@@ -563,12 +574,20 @@ function initRoutes() {
     }).addTo(map);
 
     polyline.bringToBack();
-    polyline.bindTooltip(getRouteGroupLabel(groupRoutes), {
-      direction: "top",
-      sticky: true
-    });
+
+    polyline.bindTooltip(
+      groupRoutes.length > 1
+        ? "Seleccionar sentido"
+        : (baseRoute.name || "Ruta"),
+      {
+        direction: "top",
+        sticky: true
+      }
+    );
 
     polyline.on("click", (e) => {
+      console.log("CLICK EN RUTA:", groupRoutes.map(r => r.name));
+
       if (groupRoutes.length === 1) {
         selectedRoute = groupRoutes[0];
         updateRouteStyles();
@@ -591,7 +610,6 @@ function initRoutes() {
 
   updateRouteStyles();
 }
-
 // ============================
 // HELPERS RUTA <-> PUNTO
 // ============================
