@@ -481,7 +481,6 @@ function showRouteChoicePopup(latlng, groupRoutes) {
     }
 
     map.closePopup();
-
     delete window._routePopupOptions[pId];
   };
 
@@ -506,11 +505,7 @@ function showRouteChoicePopup(latlng, groupRoutes) {
     </button>
   `).join("");
 
-  L.popup({
-    closeButton: true,
-    autoClose: true,
-    closeOnClick: true
-  })
+  L.popup()
     .setLatLng(latlng)
     .setContent(`
       <div style="min-width:190px;">
