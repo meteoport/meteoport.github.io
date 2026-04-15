@@ -263,5 +263,43 @@
       "miami1",
       "bimini"
     ]
+  },
+  {
+    "id": "ruta_18",
+    "name": "Ten-Huel",
+    "departure_time": "2026-04-15T20:30:00Z",
+    "arrival_time": "2026-04-17T09:00:00Z",
+    "points": [
+      "tenerife1_puerto",
+      "tenerife2_puerto",
+      "tenerife",
+      "huelten10",
+      "huelten9",
+      "huelten8",
+      "huelten7",
+      "huelten6",
+      "huelten5",
+      "huelten4",
+      "huelten3",
+      "huelten2",
+      "huelten1",
+      "huelten0",
+      "huelva"
+    ]
+  },
+  {
+    "id": "ruta_19",
+    "name": "Pal-Val",
+    "departure_time": "2026-04-15T10:15:00Z",
+    "arrival_time": "2026-04-15T18:00:00Z",
+    "points": [
+      "palma",
+      "valpal6",
+      "valpal5",
+      "valpal4",
+      "valencia",
+      "valencia2_puerto",
+      "valencia1_puerto"
+    ]
   }
 ]
