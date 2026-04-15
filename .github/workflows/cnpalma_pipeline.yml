@@ -1,4 +1,4 @@
-name: Balearia pipeline
+name: CNPALMA pipeline
 
 on:
   workflow_dispatch:
