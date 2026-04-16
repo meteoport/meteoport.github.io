@@ -2,8 +2,8 @@
   {
     "id": "ruta_1",
     "name": "Bahia-Palma",
-    "departure_time": "2026-04-15T08:00:00Z",
-    "arrival_time": "2026-04-16T15:00:00Z",
+    "departure_time": "2026-04-16T08:00:00Z",
+    "arrival_time": "2026-04-17T15:00:00Z",
     "points": [
       "punto1_puerto",
       "punto2_puerto",
