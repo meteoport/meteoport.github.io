@@ -104,7 +104,6 @@ L.control.layers(
     "Mapa claro": baseMap
   },
   {
-    "Batimetría": bathymetryLayer,
     "Isóbatas": bathyContours
   },
   {
