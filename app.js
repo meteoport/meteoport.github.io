@@ -74,29 +74,41 @@ map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
 // MAPA BASE
+// MAPA BASE CLARO
 const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: "&copy; OpenStreetMap &copy; CARTO",
   subdomains: "abcd",
   maxZoom: 19
+});
+
+// GEBCO COLOR-SHADED (profundidad/elevación por colores)
+const gebcoColorBase = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
+  layers: "GEBCO_LATEST_2",
+  format: "image/png",
+  transparent: false,
+  attribution: "&copy; GEBCO"
 }).addTo(map);
+
+// OPCIONAL: GEBCO SHADED RELIEF
+const gebcoReliefBase = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
+  layers: "GEBCO_LATEST",
+  format: "image/png",
+  transparent: false,
+  attribution: "&copy; GEBCO"
+});
 
 // CONTROL DE CAPAS
 L.control.layers(
   {
-    "Mapa claro": baseMap
+    "GEBCO color": gebcoColorBase,
+    "Mapa claro": baseMap,
+    "GEBCO relieve": gebcoReliefBase
   },
   {},
   {
     collapsed: true
   }
 ).addTo(map);
-
-let suppressNextMapClickForDepth = false;
-map.on("click", (e) => {
-  if (suppressNextMapClickForDepth) {
-    suppressNextMapClickForDepth = false;
-    return;
-  }
 
   showDepthAtClick(e.latlng);
 });
