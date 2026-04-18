@@ -73,39 +73,29 @@ window.map = map;
 map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
-// MAPA BASE CLARO
-const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; OpenStreetMap &copy; CARTO",
-  subdomains: "abcd",
-  maxZoom: 19
-}).addTo(map);
+// MAPA BASE OCEÁNICO
+const oceanBaseMap = L.tileLayer(
+  "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}",
+  {
+    attribution: "&copy; Esri"
+  }
+).addTo(map);
 
-// GEBCO COLOR como overlay
-const gebcoColorOverlay = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_Latest_2",
-  format: "image/png",
-  transparent: true,
-  opacity: 0.45,
-  attribution: "&copy; GEBCO"
-}).addTo(map);
-
-// OPCIONAL: GEBCO relieve como overlay
-const gebcoReliefOverlay = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_Latest",
-  format: "image/png",
-  transparent: true,
-  opacity: 0.35,
-  attribution: "&copy; GEBCO"
-});
+// REFERENCIA OCEÁNICA
+const oceanReference = L.tileLayer(
+  "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}",
+  {
+    attribution: "&copy; Esri"
+  }
+).addTo(map);
 
 // CONTROL DE CAPAS
 L.control.layers(
   {
-    "Mapa claro": baseMap
+    "Océano": oceanBaseMap
   },
   {
-    "GEBCO color": gebcoColorOverlay,
-    "GEBCO relieve": gebcoReliefOverlay
+    "Referencia océano": oceanReference
   },
   {
     collapsed: true
@@ -115,6 +105,7 @@ L.control.layers(
 map.on("click", (e) => {
   showDepthAtClick(e.latlng);
 });
+
 // ============================
 // HELPERS
 // ============================
