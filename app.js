@@ -73,46 +73,48 @@ window.map = map;
 map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
-// MAPA BASE
 // MAPA BASE CLARO
 const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   attribution: "&copy; OpenStreetMap &copy; CARTO",
   subdomains: "abcd",
   maxZoom: 19
-});
+}).addTo(map);
 
-// GEBCO COLOR-SHADED (profundidad/elevación por colores)
-const gebcoColorBase = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_LATEST_2",
+// GEBCO COLOR como overlay
+const gebcoColorOverlay = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
+  layers: "GEBCO_Latest_2",
   format: "image/png",
-  transparent: false,
+  transparent: true,
+  opacity: 0.45,
   attribution: "&copy; GEBCO"
 }).addTo(map);
 
-// OPCIONAL: GEBCO SHADED RELIEF
-const gebcoReliefBase = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_LATEST",
+// OPCIONAL: GEBCO relieve como overlay
+const gebcoReliefOverlay = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
+  layers: "GEBCO_Latest",
   format: "image/png",
-  transparent: false,
+  transparent: true,
+  opacity: 0.35,
   attribution: "&copy; GEBCO"
 });
 
 // CONTROL DE CAPAS
 L.control.layers(
   {
-    "GEBCO color": gebcoColorBase,
-    "Mapa claro": baseMap,
-    "GEBCO relieve": gebcoReliefBase
+    "Mapa claro": baseMap
   },
-  {},
+  {
+    "GEBCO color": gebcoColorOverlay,
+    "GEBCO relieve": gebcoReliefOverlay
+  },
   {
     collapsed: true
   }
 ).addTo(map);
 
+map.on("click", (e) => {
   showDepthAtClick(e.latlng);
 });
-
 // ============================
 // HELPERS
 // ============================
