@@ -80,38 +80,24 @@ const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}
   maxZoom: 19
 }).addTo(map);
 
-// BATIMETRÍA (sombreado)
-const bathymetryLayer = L.tileLayer.wms("https://wms.gebco.net/mapserv?", {
-  layers: "GEBCO_Grid",
-  format: "image/png",
-  transparent: true,
-  opacity: 0.35,
-  attribution: "&copy; GEBCO"
-});
-
-// ISÓBATAS (líneas de profundidad - EMODnet)
-const bathyContours = L.tileLayer.wms("https://ows.emodnet-bathymetry.eu/wms", {
-  layers: "emodnet:contours",
-  format: "image/png",
-  transparent: true,
-  opacity: 0.6,
-  attribution: "&copy; EMODnet Bathymetry"
-});
-
 // CONTROL DE CAPAS
 L.control.layers(
   {
     "Mapa claro": baseMap
   },
-  {
-    "Isóbatas": bathyContours
-  },
+  {},
   {
     collapsed: true
   }
 ).addTo(map);
 
+let suppressNextMapClickForDepth = false;
 map.on("click", (e) => {
+  if (suppressNextMapClickForDepth) {
+    suppressNextMapClickForDepth = false;
+    return;
+  }
+
   showDepthAtClick(e.latlng);
 });
 
@@ -725,22 +711,28 @@ function initRoutes() {
     );
 
     polyline.on("click", (e) => {
-      console.log("CLICK EN RUTA:", groupRoutes.map(r => r.name));
+  suppressNextMapClickForDepth = true;
 
-      if (groupRoutes.length === 1) {
-        selectedRoute = groupRoutes[0];
-        updateRouteStyles();
-        updateInfoPanel();
+  if (e.originalEvent) {
+    L.DomEvent.stopPropagation(e.originalEvent);
+    L.DomEvent.preventDefault(e.originalEvent);
+  }
 
-        if (selectedLocation) {
-          renderChart();
-        }
-        return;
-      }
+  console.log("CLICK EN RUTA:", groupRoutes.map(r => r.name));
 
-      showRouteChoicePopup(e.latlng, groupRoutes);
-    });
+  if (groupRoutes.length === 1) {
+    selectedRoute = groupRoutes[0];
+    updateRouteStyles();
+    updateInfoPanel();
 
+    if (selectedLocation) {
+      renderChart();
+    }
+    return;
+  }
+
+  showRouteChoicePopup(e.latlng, groupRoutes);
+});
     routeLayers.push({
       routes: groupRoutes,
       polyline
@@ -1088,12 +1080,19 @@ function initMarkers() {
 
     marker.bindTooltip(loc.name, { direction: "top", offset: [0, -6] });
 
-    marker.on("click", () => {
-      selectedLocation = loc;
-      updateRouteStyles();
-      updateInfoPanel();
-      renderChart();
-    });
+  marker.on("click", (e) => {
+  suppressNextMapClickForDepth = true;
+
+  if (e?.originalEvent) {
+    L.DomEvent.stopPropagation(e.originalEvent);
+    L.DomEvent.preventDefault(e.originalEvent);
+  }
+
+  selectedLocation = loc;
+  updateRouteStyles();
+  updateInfoPanel();
+  renderChart();
+});
 
     markers.push({ marker, loc, isObsPoint });
   });
