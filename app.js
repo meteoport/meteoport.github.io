@@ -74,24 +74,11 @@ map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
 // MAPA BASE BATIMETRÍA (ETOPO1 COLOR SHADED RELIEF)
-const bathyBaseMap = L.tileLayer(
-  "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
-  {
-    attribution: "&copy; Esri, NOAA",
-    maxZoom: 13
-  }
-).addTo(map);
-
-// CONTROL DE CAPAS (por si luego quieres añadir algo)
-L.control.layers(
-  {
-    "Batimetría": bathyBaseMap
-  },
-  {},
-  {
-    collapsed: true
-  }
-).addTo(map);
+const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  attribution: "&copy; OpenStreetMap &copy; CARTO",
+  subdomains: "abcd",
+  maxZoom: 19
+}).addTo(map);
 
 // CLICK PARA PROFUNDIDAD (GEBCO sigue funcionando igual)
 map.on("click", (e) => {
