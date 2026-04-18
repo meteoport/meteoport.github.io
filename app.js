@@ -50,6 +50,7 @@ let selectedHour = 0;
 let selectedLocation = null;
 let selectedRoute = null;
 let waveChart = null;
+let suppressNextMapClickForDepth = false;
 
 let locations = [];
 let markers = [];
@@ -82,6 +83,11 @@ const baseMap = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}
 
 // CLICK PARA PROFUNDIDAD (GEBCO sigue funcionando igual)
 map.on("click", (e) => {
+  if (suppressNextMapClickForDepth) {
+    suppressNextMapClickForDepth = false;
+    return;
+  }
+
   showDepthAtClick(e.latlng);
 });
 
