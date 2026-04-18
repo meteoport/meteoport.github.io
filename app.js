@@ -73,35 +73,27 @@ window.map = map;
 map.createPane("routesPane");
 map.getPane("routesPane").style.zIndex = 350;
 
-// MAPA BASE OCEÁNICO
-const oceanBaseMap = L.tileLayer(
-  "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}",
+// MAPA BASE BATIMETRÍA (ETOPO1 COLOR SHADED RELIEF)
+const bathyBaseMap = L.tileLayer(
+  "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
   {
-    attribution: "&copy; Esri"
+    attribution: "&copy; Esri, NOAA",
+    maxZoom: 13
   }
 ).addTo(map);
 
-// REFERENCIA OCEÁNICA
-const oceanReference = L.tileLayer(
-  "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}",
-  {
-    attribution: "&copy; Esri"
-  }
-).addTo(map);
-
-// CONTROL DE CAPAS
+// CONTROL DE CAPAS (por si luego quieres añadir algo)
 L.control.layers(
   {
-    "Océano": oceanBaseMap
+    "Batimetría": bathyBaseMap
   },
-  {
-    "Referencia océano": oceanReference
-  },
+  {},
   {
     collapsed: true
   }
 ).addTo(map);
 
+// CLICK PARA PROFUNDIDAD (GEBCO sigue funcionando igual)
 map.on("click", (e) => {
   showDepthAtClick(e.latlng);
 });
