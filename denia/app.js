@@ -253,6 +253,9 @@ function buildMergedForecast(point) {
       dirCopernicus: isValidNumber(f.di_cop) ? Number(f.di_cop) : null,
 
       wavePort: isValidNumber(f.hs_port_pred) ? Number(f.hs_port_pred) : null,
+      seaLevelPort: isValidNumber(f.sea_level_pred) ? Number(f.sea_level_pred) : null,
+      wavePortObs: isValidNumber(f.hs_port_obs) ? Number(f.hs_port_obs) : null,
+      seaLevelPortObs: isValidNumber(f.sea_level_obs) ? Number(f.sea_level_obs) : null,
 
       waveObs: isValidNumber(f.hs_obs) ? Number(f.hs_obs) : null,
       windObs: isValidNumber(f.wspeed_obs) ? Number(f.wspeed_obs) : null,
