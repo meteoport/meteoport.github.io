@@ -180,11 +180,12 @@ function isValidNumber(v) {
 }
 
 function getPointCoords(point) {
-  const lat = isValidNumber(point.lat) ? Number(point.lat) : (
-    isValidNumber(point.requested_lat) ? Number(point.requested_lat) : null
+  const lat = isValidNumber(point.requested_lat) ? Number(point.requested_lat) : (
+    isValidNumber(point.lat) ? Number(point.lat) : null
   );
-  const lon = isValidNumber(point.lon) ? Number(point.lon) : (
-    isValidNumber(point.requested_lon) ? Number(point.requested_lon) : null
+
+  const lon = isValidNumber(point.requested_lon) ? Number(point.requested_lon) : (
+    isValidNumber(point.lon) ? Number(point.lon) : null
   );
 
   if (!isValidNumber(lat) || !isValidNumber(lon)) return null;
