@@ -138,7 +138,13 @@ body {
   display: block;
 }
 
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 900px) {
+
   .app-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -160,7 +166,9 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
+
   html, body {
     height: auto;
     min-height: 100%;
@@ -263,7 +271,9 @@ body {
   }
 }
 
+
 @media (max-width: 480px) {
+
   .topbar {
     padding: 10px 12px;
   }
@@ -299,6 +309,11 @@ body {
   }
 }
 
+
+/* =========================================================
+   LEAFLET
+   ========================================================= */
+
 .leaflet-interactive:focus {
   outline: none !important;
 }
@@ -313,7 +328,13 @@ path.leaflet-interactive:focus {
   outline: none !important;
 }
 
+
+/* =========================================================
+   GRÁFICA RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 900px) {
+
   .bottom-chart {
     height: 500px;
     padding: 8px;
@@ -334,7 +355,9 @@ path.leaflet-interactive:focus {
   }
 }
 
+
 @media (max-width: 900px) and (orientation: portrait) {
+
   .bottom-chart {
     height: 520px;
   }
@@ -344,7 +367,9 @@ path.leaflet-interactive:focus {
   }
 }
 
+
 @media (max-width: 900px) and (orientation: landscape) {
+
   .bottom-chart {
     height: 380px;
   }
@@ -353,6 +378,11 @@ path.leaflet-interactive:focus {
     min-height: 32vh;
   }
 }
+
+
+/* =========================================================
+   MARCADOR OBSERVACIONES
+   ========================================================= */
 
 .obs-marker {
   display: flex;
@@ -377,11 +407,123 @@ path.leaflet-interactive:focus {
 }
 
 
-/* Puerto de Dénia: dos paneles */
-#sea-level-chart, #port-wave-chart { width:100% !important; display:none; }
-#sea-level-chart { height:calc((100% - 38px)/2) !important; margin-bottom:10px; }
-#port-wave-chart { height:calc((100% - 38px)/2) !important; }
-.bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:520px; }
-@media (max-width:900px){ .bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:620px; } }
-@media (max-width:480px){ .bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:560px; } }
+/* =========================================================
+   HEADER DERECHO
+   Mantiene los logos contenidos dentro de la cabecera
+   ========================================================= */
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.header-right img {
+  display: block;
+  max-height: 28px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+}
+
+.data-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PUERTO DE DÉNIA
+   Dos gráficas verticales: nivel del mar + Hs
+   ========================================================= */
+
+#sea-level-chart,
+#port-wave-chart {
+  width: 100% !important;
+  display: none;
+}
+
+
+/* Cuando está seleccionado denia_puerto,
+   aumentamos SOLO la zona de gráficas */
+
+.bottom-chart:has(
+  #sea-level-chart[style*="display: block"]
+) {
+  height: 600px;
+}
+
+
+/* El contenedor pasa a columna para alojar
+   correctamente las dos gráficas */
+
+.bottom-chart:has(
+  #sea-level-chart[style*="display: block"]
+) .chart-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Gráfica superior: nivel del mar */
+
+#sea-level-chart[style*="display: block"] {
+  width: 100% !important;
+  height: 250px !important;
+  min-height: 250px;
+  flex: 0 0 250px;
+  margin-bottom: 10px;
+}
+
+
+/* Gráfica inferior: agitación */
+
+#port-wave-chart[style*="display: block"] {
+  width: 100% !important;
+  height: 250px !important;
+  min-height: 250px;
+  flex: 0 0 250px;
+}
+
+
+/* =========================================================
+   PUERTO - TABLET / MÓVIL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .bottom-chart:has(
+    #sea-level-chart[style*="display: block"]
+  ) {
+    height: 620px;
+  }
+
+  #sea-level-chart[style*="display: block"],
+  #port-wave-chart[style*="display: block"] {
+    height: 260px !important;
+    min-height: 260px;
+    flex: 0 0 260px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .bottom-chart:has(
+    #sea-level-chart[style*="display: block"]
+  ) {
+    height: 580px;
+  }
+
+  #sea-level-chart[style*="display: block"],
+  #port-wave-chart[style*="display: block"] {
+    height: 235px !important;
+    min-height: 235px;
+    flex: 0 0 235px;
+  }
+}
