@@ -1198,22 +1198,29 @@ function getChartTimeRange(forecast) {
 // ==================================================
 // GRÁFICAS ESPECIALES DEL PUERTO DE DÉNIA
 // ==================================================
-
 function renderPortCharts() {
 
   if (
     !selectedLocation ||
-    !seaLevelChartCanvas ||
-    !portWaveChartCanvas
+    !waveChartCanvas
   ) {
     return;
   }
 
-  const forecast = selectedLocation.forecast;
+  const forecast =
+    selectedLocation.forecast;
 
-  if (chartTitle) {
-    chartTitle.textContent = "Puerto de Dénia";
+  // Mostrar SOLO la gráfica normal
+  waveChartCanvas.style.display = "block";
+
+  if (seaLevelChartCanvas) {
+    seaLevelChartCanvas.style.display = "none";
   }
+
+  if (portWaveChartCanvas) {
+    portWaveChartCanvas.style.display = "none";
+  }
+
 
   // Destruir gráficas anteriores
   if (waveChart) {
@@ -1232,263 +1239,107 @@ function renderPortCharts() {
   }
 
 
+  if (chartTitle) {
+    chartTitle.textContent =
+      "Agitación - Puerto de Dénia";
+  }
+
+
   // ============================
   // DATOS
   // ============================
 
-  const seaPred = forecast.map(f => ({
-    x: f.time,
-    y: f.seaLevelPort
-  }));
+  const hsPred =
+    forecast.map(f => ({
+      x: f.time,
+      y: f.wavePort
+    }));
 
-  const seaObs = forecast.map(f => ({
-    x: f.time,
-    y: f.seaLevelPortObs
-  }));
 
-  const wavePred = forecast.map(f => ({
-    x: f.time,
-    y: f.wavePort
-  }));
-
-  const waveObs = forecast.map(f => ({
-    x: f.time,
-    y: f.wavePortObs
-  }));
+  const hsObs =
+    forecast.map(f => ({
+      x: f.time,
+      y: f.wavePortObs
+    }));
 
 
   // ============================
   // RANGO TEMPORAL
   // ============================
 
-  const validTimes = forecast
-    .filter(f =>
-      isValidNumber(f.seaLevelPort) ||
-      isValidNumber(f.wavePort)
-    )
-    .map(f => new Date(f.time).getTime())
-    .filter(Number.isFinite);
+  const validTimes =
+    forecast
+      .filter(f =>
+        isValidNumber(f.wavePort)
+      )
+      .map(f =>
+        new Date(f.time).getTime()
+      )
+      .filter(Number.isFinite);
+
 
   if (!validTimes.length) {
     return;
   }
 
-  const firstTime = Math.min(...validTimes);
-  const lastTime = Math.max(...validTimes);
 
-  const firstDate = new Date(firstTime);
+  const firstTime =
+    Math.min(...validTimes);
+
+  const lastTime =
+    Math.max(...validTimes);
+
+  const firstDate =
+    new Date(firstTime);
+
 
   const timeRange = {
+
     min: Date.UTC(
       firstDate.getUTCFullYear(),
       firstDate.getUTCMonth(),
       firstDate.getUTCDate(),
       0, 0, 0, 0
     ),
+
     max: lastTime
   };
 
 
   // ============================
-  // OPCIONES COMUNES
-  // MISMO FORMATO QUE GRÁFICA NORMAL
+  // ESCALA Y
   // ============================
 
-  function makePortOptions(
-    yTitle,
-    yMax,
-    showXAxis
-  ) {
+  const allHs = [
 
-    return {
+    ...hsPred.map(p => p.y),
 
-      responsive: true,
-      maintainAspectRatio: false,
+    ...hsObs.map(p => p.y)
 
-      interaction: {
-        mode: "index",
-        intersect: false
-      },
-
-      layout: {
-        padding: {
-          top: 20,
-          bottom: showXAxis ? 28 : 5
-        }
-      },
-
-      plugins: {
-
-        daySeparatorPlugin: {
-          forecast
-        },
-
-        legend: {
-          display: true,
-          position: "top",
-          align: "center",
-
-          labels: {
-            boxWidth: 40,
-            padding: 12
-          }
-        },
-
-        tooltip: {
-
-          callbacks: {
-
-            title: items => {
-
-              if (!items.length) {
-                return "";
-              }
-
-              const idx =
-                items[0].dataIndex;
-
-              return (
-                forecast[idx]?.time ||
-                ""
-              );
-            }
-          }
-        },
-
-        verticalCursorPlugin: {
-          selectedIndex:
-            selectedHour
-        }
-      },
-
-
-      scales: {
-
-        x: {
-
-          type: "time",
-
-          min:
-            timeRange.min,
-
-          max:
-            timeRange.max,
-
-          display: true,
-
-          time: {
-
-            unit:
-              "hour",
-
-            stepSize:
-              3,
-
-            round:
-              "hour",
-
-            tooltipFormat:
-              "yyyy-MM-dd HH:mm",
-
-            displayFormats: {
-              hour:
-                "dd-MMM-HH'h'"
-            }
-          },
-
-
-          ticks: {
-
-            display:
-              showXAxis,
-
-            source:
-              "auto",
-
-            stepSize:
-              3,
-
-            maxRotation:
-              55,
-
-            minRotation:
-              55,
-
-            autoSkip:
-              false
-          },
-
-
-          grid: {
-            color:
-              "#eef2f7"
-          }
-        },
-
-
-        y: {
-
-          beginAtZero:
-            false,
-
-          max:
-            yMax,
-
-          title: {
-            display: true,
-            text: yTitle
-          },
-
-          grid: {
-            color:
-              "#e5e7eb"
-          }
-        }
-      }
-    };
-  }
-
-
-  // ============================
-  // LÍMITES Y
-  // ============================
-
-  const seaValues = [
-    ...seaPred.map(p => p.y),
-    ...seaObs.map(p => p.y)
   ].filter(
     v =>
       v != null &&
       !Number.isNaN(v)
   );
 
-  const waveValues = [
-    ...wavePred.map(p => p.y),
-    ...waveObs.map(p => p.y)
-  ].filter(
-    v =>
-      v != null &&
-      !Number.isNaN(v)
-  );
 
-  const seaMax =
-    seaValues.length
-      ? Math.max(...seaValues) + 0.1
-      : 1;
-
-  const waveMax =
-    waveValues.length
-      ? Math.max(...waveValues) + 0.05
+  const maxHs =
+    allHs.length
+      ? Math.max(...allHs)
       : 1;
 
 
+  const yMaxChart =
+    maxHs + 0.15;
+
+
   // ============================
-  // NIVEL DEL MAR
+  // GRÁFICA
   // ============================
 
-  seaLevelChart =
+  waveChart =
     new Chart(
-      seaLevelChartCanvas,
+      waveChartCanvas,
       {
 
         type: "line",
@@ -1502,103 +1353,7 @@ function renderPortCharts() {
                 "Predicción",
 
               data:
-                seaPred,
-
-              borderColor:
-                "#2563eb",
-
-              backgroundColor:
-                "transparent",
-
-              borderWidth:
-                2.2,
-
-              pointRadius:
-                0,
-
-              pointHoverRadius:
-                4,
-
-              tension:
-                0.25,
-
-              spanGaps:
-                true
-            },
-
-
-            {
-              label:
-                "Obs",
-
-              data:
-                seaObs,
-
-              borderColor:
-                "rgba(0,0,0,0.6)",
-
-              backgroundColor:
-                "rgba(0,0,0,0.3)",
-
-              borderWidth:
-                1.2,
-
-              pointRadius:
-                1.5,
-
-              pointHoverRadius:
-                3,
-
-              tension:
-                0.2,
-
-              spanGaps:
-                true
-            }
-          ]
-        },
-
-
-        options:
-          makePortOptions(
-            "Nivel del mar (m)",
-            seaMax,
-            false
-          ),
-
-
-        plugins: [
-
-          verticalCursorPlugin,
-
-          daySeparatorPlugin
-
-        ]
-      }
-    );
-
-
-  // ============================
-  // HS PUERTO
-  // ============================
-
-  portWaveChart =
-    new Chart(
-      portWaveChartCanvas,
-      {
-
-        type: "line",
-
-        data: {
-
-          datasets: [
-
-            {
-              label:
-                "Predicción",
-
-              data:
-                wavePred,
+                hsPred,
 
               borderColor:
                 "#16a34a",
@@ -1628,7 +1383,7 @@ function renderPortCharts() {
                 "Obs",
 
               data:
-                waveObs,
+                hsObs,
 
               borderColor:
                 "rgba(0,0,0,0.6)",
@@ -1655,12 +1410,168 @@ function renderPortCharts() {
         },
 
 
-        options:
-          makePortOptions(
-            "Hs (m)",
-            waveMax,
-            true
-          ),
+        options: {
+
+          responsive: true,
+
+          maintainAspectRatio: false,
+
+
+          interaction: {
+            mode: "index",
+            intersect: false
+          },
+
+
+          layout: {
+            padding: {
+              top: 20,
+              bottom: 28
+            }
+          },
+
+
+          plugins: {
+
+            daySeparatorPlugin: {
+              forecast
+            },
+
+
+            tooltip: {
+
+              callbacks: {
+
+                title: items => {
+
+                  if (!items.length) {
+                    return "";
+                  }
+
+                  const idx =
+                    items[0].dataIndex;
+
+                  return (
+                    forecast[idx]?.time ||
+                    ""
+                  );
+                },
+
+
+                label: () => "",
+
+
+                afterBody: items => {
+
+                  if (!items.length) {
+                    return [];
+                  }
+
+                  const idx =
+                    items[0].dataIndex;
+
+                  const f =
+                    forecast[idx];
+
+                  return [
+
+                    `Hs predicción: ${formatNumber(f.wavePort)} m`,
+
+                    `Hs observada: ${formatNumber(f.wavePortObs)} m`
+
+                  ];
+                }
+              }
+            },
+
+
+            verticalCursorPlugin: {
+              selectedIndex:
+                selectedHour
+            }
+          },
+
+
+          scales: {
+
+            x: {
+
+              type: "time",
+
+              min:
+                timeRange.min,
+
+              max:
+                timeRange.max,
+
+
+              time: {
+
+                unit:
+                  "hour",
+
+                stepSize:
+                  3,
+
+                round:
+                  "hour",
+
+                tooltipFormat:
+                  "yyyy-MM-dd HH:mm",
+
+                displayFormats: {
+                  hour:
+                    "dd-MMM-HH'h'"
+                }
+              },
+
+
+              ticks: {
+
+                source:
+                  "auto",
+
+                stepSize:
+                  3,
+
+                maxRotation:
+                  55,
+
+                minRotation:
+                  55,
+
+                autoSkip:
+                  false
+              },
+
+
+              grid: {
+                color:
+                  "#eef2f7"
+              }
+            },
+
+
+            y: {
+
+              beginAtZero:
+                true,
+
+              max:
+                yMaxChart,
+
+              title: {
+                display: true,
+                text: "Hs (m)"
+              },
+
+              grid: {
+                color:
+                  "#e5e7eb"
+              }
+            }
+          }
+        },
 
 
         plugins: [
@@ -1674,14 +1585,8 @@ function renderPortCharts() {
     );
 
 
-  window.seaLevelChart =
-    seaLevelChart;
-
-  window.portWaveChart =
-    portWaveChart;
-
   window.chart =
-    portWaveChart;
+    waveChart;
 }
 
 // ==================================================
