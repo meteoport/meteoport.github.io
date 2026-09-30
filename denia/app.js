@@ -1612,21 +1612,21 @@ function renderChart() {
   // PUERTO
   // ============================
 
-  if (isPort) {
+if (isPort) {
 
-    waveChartCanvas.style.display =
-      "none";
+  waveChartCanvas.style.display =
+    "block";
 
-    seaLevelChartCanvas.style.display =
-      "block";
+  seaLevelChartCanvas.style.display =
+    "none";
 
-    portWaveChartCanvas.style.display =
-      "block";
+  portWaveChartCanvas.style.display =
+    "none";
 
-    renderPortCharts();
+  renderPortCharts();
 
-    return;
-  }
+  return;
+}
 
 
   // ============================
