@@ -45,13 +45,20 @@ def main():
     points = [p for p in read_points(POINTS_FILE) if "_puerto" in p["name"].lower()]
     if not points: raise ValueError("No hay puntos con '_puerto'.")
 
-    now = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
-    start = now - timedelta(days=PAST_DAYS)
+    today = datetime.now(timezone.utc).replace(
+    hour=0, minute=0, second=0, microsecond=0
+)
+
+    start = today - timedelta(days=PAST_DAYS)
+    end = today + timedelta(hours=(FUTURE_DAYS * 24) - 1)
+
     out = []
     for p in points:
         rng = random.Random("forecast_" + p["name"])
         fc = []
-        for i in range(TOTAL_HOURS + 1):
+        total_hours = int((end - start).total_seconds() / 3600)
+
+        for i in range(total_hours + 1):
             t = start + timedelta(hours=i)
             h = (t.timestamp()/3600.0)
             hs, sea = synthetic_values(p["name"], h)
