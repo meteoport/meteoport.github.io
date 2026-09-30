@@ -194,7 +194,7 @@ function getPointCoords(point) {
 
 function getOperationalWave(f) {
   const hasPde = isValidNumber(f?.hs_pde);
-  const hasPort = isValidNumber(f?.hs_puerto);
+  const hasPort = isValidNumber(f?.hs_port_pred);
   const hasCop = isValidNumber(f?.hs_cop);
 
   if (hasPde) {
@@ -208,7 +208,7 @@ function getOperationalWave(f) {
 
   if (hasPort) {
     return {
-      wave: Number(f.hs_puerto),
+      wave: Number(f.hs_port_pred),
       tp: null,
       dir: null,
       source: "Puerto"
@@ -252,7 +252,7 @@ function buildMergedForecast(point) {
       tpCopernicus: isValidNumber(f.tp_cop) ? Number(f.tp_cop) : null,
       dirCopernicus: isValidNumber(f.di_cop) ? Number(f.di_cop) : null,
 
-      wavePort: isValidNumber(f.hs_puerto) ? Number(f.hs_puerto) : null,
+      wavePort: isValidNumber(f.hs_port_pred) ? Number(f.hs_port_pred) : null,
 
       waveObs: isValidNumber(f.hs_obs) ? Number(f.hs_obs) : null,
       windObs: isValidNumber(f.wspeed_obs) ? Number(f.wspeed_obs) : null,
