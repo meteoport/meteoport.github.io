@@ -48,13 +48,10 @@ const THRESHOLDS = {
 
 let selectedHour = 0;
 let selectedLocation = null;
-let selectedRoute = null;
 let waveChart = null;
 
 let locations = [];
 let markers = [];
-let routes = [];
-let routeLayers = [];
 
 // DOM
 const infoPanel = document.getElementById("info-panel");
@@ -272,150 +269,17 @@ function findLocationByName(name) {
   return locations.find(loc => loc.name === name) || null;
 }
 
-// ============================
-// RUTAS
-// ============================
-
-function buildRoutes(rawRoutes) {
-  return (rawRoutes || []).map(route => {
-    const resolvedPoints = (route.points || [])
-      .map(pointName => {
-        const loc = findLocationByName(pointName);
-        return {
-          name: pointName,
-          loc
-        };
-      });
-
-    const validLocations = resolvedPoints
-      .filter(p => p.loc && Array.isArray(p.loc.coords))
-      .map(p => p.loc);
-
-    return {
-      ...route,
-      resolvedPoints,
-      locations: validLocations
-    };
-  });
-}
-
-function calculateRouteSummary(route) {
-  if (!route || !route.locations || !route.locations.length) {
-    return { hasData: false, reason: "Ruta sin puntos válidos" };
-  }
-
-  const startMs = new Date(route.departure_time).getTime();
-  const endMs = new Date(route.arrival_time).getTime();
-
-  if (Number.isNaN(startMs) || Number.isNaN(endMs) || endMs < startMs) {
-    return { hasData: false, reason: "Ventana temporal inválida" };
-  }
-
-  let best = null;
-  let recordsInWindow = 0;
-
-  route.locations.forEach(loc => {
-    (loc.forecast || []).forEach(f => {
-      const t = new Date(f.time).getTime();
-      if (Number.isNaN(t)) return;
-      if (t < startMs || t > endMs) return;
-
-      recordsInWindow += 1;
-
-      if (!isValidNumber(f.wave)) return;
-
-      if (!best || f.wave > best.wave) {
-        best = {
-          locationName: loc.name,
-          time: f.time,
-          wave: f.wave,
-          tp: f.tp,
-          dir: f.dir,
-          waveSource: f.waveSource
-        };
-      }
-    });
-  });
-
-  if (!recordsInWindow) {
-    return { hasData: false, reason: "No hay datos en la ventana temporal de la ruta" };
-  }
-
-  if (!best) {
-    return { hasData: false, reason: "Hay registros en la ventana, pero sin oleaje válido" };
-  }
-
-  return { hasData: true, ...best };
-}
-
-function getRouteDisplayColor(route) {
-  const summary = calculateRouteSummary(route);
-  if (!summary.hasData) return "#64748b";
-  return getHexColorFromHs(summary.wave);
-}
-
-function updateRouteStyles() {
-  routeLayers.forEach(({ route, polyline }) => {
-    const isSelected = selectedRoute && selectedRoute.id === route.id;
-    const color = getRouteDisplayColor(route);
-
-    polyline.setStyle({
-      color,
-      weight: isSelected ? 5 : 3,
-      opacity: isSelected ? 0.95 : 0.75
-    });
-  });
-}
-
-function initRoutes() {
-  routeLayers.forEach(({ polyline }) => map.removeLayer(polyline));
-  routeLayers = [];
-
-  routes.forEach(route => {
-    const latlngs = route.locations
-      .map(loc => loc.coords)
-      .filter(coords => Array.isArray(coords) && coords.length === 2);
-
-    if (latlngs.length < 2) return;
-
-    const polyline = L.polyline(latlngs, {
-      color: getRouteDisplayColor(route),
-      weight: 3,
-      opacity: 0.75,
-      pane: "routesPane"
-    }).addTo(map);
-
-    polyline.bringToBack();
-    polyline.bindTooltip(route.name, { direction: "top", sticky: true });
-
-    polyline.on("click", () => {
-      selectedRoute = route;
-      selectedLocation = null;
-      updateRouteStyles();
-      updateInfoPanel();
-    });
-
-    routeLayers.push({ route, polyline });
-  });
-
-  updateRouteStyles();
-}
 
 // ============================
 // CARGA DATOS
 // ============================
 
-Promise.all([
-  fetch("./meteo_points_merged.json").then(res => {
+fetch("./meteo_points_merged.json")
+  .then(res => {
     if (!res.ok) throw new Error(`HTTP ${res.status} cargando meteo_points_merged.json`);
     return res.json();
-  }),
-  fetch("./routes.json").then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status} cargando routes.json`);
-    return res.json();
   })
-])
-  .then(([meteoData, routesData]) => {
+  .then(meteoData => {
     const rawPoints = Array.isArray(meteoData) ? meteoData : (meteoData.points || []);
 
     locations = rawPoints
@@ -441,14 +305,11 @@ Promise.all([
       throw new Error("No hay puntos válidos en meteo_points_merged.json");
     }
 
-    routes = buildRoutes(routesData);
-
     const maxHour = Math.max(0, getForecastLength() - 1);
     hourSlider.max = maxHour;
     hourSlider.value = selectedHour;
 
     initMarkers();
-    initRoutes();
     updateHourLabel();
     updateInfoPanel();
   })
@@ -506,8 +367,6 @@ function initMarkers() {
 
     marker.on("click", () => {
       selectedLocation = loc;
-      selectedRoute = null;
-      updateRouteStyles();
       updateInfoPanel();
       renderChart();
     });
@@ -559,24 +418,6 @@ function renderLocationInfoPanel() {
   `;
 }
 
-function renderRouteInfoPanel() {
-  if (!selectedRoute) return;
-
-  const summary = calculateRouteSummary(selectedRoute);
-  const pointsLabel = selectedRoute.resolvedPoints.map(p => p.name).join(" → ");
-
-  if (!summary.hasData) {
-    infoPanel.innerHTML = `
-      <h3>${escapeHtml(selectedRoute.name)}</h3>
-      <p><strong>Salida:</strong> ${formatDateTimeLong(selectedRoute.departure_time)}</p>
-      <p><strong>Llegada:</strong> ${formatDateTimeLong(selectedRoute.arrival_time)}</p>
-      <p><strong>Puntos:</strong> ${escapeHtml(pointsLabel)}</p>
-      <hr style="margin:10px 0;">
-      <p>${escapeHtml(summary.reason)}</p>
-    `;
-    return;
-  }
-
   const status = getRouteStatus(summary.wave);
 
   infoPanel.innerHTML = `
@@ -595,17 +436,12 @@ function renderRouteInfoPanel() {
 }
 
 function updateInfoPanel() {
-  if (selectedRoute) {
-    renderRouteInfoPanel();
-    return;
-  }
-
   if (selectedLocation) {
     renderLocationInfoPanel();
     return;
   }
 
-  infoPanel.innerHTML = `<p><strong>Selecciona un punto o una ruta</strong></p>`;
+  infoPanel.innerHTML = `<p><strong>Selecciona un punto</strong></p>`;
 }
 
 // ============================
@@ -1105,7 +941,6 @@ hourSlider.addEventListener("input", e => {
   selectedHour = parseInt(e.target.value, 10);
 
   updateMarkers();
-  updateRouteStyles();
   updateInfoPanel();
   updateHourLabel();
   updateChartCursorOnly();
