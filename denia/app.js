@@ -1923,7 +1923,9 @@ function renderChart() {
               order:
                 -10
             }
-          ];
+          ]
+
+          
                  },
 
         options: {
