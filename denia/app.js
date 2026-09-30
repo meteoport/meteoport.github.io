@@ -1200,7 +1200,6 @@ function getChartTimeRange(forecast) {
 // ==================================================
 
 function renderPortCharts() {
-function renderPortCharts() {
 
   if (
     !selectedLocation ||
