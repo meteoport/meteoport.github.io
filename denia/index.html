@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meteoport</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 
   <link
     rel="stylesheet"
@@ -17,6 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </head>
+
 <body>
   <header class="topbar">
     <div class="brand">
@@ -25,7 +26,25 @@
     </div>
 
     <nav class="topnav">
-      <a href="https://magulles.github.io/">Main site</a>
+      <div class="header-right">
+        <span class="data-label">Data source:</span>
+
+        <a href="https://marine.copernicus.eu/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/copernicus.png" alt="Copernicus">
+        </a>
+
+        <a href="https://www.portus.puertos.es/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/puertos_estado.png" alt="Puertos del Estado">
+        </a>
+
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/openmeteo.png" alt="Open-Meteo">
+        </a>
+
+        <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/openweather.png" alt="OpenWeather">
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -55,7 +74,7 @@
 
   <section class="bottom-chart">
     <div class="chart-card">
-    <h3 id="chart-title">Marine forecast</h3>
+      <h3 id="chart-title">Marine forecast</h3>
       <canvas id="wave-chart"></canvas>
     </div>
   </section>
@@ -65,6 +84,6 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""
   ></script>
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
