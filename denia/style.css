@@ -52,31 +52,6 @@ body {
   font-weight: 600;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.header-right a {
-  display: flex;
-  align-items: center;
-}
-
-.header-right img {
-  height: 32px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  display: block;
-}
-
-.data-label {
-  font-size: 0.85rem;
-  color: #6b7280;
-  white-space: nowrap;
-}
-
 .app-layout {
   flex: 1;
   display: grid;
@@ -400,3 +375,13 @@ path.leaflet-interactive:focus {
   background: #1f2937;
   margin-top: -1px;
 }
+
+
+/* Puerto de Dénia: dos paneles */
+#sea-level-chart, #port-wave-chart { width:100% !important; display:none; }
+#sea-level-chart { height:calc((100% - 38px)/2) !important; margin-bottom:10px; }
+#port-wave-chart { height:calc((100% - 38px)/2) !important; }
+.bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:520px; }
+@media (max-width:900px){ .bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:620px; } }
+@media (max-width:480px){ .bottom-chart:has(#sea-level-chart[style*="display: block"]) { height:560px; } }
+
