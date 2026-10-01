@@ -1164,7 +1164,69 @@ const daySeparatorPlugin = {
       boundary +=
         24 * 3600 * 1000;
     }
+    
+    // ============================
+    // ETIQUETAS RELATIVAS DE DÍAS
+    // ============================
 
+    ctx.setLineDash([]);
+
+    ctx.font = "600 12px Arial";
+    ctx.fillStyle = "#4b5563";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+
+    // Etiquetas desde -1d hasta el final real de la gráfica
+    const oneDay = 24 * 3600 * 1000;
+
+    let dayOffset = -1;
+
+    while (true) {
+
+      const dayStart =
+        startToday + dayOffset * oneDay;
+
+      const dayEnd =
+        dayStart + oneDay;
+
+      // Centro del día, limitado al rango visible
+      const visibleStart =
+        Math.max(dayStart, xMin);
+
+      const visibleEnd =
+        Math.min(dayEnd, xMax);
+
+      if (visibleStart < visibleEnd) {
+
+        const centerTime =
+          (visibleStart + visibleEnd) / 2;
+
+        const x =
+          xScale.getPixelForValue(centerTime);
+
+        let label;
+
+        if (dayOffset === 0) {
+          label = "Hoy";
+        } else if (dayOffset > 0) {
+          label = `+${dayOffset}d`;
+        } else {
+          label = `${dayOffset}d`;
+        }
+
+        ctx.fillText(
+          label,
+          x,
+          chartArea.bottom - 4
+        );
+      }
+
+      if (dayEnd > xMax) {
+        break;
+      }
+
+      dayOffset++;
+    }
 
     ctx.restore();
   }
