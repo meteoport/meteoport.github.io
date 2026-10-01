@@ -84,7 +84,7 @@ const map = L.map("map").setView([39.5, 0], 5);
 window.map = map;
 
 L.tileLayer(
-  "https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=TU_API_KEY",
+  "https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_45z1_1_419a4a4b3d4e30466605f6b5",
   {
     attribution: "&copy; OpenStreetMap &copy; CARTO",
     maxZoom: 19
