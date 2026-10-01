@@ -92,8 +92,8 @@ if (bottomChart) {
 const map = L.map("map");
 
 map.fitBounds([
-  [35.0, -1.5],   // suroeste
-  [44.0, 10.0]    // noreste
+  [37.8, -0.8],   // suroeste
+  [40.5, 4.6]     // noreste
 ]);
 window.map = map;
 
