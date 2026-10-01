@@ -1284,6 +1284,51 @@ function getChartTimeRange(forecast) {
   };
 }
 
+// ============================
+// UMBRALES AGITACIÓN PUERTO
+// ============================
+
+const portThresholdPlugin = {
+
+  id: "portThresholdPlugin",
+
+  afterDraw(chart) {
+
+    const { ctx, chartArea, scales } = chart;
+
+    if (!chartArea || !scales.y) return;
+
+    const yScale = scales.y;
+
+    const thresholds = [
+      { value: 0.3, color: "#16a34a" },
+      { value: 0.5, color: "#f59e0b" },
+      { value: 0.8, color: "#dc2626" }
+    ];
+
+    ctx.save();
+
+    thresholds.forEach(t => {
+
+      const y = yScale.getPixelForValue(t.value);
+
+      ctx.beginPath();
+
+      ctx.setLineDash([6, 5]);
+
+      ctx.strokeStyle = t.color;
+      ctx.lineWidth = 1.2;
+
+      ctx.moveTo(chartArea.left, y);
+      ctx.lineTo(chartArea.right, y);
+
+      ctx.stroke();
+
+    });
+
+    ctx.restore();
+  }
+};
 
 // ==================================================
 // GRÁFICAS ESPECIALES DEL PUERTO DE DÉNIA
@@ -1420,7 +1465,7 @@ function renderPortCharts() {
 
 
   const yMaxChart =
-    maxHs + 0.15;
+  Math.max(1.0, maxHs + 0.15);
 
 
   // ============================
@@ -1667,11 +1712,13 @@ function renderPortCharts() {
 
         plugins: [
 
-          verticalCursorPlugin,
+  verticalCursorPlugin,
 
-          daySeparatorPlugin
+  daySeparatorPlugin,
 
-        ]
+  portThresholdPlugin
+
+]
       }
     );
 
