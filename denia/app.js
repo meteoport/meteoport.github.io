@@ -89,7 +89,12 @@ if (bottomChart) {
 // MAPA
 // ============================
 
-const map = L.map("map").setView([39.5, 0], 5);
+const map = L.map("map");
+
+map.fitBounds([
+  [35.0, -1.5],   // suroeste
+  [44.0, 10.0]    // noreste
+]);
 window.map = map;
 
 L.tileLayer(
