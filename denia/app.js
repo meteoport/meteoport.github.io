@@ -74,6 +74,15 @@ const seaLevelChartCanvas = document.getElementById("sea-level-chart");
 const portWaveChartCanvas = document.getElementById("port-wave-chart");
 
 const chartTitle = document.getElementById("chart-title");
+const bottomChart = waveChartCanvas
+  ? waveChartCanvas.closest(".bottom-chart")
+  : null;
+
+// Al abrir Meteoport, la gráfica permanece oculta.
+// Se mostrará únicamente cuando el usuario seleccione un punto.
+if (bottomChart) {
+  bottomChart.classList.add("chart-hidden");
+}
 
 
 // ============================
@@ -598,8 +607,22 @@ function initMarkers() {
 
       selectedLocation = loc;
 
+      if (bottomChart) {
+        bottomChart.classList.remove("chart-hidden");
+      }
+
       updateInfoPanel();
       renderChart();
+
+      // Al cambiar la altura disponible, Leaflet y Chart.js
+      // recalculan su tamaño correctamente.
+      setTimeout(() => {
+        map.invalidateSize();
+
+        if (window.chart) window.chart.resize();
+        if (window.seaLevelChart) window.seaLevelChart.resize();
+        if (window.portWaveChart) window.portWaveChart.resize();
+      }, 50);
 
     });
 
@@ -1489,7 +1512,8 @@ function renderPortCharts() {
               selectedIndex:
                 selectedHour
             }
-          },
+
+                     },
 
 
           scales: {
