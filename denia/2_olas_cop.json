@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generated_at_utc": "2026-10-01T10:48:01Z",
+    "generated_at_utc": "2026-10-01T14:02:31Z",
     "past_days": 1,
     "copernicus_forecast_days": 5,
     "copernicus_forecast_hours": 144,
     "copernicus_dataset_glo": "cmems_mod_glo_wav_anfc_0.083deg_PT3H-i",
-    "points_total": 4,
-    "total_copernicus_records": 196
+    "points_total": 6,
+    "total_copernicus_records": 294
   },
   "points": [
     {
@@ -647,6 +647,324 @@
     },
     {
       "point_id": 4,
+      "name": "mod1",
+      "requested_lon": 0.660274,
+      "requested_lat": 39.259671,
+      "lon": 0.6666666666666572,
+      "lat": 39.25,
+      "forecast": [
+        {
+          "time": "2026-09-30T00:00:00Z",
+          "hs_cop": 0.54,
+          "tp_cop": 7.27,
+          "di_cop": 94.01
+        },
+        {
+          "time": "2026-09-30T03:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 7.37,
+          "di_cop": 94.28
+        },
+        {
+          "time": "2026-09-30T06:00:00Z",
+          "hs_cop": 0.49,
+          "tp_cop": 7.35,
+          "di_cop": 95.2
+        },
+        {
+          "time": "2026-09-30T09:00:00Z",
+          "hs_cop": 0.47,
+          "tp_cop": 7.22,
+          "di_cop": 95.14
+        },
+        {
+          "time": "2026-09-30T12:00:00Z",
+          "hs_cop": 0.45,
+          "tp_cop": 6.98,
+          "di_cop": 95.32
+        },
+        {
+          "time": "2026-09-30T15:00:00Z",
+          "hs_cop": 0.45,
+          "tp_cop": 6.84,
+          "di_cop": 96.34
+        },
+        {
+          "time": "2026-09-30T18:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 6.77,
+          "di_cop": 96.77
+        },
+        {
+          "time": "2026-09-30T21:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 6.73,
+          "di_cop": 96.99
+        },
+        {
+          "time": "2026-10-01T00:00:00Z",
+          "hs_cop": 0.47,
+          "tp_cop": 6.79,
+          "di_cop": 96.61
+        },
+        {
+          "time": "2026-10-01T03:00:00Z",
+          "hs_cop": 0.48,
+          "tp_cop": 6.83,
+          "di_cop": 96.38
+        },
+        {
+          "time": "2026-10-01T06:00:00Z",
+          "hs_cop": 0.47,
+          "tp_cop": 7.0,
+          "di_cop": 96.3
+        },
+        {
+          "time": "2026-10-01T09:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 7.0,
+          "di_cop": 94.9
+        },
+        {
+          "time": "2026-10-01T12:00:00Z",
+          "hs_cop": 0.61,
+          "tp_cop": 6.79,
+          "di_cop": 71.54
+        },
+        {
+          "time": "2026-10-01T15:00:00Z",
+          "hs_cop": 0.91,
+          "tp_cop": 4.26,
+          "di_cop": 62.52
+        },
+        {
+          "time": "2026-10-01T18:00:00Z",
+          "hs_cop": 0.84,
+          "tp_cop": 4.27,
+          "di_cop": 73.12
+        },
+        {
+          "time": "2026-10-01T21:00:00Z",
+          "hs_cop": 0.79,
+          "tp_cop": 4.58,
+          "di_cop": 71.14
+        },
+        {
+          "time": "2026-10-02T00:00:00Z",
+          "hs_cop": 0.84,
+          "tp_cop": 5.68,
+          "di_cop": 66.77
+        },
+        {
+          "time": "2026-10-02T03:00:00Z",
+          "hs_cop": 0.95,
+          "tp_cop": 5.8,
+          "di_cop": 65.79
+        },
+        {
+          "time": "2026-10-02T06:00:00Z",
+          "hs_cop": 1.19,
+          "tp_cop": 6.06,
+          "di_cop": 62.54
+        },
+        {
+          "time": "2026-10-02T09:00:00Z",
+          "hs_cop": 1.22,
+          "tp_cop": 6.22,
+          "di_cop": 60.89
+        },
+        {
+          "time": "2026-10-02T12:00:00Z",
+          "hs_cop": 1.19,
+          "tp_cop": 6.27,
+          "di_cop": 62.03
+        },
+        {
+          "time": "2026-10-02T15:00:00Z",
+          "hs_cop": 1.19,
+          "tp_cop": 6.44,
+          "di_cop": 59.01
+        },
+        {
+          "time": "2026-10-02T18:00:00Z",
+          "hs_cop": 1.19,
+          "tp_cop": 6.56,
+          "di_cop": 54.62
+        },
+        {
+          "time": "2026-10-02T21:00:00Z",
+          "hs_cop": 1.06,
+          "tp_cop": 6.33,
+          "di_cop": 57.08
+        },
+        {
+          "time": "2026-10-03T00:00:00Z",
+          "hs_cop": 0.95,
+          "tp_cop": 6.12,
+          "di_cop": 59.65
+        },
+        {
+          "time": "2026-10-03T03:00:00Z",
+          "hs_cop": 0.86,
+          "tp_cop": 5.96,
+          "di_cop": 63.01
+        },
+        {
+          "time": "2026-10-03T06:00:00Z",
+          "hs_cop": 0.81,
+          "tp_cop": 5.66,
+          "di_cop": 64.73
+        },
+        {
+          "time": "2026-10-03T09:00:00Z",
+          "hs_cop": 0.75,
+          "tp_cop": 5.48,
+          "di_cop": 66.66
+        },
+        {
+          "time": "2026-10-03T12:00:00Z",
+          "hs_cop": 0.66,
+          "tp_cop": 5.51,
+          "di_cop": 72.12
+        },
+        {
+          "time": "2026-10-03T15:00:00Z",
+          "hs_cop": 0.59,
+          "tp_cop": 5.71,
+          "di_cop": 79.39
+        },
+        {
+          "time": "2026-10-03T18:00:00Z",
+          "hs_cop": 0.54,
+          "tp_cop": 6.15,
+          "di_cop": 84.9
+        },
+        {
+          "time": "2026-10-03T21:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.36,
+          "di_cop": 87.93
+        },
+        {
+          "time": "2026-10-04T00:00:00Z",
+          "hs_cop": 0.53,
+          "tp_cop": 6.45,
+          "di_cop": 87.7
+        },
+        {
+          "time": "2026-10-04T03:00:00Z",
+          "hs_cop": 0.53,
+          "tp_cop": 6.48,
+          "di_cop": 89.28
+        },
+        {
+          "time": "2026-10-04T06:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.44,
+          "di_cop": 90.12
+        },
+        {
+          "time": "2026-10-04T09:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.33,
+          "di_cop": 87.92
+        },
+        {
+          "time": "2026-10-04T12:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.28,
+          "di_cop": 84.56
+        },
+        {
+          "time": "2026-10-04T15:00:00Z",
+          "hs_cop": 0.53,
+          "tp_cop": 6.23,
+          "di_cop": 83.22
+        },
+        {
+          "time": "2026-10-04T18:00:00Z",
+          "hs_cop": 0.54,
+          "tp_cop": 6.17,
+          "di_cop": 83.51
+        },
+        {
+          "time": "2026-10-04T21:00:00Z",
+          "hs_cop": 0.53,
+          "tp_cop": 6.18,
+          "di_cop": 83.97
+        },
+        {
+          "time": "2026-10-05T00:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.19,
+          "di_cop": 84.74
+        },
+        {
+          "time": "2026-10-05T03:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.17,
+          "di_cop": 84.42
+        },
+        {
+          "time": "2026-10-05T06:00:00Z",
+          "hs_cop": 0.52,
+          "tp_cop": 6.12,
+          "di_cop": 82.8
+        },
+        {
+          "time": "2026-10-05T09:00:00Z",
+          "hs_cop": 0.5,
+          "tp_cop": 6.05,
+          "di_cop": 80.96
+        },
+        {
+          "time": "2026-10-05T12:00:00Z",
+          "hs_cop": 0.48,
+          "tp_cop": 5.86,
+          "di_cop": 79.87
+        },
+        {
+          "time": "2026-10-05T15:00:00Z",
+          "hs_cop": 0.45,
+          "tp_cop": 5.69,
+          "di_cop": 79.8
+        },
+        {
+          "time": "2026-10-05T18:00:00Z",
+          "hs_cop": 0.42,
+          "tp_cop": 5.6,
+          "di_cop": 81.57
+        },
+        {
+          "time": "2026-10-05T21:00:00Z",
+          "hs_cop": 0.38,
+          "tp_cop": 5.61,
+          "di_cop": 83.48
+        },
+        {
+          "time": "2026-10-06T00:00:00Z",
+          "hs_cop": 0.35,
+          "tp_cop": 5.72,
+          "di_cop": 84.85
+        }
+      ],
+      "cop_search_info": {
+        "dataset_id": "cmems_mod_glo_wav_anfc_0.083deg_PT3H-i",
+        "adjusted_request_point": false,
+        "used_request_lon": 0.660274,
+        "used_request_lat": 39.259671,
+        "distance_to_selected_grid_km": 1.208,
+        "hs_valid_count": 49,
+        "tp_valid_count": 49,
+        "di_valid_count": 49,
+        "total_count": 49,
+        "hs_valid_ratio": 1.0,
+        "attempts_made": 1,
+        "min_hs_valid_ratio_target": 0.5
+      }
+    },
+    {
+      "point_id": 5,
       "name": "boya2",
       "requested_lon": 0.2,
       "requested_lat": 39.51,
@@ -964,7 +1282,7 @@
       }
     },
     {
-      "point_id": 5,
+      "point_id": 6,
       "name": "boya3",
       "requested_lon": 1.47,
       "requested_lat": 40.69,
@@ -1272,6 +1590,324 @@
         "used_request_lon": 1.47,
         "used_request_lat": 40.69,
         "distance_to_selected_grid_km": 3.624,
+        "hs_valid_count": 49,
+        "tp_valid_count": 49,
+        "di_valid_count": 49,
+        "total_count": 49,
+        "hs_valid_ratio": 1.0,
+        "attempts_made": 1,
+        "min_hs_valid_ratio_target": 0.5
+      }
+    },
+    {
+      "point_id": 7,
+      "name": "boya4",
+      "requested_lon": 2.09,
+      "requested_lat": 39.56,
+      "lon": 2.0833333333333144,
+      "lat": 39.58333333333333,
+      "forecast": [
+        {
+          "time": "2026-09-30T00:00:00Z",
+          "hs_cop": 0.53,
+          "tp_cop": 7.31,
+          "di_cop": 119.36
+        },
+        {
+          "time": "2026-09-30T03:00:00Z",
+          "hs_cop": 0.5,
+          "tp_cop": 7.14,
+          "di_cop": 118.24
+        },
+        {
+          "time": "2026-09-30T06:00:00Z",
+          "hs_cop": 0.43,
+          "tp_cop": 6.77,
+          "di_cop": 113.89
+        },
+        {
+          "time": "2026-09-30T09:00:00Z",
+          "hs_cop": 0.39,
+          "tp_cop": 6.57,
+          "di_cop": 113.36
+        },
+        {
+          "time": "2026-09-30T12:00:00Z",
+          "hs_cop": 0.39,
+          "tp_cop": 6.58,
+          "di_cop": 115.16
+        },
+        {
+          "time": "2026-09-30T15:00:00Z",
+          "hs_cop": 0.41,
+          "tp_cop": 6.65,
+          "di_cop": 118.6
+        },
+        {
+          "time": "2026-09-30T18:00:00Z",
+          "hs_cop": 0.49,
+          "tp_cop": 6.67,
+          "di_cop": 125.36
+        },
+        {
+          "time": "2026-09-30T21:00:00Z",
+          "hs_cop": 0.54,
+          "tp_cop": 6.3,
+          "di_cop": 125.51
+        },
+        {
+          "time": "2026-10-01T00:00:00Z",
+          "hs_cop": 0.51,
+          "tp_cop": 6.8,
+          "di_cop": 122.45
+        },
+        {
+          "time": "2026-10-01T03:00:00Z",
+          "hs_cop": 0.57,
+          "tp_cop": 6.27,
+          "di_cop": 124.79
+        },
+        {
+          "time": "2026-10-01T06:00:00Z",
+          "hs_cop": 0.55,
+          "tp_cop": 4.24,
+          "di_cop": 120.2
+        },
+        {
+          "time": "2026-10-01T09:00:00Z",
+          "hs_cop": 0.49,
+          "tp_cop": 6.37,
+          "di_cop": 115.09
+        },
+        {
+          "time": "2026-10-01T12:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 6.3,
+          "di_cop": 109.28
+        },
+        {
+          "time": "2026-10-01T15:00:00Z",
+          "hs_cop": 0.55,
+          "tp_cop": 6.15,
+          "di_cop": 85.31
+        },
+        {
+          "time": "2026-10-01T18:00:00Z",
+          "hs_cop": 0.71,
+          "tp_cop": 5.35,
+          "di_cop": 69.26
+        },
+        {
+          "time": "2026-10-01T21:00:00Z",
+          "hs_cop": 0.9,
+          "tp_cop": 5.26,
+          "di_cop": 58.37
+        },
+        {
+          "time": "2026-10-02T00:00:00Z",
+          "hs_cop": 1.2,
+          "tp_cop": 5.28,
+          "di_cop": 50.92
+        },
+        {
+          "time": "2026-10-02T03:00:00Z",
+          "hs_cop": 1.25,
+          "tp_cop": 5.76,
+          "di_cop": 46.07
+        },
+        {
+          "time": "2026-10-02T06:00:00Z",
+          "hs_cop": 1.28,
+          "tp_cop": 6.14,
+          "di_cop": 42.34
+        },
+        {
+          "time": "2026-10-02T09:00:00Z",
+          "hs_cop": 1.28,
+          "tp_cop": 6.31,
+          "di_cop": 39.81
+        },
+        {
+          "time": "2026-10-02T12:00:00Z",
+          "hs_cop": 1.22,
+          "tp_cop": 6.52,
+          "di_cop": 36.84
+        },
+        {
+          "time": "2026-10-02T15:00:00Z",
+          "hs_cop": 1.14,
+          "tp_cop": 6.33,
+          "di_cop": 39.64
+        },
+        {
+          "time": "2026-10-02T18:00:00Z",
+          "hs_cop": 1.05,
+          "tp_cop": 6.13,
+          "di_cop": 45.06
+        },
+        {
+          "time": "2026-10-02T21:00:00Z",
+          "hs_cop": 0.98,
+          "tp_cop": 5.95,
+          "di_cop": 56.19
+        },
+        {
+          "time": "2026-10-03T00:00:00Z",
+          "hs_cop": 0.89,
+          "tp_cop": 5.68,
+          "di_cop": 71.57
+        },
+        {
+          "time": "2026-10-03T03:00:00Z",
+          "hs_cop": 0.77,
+          "tp_cop": 5.5,
+          "di_cop": 74.19
+        },
+        {
+          "time": "2026-10-03T06:00:00Z",
+          "hs_cop": 0.71,
+          "tp_cop": 5.37,
+          "di_cop": 81.33
+        },
+        {
+          "time": "2026-10-03T09:00:00Z",
+          "hs_cop": 0.64,
+          "tp_cop": 5.34,
+          "di_cop": 96.19
+        },
+        {
+          "time": "2026-10-03T12:00:00Z",
+          "hs_cop": 0.58,
+          "tp_cop": 5.86,
+          "di_cop": 104.84
+        },
+        {
+          "time": "2026-10-03T15:00:00Z",
+          "hs_cop": 0.56,
+          "tp_cop": 6.17,
+          "di_cop": 109.15
+        },
+        {
+          "time": "2026-10-03T18:00:00Z",
+          "hs_cop": 0.55,
+          "tp_cop": 6.38,
+          "di_cop": 110.62
+        },
+        {
+          "time": "2026-10-03T21:00:00Z",
+          "hs_cop": 0.56,
+          "tp_cop": 6.47,
+          "di_cop": 114.03
+        },
+        {
+          "time": "2026-10-04T00:00:00Z",
+          "hs_cop": 0.54,
+          "tp_cop": 6.4,
+          "di_cop": 113.09
+        },
+        {
+          "time": "2026-10-04T03:00:00Z",
+          "hs_cop": 0.49,
+          "tp_cop": 6.3,
+          "di_cop": 110.51
+        },
+        {
+          "time": "2026-10-04T06:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 6.22,
+          "di_cop": 105.65
+        },
+        {
+          "time": "2026-10-04T09:00:00Z",
+          "hs_cop": 0.46,
+          "tp_cop": 6.14,
+          "di_cop": 101.82
+        },
+        {
+          "time": "2026-10-04T12:00:00Z",
+          "hs_cop": 0.51,
+          "tp_cop": 6.0,
+          "di_cop": 106.92
+        },
+        {
+          "time": "2026-10-04T15:00:00Z",
+          "hs_cop": 0.5,
+          "tp_cop": 6.05,
+          "di_cop": 104.48
+        },
+        {
+          "time": "2026-10-04T18:00:00Z",
+          "hs_cop": 0.48,
+          "tp_cop": 6.13,
+          "di_cop": 100.27
+        },
+        {
+          "time": "2026-10-04T21:00:00Z",
+          "hs_cop": 0.48,
+          "tp_cop": 6.12,
+          "di_cop": 100.76
+        },
+        {
+          "time": "2026-10-05T00:00:00Z",
+          "hs_cop": 0.49,
+          "tp_cop": 5.82,
+          "di_cop": 97.82
+        },
+        {
+          "time": "2026-10-05T03:00:00Z",
+          "hs_cop": 0.48,
+          "tp_cop": 4.81,
+          "di_cop": 90.88
+        },
+        {
+          "time": "2026-10-05T06:00:00Z",
+          "hs_cop": 0.47,
+          "tp_cop": 4.63,
+          "di_cop": 88.16
+        },
+        {
+          "time": "2026-10-05T09:00:00Z",
+          "hs_cop": 0.43,
+          "tp_cop": 4.58,
+          "di_cop": 87.98
+        },
+        {
+          "time": "2026-10-05T12:00:00Z",
+          "hs_cop": 0.38,
+          "tp_cop": 4.49,
+          "di_cop": 87.92
+        },
+        {
+          "time": "2026-10-05T15:00:00Z",
+          "hs_cop": 0.34,
+          "tp_cop": 4.49,
+          "di_cop": 89.82
+        },
+        {
+          "time": "2026-10-05T18:00:00Z",
+          "hs_cop": 0.3,
+          "tp_cop": 4.37,
+          "di_cop": 90.73
+        },
+        {
+          "time": "2026-10-05T21:00:00Z",
+          "hs_cop": 0.28,
+          "tp_cop": 5.38,
+          "di_cop": 93.16
+        },
+        {
+          "time": "2026-10-06T00:00:00Z",
+          "hs_cop": 0.28,
+          "tp_cop": 5.75,
+          "di_cop": 98.87
+        }
+      ],
+      "cop_search_info": {
+        "dataset_id": "cmems_mod_glo_wav_anfc_0.083deg_PT3H-i",
+        "adjusted_request_point": false,
+        "used_request_lon": 2.09,
+        "used_request_lat": 39.56,
+        "distance_to_selected_grid_km": 2.657,
         "hs_valid_count": 49,
         "tp_valid_count": 49,
         "di_valid_count": 49,
