@@ -550,3 +550,102 @@ path.leaflet-interactive:focus {
     flex: 0 0 200px;
   }
 }
+
+
+/* =========================================================
+   METEOPORT - PANEL DE GRÁFICA RESPONSIVE
+   Oculto al inicio; aparece al seleccionar un punto.
+   Estas reglas van al final para prevalecer sobre las
+   definiciones responsive anteriores.
+   ========================================================= */
+
+.bottom-chart.chart-hidden {
+  display: none !important;
+}
+
+/* Portátil / escritorio estándar */
+.bottom-chart:not(.chart-hidden) {
+  height: 235px;
+  padding: 8px 16px 10px 16px;
+}
+
+/* Al ocultarse la gráfica, mapa y layout aprovechan el espacio */
+body:has(.bottom-chart.chart-hidden) .app-layout {
+  min-height: calc(100vh - 72px);
+}
+
+body:has(.bottom-chart.chart-hidden) #map {
+  min-height: calc(100vh - 72px);
+}
+
+/* Monitor grande */
+@media (min-width: 1201px) {
+  .bottom-chart:not(.chart-hidden) {
+    height: 290px;
+    padding: 10px 20px 12px 20px;
+  }
+
+  .app-layout {
+    min-height: calc(100vh - 72px - 290px);
+  }
+
+  #map {
+    min-height: calc(100vh - 72px - 290px);
+  }
+}
+
+/* Portátil */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bottom-chart:not(.chart-hidden) {
+    height: 235px;
+  }
+
+  .app-layout {
+    min-height: calc(100vh - 72px - 235px);
+  }
+
+  #map {
+    min-height: calc(100vh - 72px - 235px);
+  }
+}
+
+/* Móvil / tablet estrecha: composición vertical y gráfica legible */
+@media (max-width: 768px) {
+  .bottom-chart:not(.chart-hidden) {
+    height: 300px;
+    padding: 8px;
+  }
+
+  .app-layout {
+    min-height: auto;
+  }
+
+  #map {
+    height: 55vh;
+    min-height: 55vh;
+  }
+
+  body:has(.bottom-chart.chart-hidden) #map {
+    height: 68vh;
+    min-height: 68vh;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .bottom-chart:not(.chart-hidden) {
+    height: 285px;
+    padding: 6px;
+  }
+
+  #map {
+    height: 52vh;
+    min-height: 52vh;
+  }
+
+  body:has(.bottom-chart.chart-hidden) #map {
+    height: 66vh;
+    min-height: 66vh;
+  }
+}
+
