@@ -516,6 +516,17 @@ fetch("./meteo_points_merged.json")
     hourSlider.value = selectedHour;
 
     initMarkers();
+// Punto mostrado por defecto al abrir la web
+selectedLocation = findLocationByName("denia_puerto");
+
+if (selectedLocation) {
+
+  if (bottomChart) {
+    bottomChart.classList.remove("chart-hidden");
+  }
+
+  renderChart();
+}
 
     updateHourLabel();
     updateInfoPanel();
