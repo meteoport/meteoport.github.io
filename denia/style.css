@@ -597,17 +597,19 @@ body:has(.bottom-chart.chart-hidden) #map {
 /* Portátil */
 @media (min-width: 769px) and (max-width: 1200px) {
   .bottom-chart:not(.chart-hidden) {
-    height: 235px;
+    height: 160px;
   }
 
   .app-layout {
-    min-height: calc(100vh - 72px - 235px);
+    min-height: calc(100vh - 72px - 160px);
   }
 
   #map {
-    min-height: calc(100vh - 72px - 235px);
+    min-height: calc(100vh - 72px - 160px);
   }
 }
+
+
 
 /* Móvil / tablet estrecha: composición vertical y gráfica legible */
 @media (max-width: 768px) {
