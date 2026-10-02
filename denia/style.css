@@ -594,19 +594,21 @@ body:has(.bottom-chart.chart-hidden) #map {
   }
 }
 
-/* Portátil */
-@media (min-width: 769px) and (max-width: 1200px) {
+/* Portátil: pantallas con poca altura */
+@media (min-width: 769px) and (max-height: 900px) {
+
   .bottom-chart:not(.chart-hidden) {
-    height: 160px;
+    height: 160px !important;
   }
 
   .app-layout {
-    min-height: calc(100vh - 72px - 160px);
+    min-height: calc(100vh - 72px - 160px) !important;
   }
 
   #map {
-    min-height: calc(100vh - 72px - 160px);
+    min-height: calc(100vh - 72px - 160px) !important;
   }
+
 }
 
 
