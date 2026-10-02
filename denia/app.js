@@ -91,11 +91,10 @@ if (bottomChart) {
 
 const map = L.map("map");
 
-map.setView([39.05, 1.75], 7);
-setTimeout(() => {
-  map.invalidateSize();
-  map.setView([39.05, 1.75], 7);
-}, 300);
+map.fitBounds([
+  [38.3, -0.3],   // suroeste
+  [40.0, 4.2]     // noreste
+]);
 window.map = map;
 
 L.tileLayer(
