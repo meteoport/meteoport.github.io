@@ -93,7 +93,7 @@ const map = L.map("map");
 
 map.fitBounds([
   [37.8, -0.8],   // suroeste
-  [40.5, 4.6]     // noreste
+  [40.4, 4.6]     // noreste
 ]);
 window.map = map;
 
