@@ -91,7 +91,11 @@ if (bottomChart) {
 
 const map = L.map("map");
 
-map.setView([38.90, 1.75], 7);
+map.setView([39.05, 1.75], 7);
+setTimeout(() => {
+  map.invalidateSize();
+  map.setView([39.05, 1.75], 7);
+}, 300);
 window.map = map;
 
 L.tileLayer(
