@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at_utc": "2026-10-26T07:47:46Z",
+    "generated_at_utc": "2026-10-26T09:24:41Z",
     "past_hours": 24,
     "resolution": "1h",
     "source": "simulated_demo"
@@ -172,6 +172,16 @@
           "time": "2026-10-26T07:00:00Z",
           "hs_port_obs": 0.178,
           "sea_level_obs": -0.273
+        },
+        {
+          "time": "2026-10-26T08:00:00Z",
+          "hs_port_obs": 0.177,
+          "sea_level_obs": -0.401
+        },
+        {
+          "time": "2026-10-26T09:00:00Z",
+          "hs_port_obs": 0.165,
+          "sea_level_obs": -0.455
         }
       ]
     }

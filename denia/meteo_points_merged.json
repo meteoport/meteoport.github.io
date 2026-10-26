@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at_utc": "2026-10-26T07:50:34Z",
+    "generated_at_utc": "2026-10-26T09:27:38Z",
     "points_total": 7,
     "total_records": 774,
     "sources": {
@@ -566,8 +566,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.69,
-          "wsdir_mod": 255.0
+          "wspeed_mod": 3.23,
+          "wsdir_mod": 254.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -583,7 +583,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.82,
+          "wspeed_mod": 3.13,
           "wsdir_mod": 253.0
         },
         {
@@ -600,8 +600,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.93,
-          "wsdir_mod": 262.0
+          "wspeed_mod": 3.16,
+          "wsdir_mod": 259.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -617,8 +617,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.0,
-          "wsdir_mod": 268.0
+          "wspeed_mod": 3.01,
+          "wsdir_mod": 264.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -634,8 +634,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.6,
-          "wsdir_mod": 272.0
+          "wspeed_mod": 2.92,
+          "wsdir_mod": 264.0
         },
         {
           "time": "2026-10-26T11:00:00Z",
@@ -651,8 +651,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.61,
-          "wsdir_mod": 263.0
+          "wspeed_mod": 2.26,
+          "wsdir_mod": 257.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -668,8 +668,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.42,
-          "wsdir_mod": 231.0
+          "wspeed_mod": 1.66,
+          "wsdir_mod": 237.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -685,8 +685,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.24,
-          "wsdir_mod": 194.0
+          "wspeed_mod": 1.43,
+          "wsdir_mod": 192.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -702,8 +702,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.66,
-          "wsdir_mod": 155.0
+          "wspeed_mod": 2.11,
+          "wsdir_mod": 149.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -719,8 +719,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.55,
-          "wsdir_mod": 135.0
+          "wspeed_mod": 3.33,
+          "wsdir_mod": 131.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -736,8 +736,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.34,
-          "wsdir_mod": 129.0
+          "wspeed_mod": 4.25,
+          "wsdir_mod": 131.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -753,8 +753,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.26,
-          "wsdir_mod": 117.0
+          "wspeed_mod": 4.22,
+          "wsdir_mod": 126.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -770,8 +770,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 106.0
+          "wspeed_mod": 3.58,
+          "wsdir_mod": 120.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -787,8 +787,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.67,
-          "wsdir_mod": 103.0
+          "wspeed_mod": 3.13,
+          "wsdir_mod": 117.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -804,8 +804,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.38,
-          "wsdir_mod": 105.0
+          "wspeed_mod": 2.69,
+          "wsdir_mod": 121.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -821,8 +821,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.99,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 2.58,
+          "wsdir_mod": 126.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -838,8 +838,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.48,
-          "wsdir_mod": 118.0
+          "wspeed_mod": 2.33,
+          "wsdir_mod": 133.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -855,8 +855,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.28,
-          "wsdir_mod": 141.0
+          "wspeed_mod": 1.98,
+          "wsdir_mod": 139.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -872,8 +872,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.85,
-          "wsdir_mod": 159.0
+          "wspeed_mod": 1.0,
+          "wsdir_mod": 143.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -889,8 +889,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.36,
-          "wsdir_mod": 214.0
+          "wspeed_mod": 0.22,
+          "wsdir_mod": 333.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -906,8 +906,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.04,
-          "wsdir_mod": 287.0
+          "wspeed_mod": 1.2,
+          "wsdir_mod": 312.0
         },
         {
           "time": "2026-10-27T03:00:00Z",
@@ -923,8 +923,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.75,
-          "wsdir_mod": 283.0
+          "wspeed_mod": 1.99,
+          "wsdir_mod": 288.0
         },
         {
           "time": "2026-10-27T04:00:00Z",
@@ -940,8 +940,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.7,
-          "wsdir_mod": 272.0
+          "wspeed_mod": 2.91,
+          "wsdir_mod": 274.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -957,7 +957,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.31,
+          "wspeed_mod": 3.41,
           "wsdir_mod": 265.0
         },
         {
@@ -974,8 +974,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.72,
-          "wsdir_mod": 264.0
+          "wspeed_mod": 2.67,
+          "wsdir_mod": 257.0
         },
         {
           "time": "2026-10-27T07:00:00Z",
@@ -991,8 +991,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.62,
-          "wsdir_mod": 264.0
+          "wspeed_mod": 3.65,
+          "wsdir_mod": 261.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -1008,8 +1008,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.35,
-          "wsdir_mod": 253.0
+          "wspeed_mod": 3.59,
+          "wsdir_mod": 257.0
         },
         {
           "time": "2026-10-27T09:00:00Z",
@@ -1025,8 +1025,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.26,
-          "wsdir_mod": 243.0
+          "wspeed_mod": 3.09,
+          "wsdir_mod": 245.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -1042,8 +1042,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.42,
-          "wsdir_mod": 232.0
+          "wspeed_mod": 3.08,
+          "wsdir_mod": 234.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -1059,8 +1059,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.26,
-          "wsdir_mod": 223.0
+          "wspeed_mod": 2.86,
+          "wsdir_mod": 216.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -1076,8 +1076,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.28,
-          "wsdir_mod": 192.0
+          "wspeed_mod": 2.43,
+          "wsdir_mod": 189.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -1093,8 +1093,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.63,
-          "wsdir_mod": 172.0
+          "wspeed_mod": 3.02,
+          "wsdir_mod": 146.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -1110,8 +1110,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.61,
-          "wsdir_mod": 161.0
+          "wspeed_mod": 3.2,
+          "wsdir_mod": 141.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -1127,8 +1127,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.3,
-          "wsdir_mod": 145.0
+          "wspeed_mod": 3.33,
+          "wsdir_mod": 139.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -1144,8 +1144,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.49,
-          "wsdir_mod": 117.0
+          "wspeed_mod": 2.56,
+          "wsdir_mod": 121.0
         },
         {
           "time": "2026-10-27T17:00:00Z",
@@ -1161,8 +1161,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.71,
-          "wsdir_mod": 94.0
+          "wspeed_mod": 2.8,
+          "wsdir_mod": 92.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -1178,8 +1178,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.31,
-          "wsdir_mod": 65.0
+          "wspeed_mod": 3.18,
+          "wsdir_mod": 66.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -1195,8 +1195,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.86,
-          "wsdir_mod": 59.0
+          "wspeed_mod": 3.56,
+          "wsdir_mod": 52.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -1212,8 +1212,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.53,
-          "wsdir_mod": 25.0
+          "wspeed_mod": 4.08,
+          "wsdir_mod": 54.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -1229,8 +1229,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.41,
-          "wsdir_mod": 28.0
+          "wspeed_mod": 3.41,
+          "wsdir_mod": 50.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -1246,8 +1246,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.66,
-          "wsdir_mod": 36.0
+          "wspeed_mod": 4.52,
+          "wsdir_mod": 35.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -1263,8 +1263,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.9,
-          "wsdir_mod": 39.0
+          "wspeed_mod": 5.47,
+          "wsdir_mod": 40.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -1280,8 +1280,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.02,
-          "wsdir_mod": 48.0
+          "wspeed_mod": 6.01,
+          "wsdir_mod": 47.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -1297,8 +1297,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.86,
-          "wsdir_mod": 43.0
+          "wspeed_mod": 6.65,
+          "wsdir_mod": 47.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -1314,8 +1314,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.29,
-          "wsdir_mod": 43.0
+          "wspeed_mod": 7.36,
+          "wsdir_mod": 44.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -1331,8 +1331,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.51,
-          "wsdir_mod": 44.0
+          "wspeed_mod": 6.75,
+          "wsdir_mod": 50.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -1348,8 +1348,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.44,
-          "wsdir_mod": 46.0
+          "wspeed_mod": 6.1,
+          "wsdir_mod": 55.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -1365,8 +1365,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.8,
-          "wsdir_mod": 44.0
+          "wspeed_mod": 4.24,
+          "wsdir_mod": 47.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -1382,8 +1382,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.52,
-          "wsdir_mod": 44.0
+          "wspeed_mod": 4.55,
+          "wsdir_mod": 40.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -1399,8 +1399,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.81,
-          "wsdir_mod": 42.0
+          "wspeed_mod": 4.61,
+          "wsdir_mod": 41.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -1416,8 +1416,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.02,
-          "wsdir_mod": 48.0
+          "wspeed_mod": 5.23,
+          "wsdir_mod": 64.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -1433,8 +1433,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.39,
-          "wsdir_mod": 50.0
+          "wspeed_mod": 6.3,
+          "wsdir_mod": 70.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -1450,8 +1450,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.84,
-          "wsdir_mod": 52.0
+          "wspeed_mod": 5.85,
+          "wsdir_mod": 73.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -1467,8 +1467,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.53,
-          "wsdir_mod": 49.0
+          "wspeed_mod": 4.64,
+          "wsdir_mod": 83.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -1484,8 +1484,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.05,
-          "wsdir_mod": 57.0
+          "wspeed_mod": 3.0,
+          "wsdir_mod": 88.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -1501,8 +1501,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.98,
-          "wsdir_mod": 65.0
+          "wspeed_mod": 2.58,
+          "wsdir_mod": 126.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -1518,8 +1518,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.35,
-          "wsdir_mod": 73.0
+          "wspeed_mod": 2.75,
+          "wsdir_mod": 161.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -1535,8 +1535,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.3,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 2.5,
+          "wsdir_mod": 180.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -1552,8 +1552,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.04,
-          "wsdir_mod": 99.0
+          "wspeed_mod": 1.9,
+          "wsdir_mod": 183.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -1569,8 +1569,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.09,
-          "wsdir_mod": 115.0
+          "wspeed_mod": 1.1,
+          "wsdir_mod": 185.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -1586,8 +1586,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.4,
-          "wsdir_mod": 137.0
+          "wspeed_mod": 1.17,
+          "wsdir_mod": 149.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -1603,7 +1603,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.58,
+          "wspeed_mod": 1.79,
           "wsdir_mod": 153.0
         },
         {
@@ -1620,8 +1620,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.75,
-          "wsdir_mod": 171.0
+          "wspeed_mod": 3.0,
+          "wsdir_mod": 154.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -1637,8 +1637,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.32,
-          "wsdir_mod": 196.0
+          "wspeed_mod": 3.45,
+          "wsdir_mod": 163.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -1654,8 +1654,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.22,
-          "wsdir_mod": 210.0
+          "wspeed_mod": 3.04,
+          "wsdir_mod": 171.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -1671,8 +1671,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.45,
-          "wsdir_mod": 210.0
+          "wspeed_mod": 3.1,
+          "wsdir_mod": 180.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
@@ -2549,8 +2549,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.9,
-          "wsdir_mod": 1.0
+          "wspeed_mod": 3.5,
+          "wsdir_mod": 360.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -2566,8 +2566,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.4,
-          "wsdir_mod": 24.0
+          "wspeed_mod": 3.04,
+          "wsdir_mod": 27.0
         },
         {
           "time": "2026-10-26T08:00:00Z",
@@ -2583,8 +2583,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.0,
-          "wsdir_mod": 32.0
+          "wspeed_mod": 3.47,
+          "wsdir_mod": 41.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -2600,8 +2600,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.15,
-          "wsdir_mod": 29.0
+          "wspeed_mod": 3.86,
+          "wsdir_mod": 37.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -2617,7 +2617,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.44,
+          "wspeed_mod": 3.76,
           "wsdir_mod": 17.0
         },
         {
@@ -2634,8 +2634,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.18,
-          "wsdir_mod": 21.0
+          "wspeed_mod": 3.11,
+          "wsdir_mod": 4.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -2651,8 +2651,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.64,
-          "wsdir_mod": 61.0
+          "wspeed_mod": 2.12,
+          "wsdir_mod": 352.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -2668,8 +2668,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 86.0
+          "wspeed_mod": 2.2,
+          "wsdir_mod": 30.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -2685,8 +2685,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.61,
-          "wsdir_mod": 93.0
+          "wspeed_mod": 3.4,
+          "wsdir_mod": 62.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -2702,8 +2702,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.6,
-          "wsdir_mod": 90.0
+          "wspeed_mod": 2.4,
+          "wsdir_mod": 88.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -2719,8 +2719,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.33,
-          "wsdir_mod": 100.0
+          "wspeed_mod": 1.66,
+          "wsdir_mod": 115.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -2736,8 +2736,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.93,
-          "wsdir_mod": 111.0
+          "wspeed_mod": 1.44,
+          "wsdir_mod": 124.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -2753,8 +2753,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.88,
-          "wsdir_mod": 115.0
+          "wspeed_mod": 1.08,
+          "wsdir_mod": 146.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -2770,8 +2770,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.64,
-          "wsdir_mod": 142.0
+          "wspeed_mod": 0.95,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -2787,8 +2787,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.43,
-          "wsdir_mod": 168.0
+          "wspeed_mod": 0.94,
+          "wsdir_mod": 238.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -2804,8 +2804,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.2,
-          "wsdir_mod": 185.0
+          "wspeed_mod": 1.43,
+          "wsdir_mod": 245.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -2821,8 +2821,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.53,
-          "wsdir_mod": 212.0
+          "wspeed_mod": 2.12,
+          "wsdir_mod": 251.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -2838,8 +2838,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.72,
-          "wsdir_mod": 234.0
+          "wspeed_mod": 2.18,
+          "wsdir_mod": 254.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -2855,8 +2855,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.88,
-          "wsdir_mod": 245.0
+          "wspeed_mod": 2.12,
+          "wsdir_mod": 251.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -2872,8 +2872,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.84,
-          "wsdir_mod": 248.0
+          "wspeed_mod": 2.25,
+          "wsdir_mod": 238.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -2889,8 +2889,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.9,
-          "wsdir_mod": 252.0
+          "wspeed_mod": 2.5,
+          "wsdir_mod": 233.0
         },
         {
           "time": "2026-10-27T03:00:00Z",
@@ -2906,8 +2906,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.4,
-          "wsdir_mod": 253.0
+          "wspeed_mod": 2.78,
+          "wsdir_mod": 232.0
         },
         {
           "time": "2026-10-27T04:00:00Z",
@@ -2923,8 +2923,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.97,
-          "wsdir_mod": 250.0
+          "wspeed_mod": 3.06,
+          "wsdir_mod": 232.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -2940,8 +2940,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.86,
-          "wsdir_mod": 234.0
+          "wspeed_mod": 3.26,
+          "wsdir_mod": 220.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -2957,8 +2957,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.2,
-          "wsdir_mod": 219.0
+          "wspeed_mod": 3.55,
+          "wsdir_mod": 212.0
         },
         {
           "time": "2026-10-27T07:00:00Z",
@@ -2974,8 +2974,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.5,
-          "wsdir_mod": 217.0
+          "wspeed_mod": 3.72,
+          "wsdir_mod": 211.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -2991,8 +2991,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.69,
-          "wsdir_mod": 213.0
+          "wspeed_mod": 3.91,
+          "wsdir_mod": 212.0
         },
         {
           "time": "2026-10-27T09:00:00Z",
@@ -3008,8 +3008,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.1,
-          "wsdir_mod": 227.0
+          "wspeed_mod": 4.24,
+          "wsdir_mod": 223.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -3025,8 +3025,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.89,
-          "wsdir_mod": 226.0
+          "wspeed_mod": 3.98,
+          "wsdir_mod": 231.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -3042,8 +3042,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.11,
-          "wsdir_mod": 228.0
+          "wspeed_mod": 2.73,
+          "wsdir_mod": 242.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -3059,8 +3059,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.58,
-          "wsdir_mod": 234.0
+          "wspeed_mod": 2.33,
+          "wsdir_mod": 227.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -3076,8 +3076,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.69,
-          "wsdir_mod": 228.0
+          "wspeed_mod": 2.39,
+          "wsdir_mod": 237.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -3093,8 +3093,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.97,
-          "wsdir_mod": 222.0
+          "wspeed_mod": 2.34,
+          "wsdir_mod": 220.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -3110,8 +3110,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.26,
-          "wsdir_mod": 230.0
+          "wspeed_mod": 2.61,
+          "wsdir_mod": 212.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -3127,8 +3127,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.94,
-          "wsdir_mod": 198.0
+          "wspeed_mod": 2.83,
+          "wsdir_mod": 212.0
         },
         {
           "time": "2026-10-27T17:00:00Z",
@@ -3144,8 +3144,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.16,
-          "wsdir_mod": 191.0
+          "wspeed_mod": 2.8,
+          "wsdir_mod": 215.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -3161,8 +3161,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.88,
-          "wsdir_mod": 236.0
+          "wspeed_mod": 1.98,
+          "wsdir_mod": 225.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -3178,8 +3178,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.92,
-          "wsdir_mod": 261.0
+          "wspeed_mod": 0.3,
+          "wsdir_mod": 270.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -3195,8 +3195,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.64,
-          "wsdir_mod": 38.0
+          "wspeed_mod": 1.53,
+          "wsdir_mod": 32.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -3212,8 +3212,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 49.0
+          "wspeed_mod": 3.19,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -3229,8 +3229,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.45,
-          "wsdir_mod": 60.0
+          "wspeed_mod": 3.52,
+          "wsdir_mod": 75.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -3246,8 +3246,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.54,
-          "wsdir_mod": 82.0
+          "wspeed_mod": 3.0,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -3263,8 +3263,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.98,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 2.69,
+          "wsdir_mod": 121.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -3280,8 +3280,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.49,
-          "wsdir_mod": 114.0
+          "wspeed_mod": 2.62,
+          "wsdir_mod": 133.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -3297,8 +3297,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.21,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 0.91,
+          "wsdir_mod": 174.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -3314,8 +3314,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.6,
-          "wsdir_mod": 270.0
+          "wspeed_mod": 3.45,
+          "wsdir_mod": 280.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -3331,8 +3331,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.9,
-          "wsdir_mod": 272.0
+          "wspeed_mod": 3.62,
+          "wsdir_mod": 298.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -3348,8 +3348,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.8,
-          "wsdir_mod": 306.0
+          "wspeed_mod": 6.28,
+          "wsdir_mod": 307.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -3365,7 +3365,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.95,
+          "wspeed_mod": 7.02,
           "wsdir_mod": 319.0
         },
         {
@@ -3382,8 +3382,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.72,
-          "wsdir_mod": 317.0
+          "wspeed_mod": 7.12,
+          "wsdir_mod": 322.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -3399,8 +3399,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.22,
-          "wsdir_mod": 323.0
+          "wspeed_mod": 7.16,
+          "wsdir_mod": 324.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -3416,8 +3416,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.18,
-          "wsdir_mod": 321.0
+          "wspeed_mod": 7.56,
+          "wsdir_mod": 323.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -3450,8 +3450,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.37,
-          "wsdir_mod": 318.0
+          "wspeed_mod": 5.52,
+          "wsdir_mod": 314.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -3467,8 +3467,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.52,
-          "wsdir_mod": 315.0
+          "wspeed_mod": 4.49,
+          "wsdir_mod": 302.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -3484,8 +3484,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.1,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 4.02,
+          "wsdir_mod": 297.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -3501,8 +3501,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.9,
-          "wsdir_mod": 290.0
+          "wspeed_mod": 3.3,
+          "wsdir_mod": 284.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -3518,8 +3518,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.41,
-          "wsdir_mod": 283.0
+          "wspeed_mod": 3.07,
+          "wsdir_mod": 251.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -3535,8 +3535,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.1,
-          "wsdir_mod": 271.0
+          "wspeed_mod": 4.08,
+          "wsdir_mod": 234.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -3552,8 +3552,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.03,
-          "wsdir_mod": 253.0
+          "wspeed_mod": 4.16,
+          "wsdir_mod": 235.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -3569,8 +3569,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.91,
-          "wsdir_mod": 246.0
+          "wspeed_mod": 4.66,
+          "wsdir_mod": 235.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -3586,8 +3586,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.17,
-          "wsdir_mod": 250.0
+          "wspeed_mod": 5.55,
+          "wsdir_mod": 236.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -3603,8 +3603,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.99,
-          "wsdir_mod": 253.0
+          "wspeed_mod": 6.08,
+          "wsdir_mod": 234.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -3620,8 +3620,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.27,
-          "wsdir_mod": 252.0
+          "wspeed_mod": 6.49,
+          "wsdir_mod": 236.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -3637,8 +3637,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.27,
-          "wsdir_mod": 252.0
+          "wspeed_mod": 6.96,
+          "wsdir_mod": 238.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -3654,8 +3654,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.13,
-          "wsdir_mod": 255.0
+          "wspeed_mod": 7.17,
+          "wsdir_mod": 240.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
@@ -4533,7 +4533,7 @@
           "hs_obs": null,
           "wspeed_obs": null,
           "wspeed_mod": 5.38,
-          "wsdir_mod": 313.0
+          "wsdir_mod": 312.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -4549,8 +4549,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.08,
-          "wsdir_mod": 328.0
+          "wspeed_mod": 4.94,
+          "wsdir_mod": 324.0
         },
         {
           "time": "2026-10-26T08:00:00Z",
@@ -4566,7 +4566,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.1,
+          "wspeed_mod": 4.79,
           "wsdir_mod": 334.0
         },
         {
@@ -4583,8 +4583,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.01,
-          "wsdir_mod": 331.0
+          "wspeed_mod": 4.52,
+          "wsdir_mod": 332.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -4600,7 +4600,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.84,
+          "wspeed_mod": 4.2,
           "wsdir_mod": 322.0
         },
         {
@@ -4617,8 +4617,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.09,
-          "wsdir_mod": 315.0
+          "wspeed_mod": 4.31,
+          "wsdir_mod": 314.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -4634,8 +4634,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.34,
-          "wsdir_mod": 308.0
+          "wspeed_mod": 4.48,
+          "wsdir_mod": 309.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -4651,8 +4651,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.0,
-          "wsdir_mod": 307.0
+          "wspeed_mod": 4.44,
+          "wsdir_mod": 306.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -4668,8 +4668,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.2,
-          "wsdir_mod": 308.0
+          "wspeed_mod": 4.0,
+          "wsdir_mod": 302.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -4685,8 +4685,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.44,
-          "wsdir_mod": 306.0
+          "wspeed_mod": 3.36,
+          "wsdir_mod": 300.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -4702,8 +4702,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.78,
-          "wsdir_mod": 308.0
+          "wspeed_mod": 2.61,
+          "wsdir_mod": 302.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -4719,8 +4719,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.84,
-          "wsdir_mod": 315.0
+          "wspeed_mod": 1.5,
+          "wsdir_mod": 307.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -4736,8 +4736,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.34,
-          "wsdir_mod": 297.0
+          "wspeed_mod": 1.04,
+          "wsdir_mod": 287.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -4753,8 +4753,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.71,
-          "wsdir_mod": 263.0
+          "wspeed_mod": 1.17,
+          "wsdir_mod": 250.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -4770,8 +4770,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.02,
-          "wsdir_mod": 250.0
+          "wspeed_mod": 1.7,
+          "wsdir_mod": 225.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -4787,8 +4787,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.15,
-          "wsdir_mod": 242.0
+          "wspeed_mod": 2.36,
+          "wsdir_mod": 216.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -4804,8 +4804,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.37,
-          "wsdir_mod": 242.0
+          "wspeed_mod": 2.98,
+          "wsdir_mod": 220.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -4821,8 +4821,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.0,
-          "wsdir_mod": 244.0
+          "wspeed_mod": 3.26,
+          "wsdir_mod": 227.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -4838,8 +4838,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.2,
-          "wsdir_mod": 250.0
+          "wspeed_mod": 3.0,
+          "wsdir_mod": 233.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -4855,8 +4855,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.64,
-          "wsdir_mod": 245.0
+          "wspeed_mod": 2.48,
+          "wsdir_mod": 227.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -4872,8 +4872,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.2,
-          "wsdir_mod": 240.0
+          "wspeed_mod": 2.34,
+          "wsdir_mod": 220.0
         },
         {
           "time": "2026-10-27T03:00:00Z",
@@ -4889,8 +4889,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.84,
-          "wsdir_mod": 229.0
+          "wspeed_mod": 2.34,
+          "wsdir_mod": 200.0
         },
         {
           "time": "2026-10-27T04:00:00Z",
@@ -4906,8 +4906,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.77,
-          "wsdir_mod": 223.0
+          "wspeed_mod": 2.6,
+          "wsdir_mod": 203.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -4923,8 +4923,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.27,
-          "wsdir_mod": 221.0
+          "wspeed_mod": 2.87,
+          "wsdir_mod": 209.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -4940,8 +4940,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.25,
-          "wsdir_mod": 212.0
+          "wspeed_mod": 2.94,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-27T07:00:00Z",
@@ -4957,8 +4957,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.53,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 3.51,
+          "wsdir_mod": 185.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -4974,8 +4974,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.13,
-          "wsdir_mod": 187.0
+          "wspeed_mod": 4.0,
+          "wsdir_mod": 183.0
         },
         {
           "time": "2026-10-27T09:00:00Z",
@@ -4991,8 +4991,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.45,
-          "wsdir_mod": 190.0
+          "wspeed_mod": 4.21,
+          "wsdir_mod": 184.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -5008,8 +5008,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.24,
-          "wsdir_mod": 199.0
+          "wspeed_mod": 4.41,
+          "wsdir_mod": 193.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -5025,8 +5025,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.3,
-          "wsdir_mod": 216.0
+          "wspeed_mod": 4.55,
+          "wsdir_mod": 199.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -5042,7 +5042,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.85,
+          "wspeed_mod": 4.29,
           "wsdir_mod": 208.0
         },
         {
@@ -5059,8 +5059,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.57,
-          "wsdir_mod": 198.0
+          "wspeed_mod": 3.76,
+          "wsdir_mod": 205.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -5076,8 +5076,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.76,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 3.64,
+          "wsdir_mod": 196.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -5093,8 +5093,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.95,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 3.88,
+          "wsdir_mod": 192.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -5110,7 +5110,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.83,
+          "wspeed_mod": 3.93,
           "wsdir_mod": 187.0
         },
         {
@@ -5127,8 +5127,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.6,
-          "wsdir_mod": 178.0
+          "wspeed_mod": 3.82,
+          "wsdir_mod": 186.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -5144,8 +5144,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.73,
-          "wsdir_mod": 172.0
+          "wspeed_mod": 3.2,
+          "wsdir_mod": 182.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -5161,8 +5161,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.52,
-          "wsdir_mod": 187.0
+          "wspeed_mod": 2.82,
+          "wsdir_mod": 186.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -5178,8 +5178,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.01,
-          "wsdir_mod": 176.0
+          "wspeed_mod": 2.72,
+          "wsdir_mod": 163.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -5195,8 +5195,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.75,
-          "wsdir_mod": 156.0
+          "wspeed_mod": 1.34,
+          "wsdir_mod": 153.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -5212,8 +5212,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.33,
-          "wsdir_mod": 103.0
+          "wspeed_mod": 1.3,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -5229,7 +5229,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.02,
+          "wspeed_mod": 3.38,
           "wsdir_mod": 56.0
         },
         {
@@ -5246,8 +5246,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.05,
-          "wsdir_mod": 40.0
+          "wspeed_mod": 4.84,
+          "wsdir_mod": 38.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -5263,7 +5263,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.59,
+          "wspeed_mod": 6.09,
           "wsdir_mod": 30.0
         },
         {
@@ -5280,8 +5280,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.86,
-          "wsdir_mod": 37.0
+          "wspeed_mod": 8.46,
+          "wsdir_mod": 39.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -5297,8 +5297,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.49,
-          "wsdir_mod": 46.0
+          "wspeed_mod": 7.63,
+          "wsdir_mod": 56.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -5314,8 +5314,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.42,
-          "wsdir_mod": 64.0
+          "wspeed_mod": 5.94,
+          "wsdir_mod": 57.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -5331,8 +5331,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.24,
-          "wsdir_mod": 66.0
+          "wspeed_mod": 5.3,
+          "wsdir_mod": 54.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -5348,8 +5348,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.77,
-          "wsdir_mod": 58.0
+          "wspeed_mod": 5.01,
+          "wsdir_mod": 61.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -5365,8 +5365,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.3,
-          "wsdir_mod": 54.0
+          "wspeed_mod": 3.31,
+          "wsdir_mod": 85.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -5382,8 +5382,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.24,
-          "wsdir_mod": 56.0
+          "wspeed_mod": 2.45,
+          "wsdir_mod": 78.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -5399,8 +5399,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.62,
-          "wsdir_mod": 52.0
+          "wspeed_mod": 4.63,
+          "wsdir_mod": 57.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -5416,8 +5416,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.17,
-          "wsdir_mod": 50.0
+          "wspeed_mod": 6.69,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -5433,8 +5433,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.48,
-          "wsdir_mod": 52.0
+          "wspeed_mod": 7.25,
+          "wsdir_mod": 51.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -5450,8 +5450,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.7,
-          "wsdir_mod": 43.0
+          "wspeed_mod": 8.81,
+          "wsdir_mod": 39.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -5467,8 +5467,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.12,
-          "wsdir_mod": 22.0
+          "wspeed_mod": 7.65,
+          "wsdir_mod": 27.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -5484,8 +5484,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.48,
-          "wsdir_mod": 17.0
+          "wspeed_mod": 6.11,
+          "wsdir_mod": 21.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -5501,8 +5501,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.66,
-          "wsdir_mod": 8.0
+          "wspeed_mod": 5.37,
+          "wsdir_mod": 27.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -5518,8 +5518,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.82,
-          "wsdir_mod": 5.0
+          "wspeed_mod": 5.08,
+          "wsdir_mod": 36.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -5535,8 +5535,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.91,
-          "wsdir_mod": 4.0
+          "wspeed_mod": 4.81,
+          "wsdir_mod": 43.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -5552,8 +5552,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.11,
-          "wsdir_mod": 4.0
+          "wspeed_mod": 3.76,
+          "wsdir_mod": 50.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -5569,8 +5569,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.12,
-          "wsdir_mod": 341.0
+          "wspeed_mod": 2.92,
+          "wsdir_mod": 59.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -5586,8 +5586,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.91,
-          "wsdir_mod": 317.0
+          "wspeed_mod": 1.89,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -5603,8 +5603,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.02,
-          "wsdir_mod": 303.0
+          "wspeed_mod": 1.43,
+          "wsdir_mod": 25.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -5620,8 +5620,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.33,
-          "wsdir_mod": 301.0
+          "wspeed_mod": 1.7,
+          "wsdir_mod": 360.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -5637,8 +5637,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.59,
-          "wsdir_mod": 298.0
+          "wspeed_mod": 1.58,
+          "wsdir_mod": 342.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
@@ -6515,8 +6515,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.01,
-          "wsdir_mod": 186.0
+          "wspeed_mod": 2.04,
+          "wsdir_mod": 191.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -6549,8 +6549,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.51,
-          "wsdir_mod": 188.0
+          "wspeed_mod": 1.6,
+          "wsdir_mod": 184.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -6566,8 +6566,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.45,
-          "wsdir_mod": 153.0
+          "wspeed_mod": 0.72,
+          "wsdir_mod": 146.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -6583,8 +6583,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.08,
-          "wsdir_mod": 68.0
+          "wspeed_mod": 1.3,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-26T11:00:00Z",
@@ -6600,8 +6600,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.0,
-          "wsdir_mod": 93.0
+          "wspeed_mod": 2.25,
+          "wsdir_mod": 122.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -6617,8 +6617,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.38,
-          "wsdir_mod": 112.0
+          "wspeed_mod": 3.22,
+          "wsdir_mod": 144.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -6634,8 +6634,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.12,
-          "wsdir_mod": 130.0
+          "wspeed_mod": 3.69,
+          "wsdir_mod": 147.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -6651,8 +6651,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.61,
-          "wsdir_mod": 136.0
+          "wspeed_mod": 3.66,
+          "wsdir_mod": 145.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -6668,8 +6668,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.75,
-          "wsdir_mod": 136.0
+          "wspeed_mod": 3.84,
+          "wsdir_mod": 141.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -6685,8 +6685,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.34,
-          "wsdir_mod": 141.0
+          "wspeed_mod": 3.3,
+          "wsdir_mod": 145.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -6702,8 +6702,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.66,
-          "wsdir_mod": 146.0
+          "wspeed_mod": 2.78,
+          "wsdir_mod": 150.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -6719,8 +6719,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.33,
-          "wsdir_mod": 155.0
+          "wspeed_mod": 2.47,
+          "wsdir_mod": 159.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -6736,8 +6736,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.06,
-          "wsdir_mod": 166.0
+          "wspeed_mod": 2.16,
+          "wsdir_mod": 167.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -6753,8 +6753,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.7,
-          "wsdir_mod": 177.0
+          "wspeed_mod": 1.92,
+          "wsdir_mod": 171.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -6770,8 +6770,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.53,
-          "wsdir_mod": 191.0
+          "wspeed_mod": 1.6,
+          "wsdir_mod": 184.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -6787,8 +6787,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.58,
-          "wsdir_mod": 198.0
+          "wspeed_mod": 1.49,
+          "wsdir_mod": 200.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -6804,8 +6804,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.71,
-          "wsdir_mod": 201.0
+          "wspeed_mod": 1.62,
+          "wsdir_mod": 202.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -6821,8 +6821,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.68,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 1.75,
+          "wsdir_mod": 193.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -6838,8 +6838,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.75,
-          "wsdir_mod": 193.0
+          "wspeed_mod": 1.73,
+          "wsdir_mod": 190.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -6889,8 +6889,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.84,
-          "wsdir_mod": 193.0
+          "wspeed_mod": 1.82,
+          "wsdir_mod": 189.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -6906,8 +6906,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.82,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 1.84,
+          "wsdir_mod": 193.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -6940,8 +6940,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.68,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 1.65,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -6974,8 +6974,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.32,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 0.1,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -6991,8 +6991,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.76,
-          "wsdir_mod": 67.0
+          "wspeed_mod": 0.54,
+          "wsdir_mod": 22.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -7008,8 +7008,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.92,
-          "wsdir_mod": 13.0
+          "wspeed_mod": 0.85,
+          "wsdir_mod": 69.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -7025,8 +7025,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.3,
-          "wsdir_mod": 113.0
+          "wspeed_mod": 1.1,
+          "wsdir_mod": 85.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -7042,8 +7042,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.3,
-          "wsdir_mod": 122.0
+          "wspeed_mod": 1.26,
+          "wsdir_mod": 108.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -7059,8 +7059,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.7,
-          "wsdir_mod": 152.0
+          "wspeed_mod": 1.84,
+          "wsdir_mod": 151.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -7076,8 +7076,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.47,
-          "wsdir_mod": 159.0
+          "wspeed_mod": 2.4,
+          "wsdir_mod": 163.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -7093,8 +7093,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.55,
-          "wsdir_mod": 169.0
+          "wspeed_mod": 2.38,
+          "wsdir_mod": 165.0
         },
         {
           "time": "2026-10-27T17:00:00Z",
@@ -7110,8 +7110,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.53,
-          "wsdir_mod": 171.0
+          "wspeed_mod": 2.24,
+          "wsdir_mod": 170.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -7127,8 +7127,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.2,
-          "wsdir_mod": 180.0
+          "wspeed_mod": 2.21,
+          "wsdir_mod": 175.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -7145,7 +7145,7 @@
           "hs_obs": null,
           "wspeed_obs": null,
           "wspeed_mod": 2.0,
-          "wsdir_mod": 183.0
+          "wsdir_mod": 177.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -7161,8 +7161,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.73,
-          "wsdir_mod": 190.0
+          "wspeed_mod": 1.26,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -7178,8 +7178,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.13,
-          "wsdir_mod": 225.0
+          "wspeed_mod": 1.99,
+          "wsdir_mod": 252.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -7195,8 +7195,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.02,
-          "wsdir_mod": 290.0
+          "wspeed_mod": 2.1,
+          "wsdir_mod": 267.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -7212,8 +7212,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.73,
-          "wsdir_mod": 298.0
+          "wspeed_mod": 2.98,
+          "wsdir_mod": 310.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -7229,8 +7229,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.23,
-          "wsdir_mod": 292.0
+          "wspeed_mod": 3.47,
+          "wsdir_mod": 303.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -7246,8 +7246,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.49,
-          "wsdir_mod": 297.0
+          "wspeed_mod": 3.86,
+          "wsdir_mod": 301.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -7263,8 +7263,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.47,
-          "wsdir_mod": 303.0
+          "wspeed_mod": 2.97,
+          "wsdir_mod": 312.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -7280,8 +7280,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.44,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.0,
+          "wsdir_mod": 323.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -7297,8 +7297,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.08,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 1.77,
+          "wsdir_mod": 313.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -7314,8 +7314,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.06,
-          "wsdir_mod": 309.0
+          "wspeed_mod": 1.94,
+          "wsdir_mod": 325.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -7331,8 +7331,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.44,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.09,
+          "wsdir_mod": 287.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -7348,8 +7348,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.94,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.11,
+          "wsdir_mod": 301.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -7365,8 +7365,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.44,
-          "wsdir_mod": 306.0
+          "wspeed_mod": 2.73,
+          "wsdir_mod": 298.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -7382,8 +7382,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.86,
-          "wsdir_mod": 324.0
+          "wspeed_mod": 3.1,
+          "wsdir_mod": 291.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -7399,8 +7399,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 319.0
+          "wspeed_mod": 3.2,
+          "wsdir_mod": 309.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -7416,8 +7416,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.77,
-          "wsdir_mod": 16.0
+          "wspeed_mod": 2.69,
+          "wsdir_mod": 345.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -7433,8 +7433,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.7,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 2.83,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -7450,8 +7450,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.08,
-          "wsdir_mod": 101.0
+          "wspeed_mod": 3.9,
+          "wsdir_mod": 91.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -7467,8 +7467,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.28,
-          "wsdir_mod": 101.0
+          "wspeed_mod": 4.55,
+          "wsdir_mod": 99.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -7484,8 +7484,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.12,
-          "wsdir_mod": 104.0
+          "wspeed_mod": 4.49,
+          "wsdir_mod": 107.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -7501,8 +7501,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.36,
-          "wsdir_mod": 113.0
+          "wspeed_mod": 4.11,
+          "wsdir_mod": 116.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -7518,8 +7518,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.86,
-          "wsdir_mod": 144.0
+          "wspeed_mod": 2.55,
+          "wsdir_mod": 135.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -7535,8 +7535,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.4,
-          "wsdir_mod": 180.0
+          "wspeed_mod": 1.75,
+          "wsdir_mod": 156.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -7552,8 +7552,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.52,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 1.5,
+          "wsdir_mod": 176.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -7569,8 +7569,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.52,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 1.41,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -7586,8 +7586,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.55,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 1.61,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -7603,8 +7603,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.65,
-          "wsdir_mod": 194.0
+          "wspeed_mod": 1.51,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -7620,8 +7620,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.55,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 1.41,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
@@ -8498,8 +8498,8 @@
           "sea_level_obs": -0.05,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.01,
-          "wsdir_mod": 186.0
+          "wspeed_mod": 2.04,
+          "wsdir_mod": 191.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -8528,12 +8528,12 @@
           "di_cop": null,
           "hs_port_pred": 0.178,
           "sea_level_pred": -0.41,
-          "hs_port_obs": null,
-          "sea_level_obs": null,
+          "hs_port_obs": 0.177,
+          "sea_level_obs": -0.401,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.51,
-          "wsdir_mod": 188.0
+          "wspeed_mod": 1.6,
+          "wsdir_mod": 184.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -8545,12 +8545,12 @@
           "di_cop": null,
           "hs_port_pred": 0.174,
           "sea_level_pred": -0.45,
-          "hs_port_obs": null,
-          "sea_level_obs": null,
+          "hs_port_obs": 0.165,
+          "sea_level_obs": -0.455,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.45,
-          "wsdir_mod": 153.0
+          "wspeed_mod": 0.72,
+          "wsdir_mod": 146.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -8566,8 +8566,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.08,
-          "wsdir_mod": 68.0
+          "wspeed_mod": 1.3,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-26T11:00:00Z",
@@ -8583,8 +8583,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.0,
-          "wsdir_mod": 93.0
+          "wspeed_mod": 2.25,
+          "wsdir_mod": 122.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -8600,8 +8600,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.38,
-          "wsdir_mod": 112.0
+          "wspeed_mod": 3.22,
+          "wsdir_mod": 144.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -8617,8 +8617,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.12,
-          "wsdir_mod": 130.0
+          "wspeed_mod": 3.69,
+          "wsdir_mod": 147.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -8634,8 +8634,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.61,
-          "wsdir_mod": 136.0
+          "wspeed_mod": 3.66,
+          "wsdir_mod": 145.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -8651,8 +8651,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.75,
-          "wsdir_mod": 136.0
+          "wspeed_mod": 3.84,
+          "wsdir_mod": 141.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -8668,8 +8668,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.34,
-          "wsdir_mod": 141.0
+          "wspeed_mod": 3.3,
+          "wsdir_mod": 145.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -8685,8 +8685,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.66,
-          "wsdir_mod": 146.0
+          "wspeed_mod": 2.78,
+          "wsdir_mod": 150.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -8702,8 +8702,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.33,
-          "wsdir_mod": 155.0
+          "wspeed_mod": 2.47,
+          "wsdir_mod": 159.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -8719,8 +8719,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.06,
-          "wsdir_mod": 166.0
+          "wspeed_mod": 2.16,
+          "wsdir_mod": 167.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -8736,8 +8736,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.7,
-          "wsdir_mod": 177.0
+          "wspeed_mod": 1.92,
+          "wsdir_mod": 171.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -8753,8 +8753,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.53,
-          "wsdir_mod": 191.0
+          "wspeed_mod": 1.6,
+          "wsdir_mod": 184.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -8770,8 +8770,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.58,
-          "wsdir_mod": 198.0
+          "wspeed_mod": 1.49,
+          "wsdir_mod": 200.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -8787,8 +8787,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.71,
-          "wsdir_mod": 201.0
+          "wspeed_mod": 1.62,
+          "wsdir_mod": 202.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -8804,8 +8804,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.68,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 1.75,
+          "wsdir_mod": 193.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -8821,8 +8821,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.75,
-          "wsdir_mod": 193.0
+          "wspeed_mod": 1.73,
+          "wsdir_mod": 190.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -8872,8 +8872,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.84,
-          "wsdir_mod": 193.0
+          "wspeed_mod": 1.82,
+          "wsdir_mod": 189.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -8889,8 +8889,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.82,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 1.84,
+          "wsdir_mod": 193.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -8923,8 +8923,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.68,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 1.65,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -8957,8 +8957,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.32,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 0.1,
+          "wsdir_mod": 90.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -8974,8 +8974,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.76,
-          "wsdir_mod": 67.0
+          "wspeed_mod": 0.54,
+          "wsdir_mod": 22.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -8991,8 +8991,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.92,
-          "wsdir_mod": 13.0
+          "wspeed_mod": 0.85,
+          "wsdir_mod": 69.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -9008,8 +9008,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.3,
-          "wsdir_mod": 113.0
+          "wspeed_mod": 1.1,
+          "wsdir_mod": 85.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -9025,8 +9025,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.3,
-          "wsdir_mod": 122.0
+          "wspeed_mod": 1.26,
+          "wsdir_mod": 108.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -9042,8 +9042,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.7,
-          "wsdir_mod": 152.0
+          "wspeed_mod": 1.84,
+          "wsdir_mod": 151.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -9059,8 +9059,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.47,
-          "wsdir_mod": 159.0
+          "wspeed_mod": 2.4,
+          "wsdir_mod": 163.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -9076,8 +9076,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.55,
-          "wsdir_mod": 169.0
+          "wspeed_mod": 2.38,
+          "wsdir_mod": 165.0
         },
         {
           "time": "2026-10-27T17:00:00Z",
@@ -9093,8 +9093,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.53,
-          "wsdir_mod": 171.0
+          "wspeed_mod": 2.24,
+          "wsdir_mod": 170.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -9110,8 +9110,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.2,
-          "wsdir_mod": 180.0
+          "wspeed_mod": 2.21,
+          "wsdir_mod": 175.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -9128,7 +9128,7 @@
           "hs_obs": null,
           "wspeed_obs": null,
           "wspeed_mod": 2.0,
-          "wsdir_mod": 183.0
+          "wsdir_mod": 177.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -9144,8 +9144,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.73,
-          "wsdir_mod": 190.0
+          "wspeed_mod": 1.26,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -9161,8 +9161,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.13,
-          "wsdir_mod": 225.0
+          "wspeed_mod": 1.99,
+          "wsdir_mod": 252.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -9178,8 +9178,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.02,
-          "wsdir_mod": 290.0
+          "wspeed_mod": 2.1,
+          "wsdir_mod": 267.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -9195,8 +9195,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.73,
-          "wsdir_mod": 298.0
+          "wspeed_mod": 2.98,
+          "wsdir_mod": 310.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -9212,8 +9212,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.23,
-          "wsdir_mod": 292.0
+          "wspeed_mod": 3.47,
+          "wsdir_mod": 303.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -9229,8 +9229,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.49,
-          "wsdir_mod": 297.0
+          "wspeed_mod": 3.86,
+          "wsdir_mod": 301.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -9246,8 +9246,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.47,
-          "wsdir_mod": 303.0
+          "wspeed_mod": 2.97,
+          "wsdir_mod": 312.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -9263,8 +9263,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.44,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.0,
+          "wsdir_mod": 323.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -9280,8 +9280,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.08,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 1.77,
+          "wsdir_mod": 313.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -9297,8 +9297,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.06,
-          "wsdir_mod": 309.0
+          "wspeed_mod": 1.94,
+          "wsdir_mod": 325.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -9314,8 +9314,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.44,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.09,
+          "wsdir_mod": 287.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -9331,8 +9331,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.94,
-          "wsdir_mod": 305.0
+          "wspeed_mod": 2.11,
+          "wsdir_mod": 301.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -9348,8 +9348,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.44,
-          "wsdir_mod": 306.0
+          "wspeed_mod": 2.73,
+          "wsdir_mod": 298.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -9365,8 +9365,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.86,
-          "wsdir_mod": 324.0
+          "wspeed_mod": 3.1,
+          "wsdir_mod": 291.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -9382,8 +9382,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 319.0
+          "wspeed_mod": 3.2,
+          "wsdir_mod": 309.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -9399,8 +9399,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.77,
-          "wsdir_mod": 16.0
+          "wspeed_mod": 2.69,
+          "wsdir_mod": 345.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -9416,8 +9416,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.7,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 2.83,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -9433,8 +9433,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.08,
-          "wsdir_mod": 101.0
+          "wspeed_mod": 3.9,
+          "wsdir_mod": 91.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -9450,8 +9450,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.28,
-          "wsdir_mod": 101.0
+          "wspeed_mod": 4.55,
+          "wsdir_mod": 99.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -9467,8 +9467,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.12,
-          "wsdir_mod": 104.0
+          "wspeed_mod": 4.49,
+          "wsdir_mod": 107.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -9484,8 +9484,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.36,
-          "wsdir_mod": 113.0
+          "wspeed_mod": 4.11,
+          "wsdir_mod": 116.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -9501,8 +9501,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.86,
-          "wsdir_mod": 144.0
+          "wspeed_mod": 2.55,
+          "wsdir_mod": 135.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -9518,8 +9518,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.4,
-          "wsdir_mod": 180.0
+          "wspeed_mod": 1.75,
+          "wsdir_mod": 156.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -9535,8 +9535,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.52,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 1.5,
+          "wsdir_mod": 176.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -9552,8 +9552,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.52,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 1.41,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -9569,8 +9569,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.55,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 1.61,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -9586,8 +9586,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.65,
-          "wsdir_mod": 194.0
+          "wspeed_mod": 1.51,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -9603,15 +9603,15 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.55,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 1.41,
+          "wsdir_mod": 188.0
         }
       ],
       "merge_info": {
         "pde_records": 96,
         "cop_records": 0,
         "port_forecast_records": 96,
-        "port_observ_records": 32,
+        "port_observ_records": 34,
         "boya_records": 0,
         "viento_records": 96,
         "selected_records": 96,
@@ -10180,8 +10180,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.04,
-          "wsdir_mod": 17.0
+          "wspeed_mod": 1.1,
+          "wsdir_mod": 355.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -10197,8 +10197,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.76,
-          "wsdir_mod": 23.0
+          "wspeed_mod": 0.73,
+          "wsdir_mod": 16.0
         },
         {
           "time": "2026-10-26T08:00:00Z",
@@ -10214,8 +10214,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.63,
-          "wsdir_mod": 18.0
+          "wspeed_mod": 0.58,
+          "wsdir_mod": 31.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -10231,8 +10231,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.85,
-          "wsdir_mod": 21.0
+          "wspeed_mod": 0.78,
+          "wsdir_mod": 50.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -10248,8 +10248,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.89,
-          "wsdir_mod": 27.0
+          "wspeed_mod": 0.73,
+          "wsdir_mod": 74.0
         },
         {
           "time": "2026-10-26T11:00:00Z",
@@ -10265,8 +10265,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.86,
-          "wsdir_mod": 36.0
+          "wspeed_mod": 0.63,
+          "wsdir_mod": 108.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -10282,8 +10282,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.85,
-          "wsdir_mod": 45.0
+          "wspeed_mod": 0.64,
+          "wsdir_mod": 129.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -10299,8 +10299,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.21,
-          "wsdir_mod": 66.0
+          "wspeed_mod": 0.92,
+          "wsdir_mod": 131.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -10316,8 +10316,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.41,
-          "wsdir_mod": 98.0
+          "wspeed_mod": 1.49,
+          "wsdir_mod": 132.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -10333,8 +10333,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.89,
-          "wsdir_mod": 122.0
+          "wspeed_mod": 2.13,
+          "wsdir_mod": 139.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -10350,8 +10350,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.19,
-          "wsdir_mod": 133.0
+          "wspeed_mod": 2.68,
+          "wsdir_mod": 153.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -10367,8 +10367,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.25,
-          "wsdir_mod": 148.0
+          "wspeed_mod": 2.79,
+          "wsdir_mod": 165.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -10384,8 +10384,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.15,
-          "wsdir_mod": 158.0
+          "wspeed_mod": 2.83,
+          "wsdir_mod": 172.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -10401,8 +10401,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.14,
-          "wsdir_mod": 169.0
+          "wspeed_mod": 3.3,
+          "wsdir_mod": 178.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -10418,8 +10418,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.5,
-          "wsdir_mod": 178.0
+          "wspeed_mod": 3.71,
+          "wsdir_mod": 185.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -10435,8 +10435,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.1,
-          "wsdir_mod": 180.0
+          "wspeed_mod": 4.12,
+          "wsdir_mod": 186.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -10452,8 +10452,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.41,
-          "wsdir_mod": 183.0
+          "wspeed_mod": 4.14,
+          "wsdir_mod": 188.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -10469,8 +10469,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.34,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 3.96,
+          "wsdir_mod": 196.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -10486,8 +10486,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.27,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 3.67,
+          "wsdir_mod": 206.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -10503,8 +10503,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.28,
-          "wsdir_mod": 211.0
+          "wspeed_mod": 3.45,
+          "wsdir_mod": 210.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -10520,8 +10520,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.22,
-          "wsdir_mod": 216.0
+          "wspeed_mod": 3.4,
+          "wsdir_mod": 208.0
         },
         {
           "time": "2026-10-27T03:00:00Z",
@@ -10537,8 +10537,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.26,
-          "wsdir_mod": 223.0
+          "wspeed_mod": 3.5,
+          "wsdir_mod": 211.0
         },
         {
           "time": "2026-10-27T04:00:00Z",
@@ -10554,8 +10554,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.9,
-          "wsdir_mod": 226.0
+          "wspeed_mod": 3.08,
+          "wsdir_mod": 216.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -10571,8 +10571,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.5,
-          "wsdir_mod": 217.0
+          "wspeed_mod": 2.69,
+          "wsdir_mod": 202.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -10588,8 +10588,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.42,
-          "wsdir_mod": 204.0
+          "wspeed_mod": 2.79,
+          "wsdir_mod": 201.0
         },
         {
           "time": "2026-10-27T07:00:00Z",
@@ -10605,8 +10605,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.62,
-          "wsdir_mod": 187.0
+          "wspeed_mod": 3.11,
+          "wsdir_mod": 186.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -10622,8 +10622,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.13,
-          "wsdir_mod": 197.0
+          "wspeed_mod": 3.71,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T09:00:00Z",
@@ -10639,8 +10639,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.61,
-          "wsdir_mod": 194.0
+          "wspeed_mod": 4.22,
+          "wsdir_mod": 202.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -10656,8 +10656,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.22,
-          "wsdir_mod": 202.0
+          "wspeed_mod": 4.4,
+          "wsdir_mod": 197.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -10673,8 +10673,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.46,
-          "wsdir_mod": 196.0
+          "wspeed_mod": 4.62,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -10690,8 +10690,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.79,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 4.97,
+          "wsdir_mod": 195.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -10707,8 +10707,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.19,
-          "wsdir_mod": 196.0
+          "wspeed_mod": 5.22,
+          "wsdir_mod": 192.0
         },
         {
           "time": "2026-10-27T14:00:00Z",
@@ -10724,7 +10724,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.46,
+          "wspeed_mod": 5.36,
           "wsdir_mod": 194.0
         },
         {
@@ -10741,8 +10741,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.51,
-          "wsdir_mod": 196.0
+          "wspeed_mod": 5.55,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -10758,8 +10758,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.02,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 5.73,
+          "wsdir_mod": 196.0
         },
         {
           "time": "2026-10-27T17:00:00Z",
@@ -10775,8 +10775,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.54,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 6.17,
+          "wsdir_mod": 200.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -10792,8 +10792,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.62,
-          "wsdir_mod": 205.0
+          "wspeed_mod": 6.17,
+          "wsdir_mod": 197.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -10809,8 +10809,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.18,
-          "wsdir_mod": 209.0
+          "wspeed_mod": 5.92,
+          "wsdir_mod": 202.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -10826,8 +10826,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.22,
-          "wsdir_mod": 208.0
+          "wspeed_mod": 5.57,
+          "wsdir_mod": 198.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -10843,8 +10843,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.24,
-          "wsdir_mod": 215.0
+          "wspeed_mod": 4.85,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -10860,8 +10860,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.66,
-          "wsdir_mod": 225.0
+          "wspeed_mod": 4.2,
+          "wsdir_mod": 205.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -10877,8 +10877,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.65,
-          "wsdir_mod": 251.0
+          "wspeed_mod": 3.14,
+          "wsdir_mod": 217.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -10894,8 +10894,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.22,
-          "wsdir_mod": 278.0
+          "wspeed_mod": 1.66,
+          "wsdir_mod": 213.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -10911,8 +10911,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.95,
-          "wsdir_mod": 62.0
+          "wspeed_mod": 3.54,
+          "wsdir_mod": 98.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -10928,8 +10928,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.18,
-          "wsdir_mod": 67.0
+          "wspeed_mod": 5.66,
+          "wsdir_mod": 69.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -10945,7 +10945,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.18,
+          "wspeed_mod": 6.4,
           "wsdir_mod": 51.0
         },
         {
@@ -10962,8 +10962,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.74,
-          "wsdir_mod": 48.0
+          "wspeed_mod": 5.56,
+          "wsdir_mod": 52.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -10979,8 +10979,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.88,
-          "wsdir_mod": 58.0
+          "wspeed_mod": 5.42,
+          "wsdir_mod": 60.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -10996,8 +10996,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.94,
-          "wsdir_mod": 54.0
+          "wspeed_mod": 4.11,
+          "wsdir_mod": 64.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -11013,8 +11013,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.82,
-          "wsdir_mod": 42.0
+          "wspeed_mod": 4.07,
+          "wsdir_mod": 65.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -11030,8 +11030,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.05,
-          "wsdir_mod": 50.0
+          "wspeed_mod": 3.49,
+          "wsdir_mod": 66.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -11047,8 +11047,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.69,
-          "wsdir_mod": 77.0
+          "wspeed_mod": 3.51,
+          "wsdir_mod": 70.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -11064,8 +11064,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.01,
-          "wsdir_mod": 86.0
+          "wspeed_mod": 4.75,
+          "wsdir_mod": 75.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -11081,7 +11081,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.11,
+          "wspeed_mod": 5.9,
           "wsdir_mod": 88.0
         },
         {
@@ -11098,7 +11098,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.12,
+          "wspeed_mod": 6.31,
           "wsdir_mod": 94.0
         },
         {
@@ -11115,8 +11115,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.1,
-          "wsdir_mod": 90.0
+          "wspeed_mod": 6.84,
+          "wsdir_mod": 96.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -11132,8 +11132,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.4,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 7.06,
+          "wsdir_mod": 97.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -11149,8 +11149,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.7,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 6.81,
+          "wsdir_mod": 100.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -11166,8 +11166,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.6,
-          "wsdir_mod": 88.0
+          "wspeed_mod": 6.5,
+          "wsdir_mod": 104.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -11183,8 +11183,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.8,
-          "wsdir_mod": 92.0
+          "wspeed_mod": 6.07,
+          "wsdir_mod": 107.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -11200,8 +11200,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.16,
-          "wsdir_mod": 101.0
+          "wspeed_mod": 5.2,
+          "wsdir_mod": 113.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -11217,8 +11217,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.53,
-          "wsdir_mod": 108.0
+          "wspeed_mod": 4.38,
+          "wsdir_mod": 125.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -11234,8 +11234,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.01,
-          "wsdir_mod": 117.0
+          "wspeed_mod": 4.98,
+          "wsdir_mod": 112.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -11251,8 +11251,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.29,
-          "wsdir_mod": 110.0
+          "wspeed_mod": 4.49,
+          "wsdir_mod": 111.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -11268,8 +11268,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.54,
-          "wsdir_mod": 119.0
+          "wspeed_mod": 3.94,
+          "wsdir_mod": 126.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -11285,8 +11285,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.77,
-          "wsdir_mod": 131.0
+          "wspeed_mod": 3.25,
+          "wsdir_mod": 135.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
@@ -12163,8 +12163,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.81,
-          "wsdir_mod": 300.0
+          "wspeed_mod": 1.04,
+          "wsdir_mod": 287.0
         },
         {
           "time": "2026-10-26T07:00:00Z",
@@ -12180,8 +12180,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.04,
-          "wsdir_mod": 287.0
+          "wspeed_mod": 1.02,
+          "wsdir_mod": 281.0
         },
         {
           "time": "2026-10-26T08:00:00Z",
@@ -12197,8 +12197,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.12,
-          "wsdir_mod": 297.0
+          "wspeed_mod": 0.76,
+          "wsdir_mod": 293.0
         },
         {
           "time": "2026-10-26T09:00:00Z",
@@ -12214,8 +12214,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.25,
-          "wsdir_mod": 299.0
+          "wspeed_mod": 0.63,
+          "wsdir_mod": 288.0
         },
         {
           "time": "2026-10-26T10:00:00Z",
@@ -12231,8 +12231,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.52,
-          "wsdir_mod": 293.0
+          "wspeed_mod": 0.81,
+          "wsdir_mod": 277.0
         },
         {
           "time": "2026-10-26T11:00:00Z",
@@ -12248,8 +12248,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.48,
-          "wsdir_mod": 298.0
+          "wspeed_mod": 0.9,
+          "wsdir_mod": 270.0
         },
         {
           "time": "2026-10-26T12:00:00Z",
@@ -12265,8 +12265,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.14,
-          "wsdir_mod": 308.0
+          "wspeed_mod": 0.6,
+          "wsdir_mod": 270.0
         },
         {
           "time": "2026-10-26T13:00:00Z",
@@ -12282,8 +12282,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.73,
-          "wsdir_mod": 344.0
+          "wspeed_mod": 0.22,
+          "wsdir_mod": 117.0
         },
         {
           "time": "2026-10-26T14:00:00Z",
@@ -12299,8 +12299,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 0.78,
-          "wsdir_mod": 50.0
+          "wspeed_mod": 1.21,
+          "wsdir_mod": 114.0
         },
         {
           "time": "2026-10-26T15:00:00Z",
@@ -12316,8 +12316,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 1.43,
-          "wsdir_mod": 102.0
+          "wspeed_mod": 2.22,
+          "wsdir_mod": 126.0
         },
         {
           "time": "2026-10-26T16:00:00Z",
@@ -12333,8 +12333,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.24,
-          "wsdir_mod": 117.0
+          "wspeed_mod": 2.9,
+          "wsdir_mod": 134.0
         },
         {
           "time": "2026-10-26T17:00:00Z",
@@ -12350,8 +12350,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.73,
-          "wsdir_mod": 118.0
+          "wspeed_mod": 3.11,
+          "wsdir_mod": 138.0
         },
         {
           "time": "2026-10-26T18:00:00Z",
@@ -12367,8 +12367,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.0,
-          "wsdir_mod": 127.0
+          "wspeed_mod": 3.38,
+          "wsdir_mod": 146.0
         },
         {
           "time": "2026-10-26T19:00:00Z",
@@ -12384,8 +12384,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.97,
-          "wsdir_mod": 132.0
+          "wspeed_mod": 3.5,
+          "wsdir_mod": 149.0
         },
         {
           "time": "2026-10-26T20:00:00Z",
@@ -12401,8 +12401,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.76,
-          "wsdir_mod": 136.0
+          "wspeed_mod": 3.44,
+          "wsdir_mod": 154.0
         },
         {
           "time": "2026-10-26T21:00:00Z",
@@ -12418,8 +12418,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.8,
-          "wsdir_mod": 145.0
+          "wspeed_mod": 3.54,
+          "wsdir_mod": 164.0
         },
         {
           "time": "2026-10-26T22:00:00Z",
@@ -12435,8 +12435,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.18,
-          "wsdir_mod": 156.0
+          "wspeed_mod": 4.12,
+          "wsdir_mod": 174.0
         },
         {
           "time": "2026-10-26T23:00:00Z",
@@ -12452,8 +12452,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.62,
-          "wsdir_mod": 174.0
+          "wspeed_mod": 4.4,
+          "wsdir_mod": 181.0
         },
         {
           "time": "2026-10-27T00:00:00Z",
@@ -12469,8 +12469,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.75,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 4.74,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-27T01:00:00Z",
@@ -12486,8 +12486,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.15,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 5.0,
+          "wsdir_mod": 192.0
         },
         {
           "time": "2026-10-27T02:00:00Z",
@@ -12503,7 +12503,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.35,
+          "wspeed_mod": 5.02,
           "wsdir_mod": 203.0
         },
         {
@@ -12520,8 +12520,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.24,
-          "wsdir_mod": 214.0
+          "wspeed_mod": 4.63,
+          "wsdir_mod": 213.0
         },
         {
           "time": "2026-10-27T04:00:00Z",
@@ -12537,8 +12537,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.64,
-          "wsdir_mod": 217.0
+          "wspeed_mod": 4.16,
+          "wsdir_mod": 215.0
         },
         {
           "time": "2026-10-27T05:00:00Z",
@@ -12554,8 +12554,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.28,
-          "wsdir_mod": 218.0
+          "wspeed_mod": 3.58,
+          "wsdir_mod": 216.0
         },
         {
           "time": "2026-10-27T06:00:00Z",
@@ -12571,8 +12571,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.97,
-          "wsdir_mod": 222.0
+          "wspeed_mod": 3.33,
+          "wsdir_mod": 221.0
         },
         {
           "time": "2026-10-27T07:00:00Z",
@@ -12588,8 +12588,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.59,
-          "wsdir_mod": 208.0
+          "wspeed_mod": 3.04,
+          "wsdir_mod": 197.0
         },
         {
           "time": "2026-10-27T08:00:00Z",
@@ -12605,8 +12605,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.91,
-          "wsdir_mod": 221.0
+          "wspeed_mod": 3.3,
+          "wsdir_mod": 215.0
         },
         {
           "time": "2026-10-27T09:00:00Z",
@@ -12622,8 +12622,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.94,
-          "wsdir_mod": 215.0
+          "wspeed_mod": 3.58,
+          "wsdir_mod": 207.0
         },
         {
           "time": "2026-10-27T10:00:00Z",
@@ -12639,8 +12639,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.9,
-          "wsdir_mod": 203.0
+          "wspeed_mod": 4.02,
+          "wsdir_mod": 199.0
         },
         {
           "time": "2026-10-27T11:00:00Z",
@@ -12656,8 +12656,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.46,
-          "wsdir_mod": 200.0
+          "wspeed_mod": 4.63,
+          "wsdir_mod": 194.0
         },
         {
           "time": "2026-10-27T12:00:00Z",
@@ -12673,8 +12673,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.74,
-          "wsdir_mod": 208.0
+          "wspeed_mod": 5.03,
+          "wsdir_mod": 197.0
         },
         {
           "time": "2026-10-27T13:00:00Z",
@@ -12690,7 +12690,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.36,
+          "wspeed_mod": 5.26,
           "wsdir_mod": 194.0
         },
         {
@@ -12707,8 +12707,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.8,
-          "wsdir_mod": 195.0
+          "wspeed_mod": 5.74,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-27T15:00:00Z",
@@ -12724,8 +12724,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.07,
-          "wsdir_mod": 189.0
+          "wspeed_mod": 6.35,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-27T16:00:00Z",
@@ -12741,7 +12741,7 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.12,
+          "wspeed_mod": 6.32,
           "wsdir_mod": 185.0
         },
         {
@@ -12758,8 +12758,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.43,
-          "wsdir_mod": 185.0
+          "wspeed_mod": 6.14,
+          "wsdir_mod": 187.0
         },
         {
           "time": "2026-10-27T18:00:00Z",
@@ -12775,8 +12775,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.0,
-          "wsdir_mod": 182.0
+          "wspeed_mod": 5.71,
+          "wsdir_mod": 177.0
         },
         {
           "time": "2026-10-27T19:00:00Z",
@@ -12792,8 +12792,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.6,
-          "wsdir_mod": 182.0
+          "wspeed_mod": 5.1,
+          "wsdir_mod": 178.0
         },
         {
           "time": "2026-10-27T20:00:00Z",
@@ -12809,8 +12809,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.39,
-          "wsdir_mod": 168.0
+          "wspeed_mod": 4.67,
+          "wsdir_mod": 170.0
         },
         {
           "time": "2026-10-27T21:00:00Z",
@@ -12826,8 +12826,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.82,
-          "wsdir_mod": 174.0
+          "wspeed_mod": 4.02,
+          "wsdir_mod": 161.0
         },
         {
           "time": "2026-10-27T22:00:00Z",
@@ -12843,8 +12843,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.28,
-          "wsdir_mod": 128.0
+          "wspeed_mod": 3.44,
+          "wsdir_mod": 154.0
         },
         {
           "time": "2026-10-27T23:00:00Z",
@@ -12860,8 +12860,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.15,
-          "wsdir_mod": 75.0
+          "wspeed_mod": 2.78,
+          "wsdir_mod": 120.0
         },
         {
           "time": "2026-10-28T00:00:00Z",
@@ -12877,8 +12877,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.31,
-          "wsdir_mod": 70.0
+          "wspeed_mod": 4.02,
+          "wsdir_mod": 71.0
         },
         {
           "time": "2026-10-28T01:00:00Z",
@@ -12894,8 +12894,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.95,
-          "wsdir_mod": 63.0
+          "wspeed_mod": 5.77,
+          "wsdir_mod": 64.0
         },
         {
           "time": "2026-10-28T02:00:00Z",
@@ -12911,8 +12911,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.37,
-          "wsdir_mod": 46.0
+          "wspeed_mod": 5.56,
+          "wsdir_mod": 52.0
         },
         {
           "time": "2026-10-28T03:00:00Z",
@@ -12929,7 +12929,7 @@
           "hs_obs": null,
           "wspeed_obs": null,
           "wspeed_mod": 6.51,
-          "wsdir_mod": 45.0
+          "wsdir_mod": 46.0
         },
         {
           "time": "2026-10-28T04:00:00Z",
@@ -12945,8 +12945,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.93,
-          "wsdir_mod": 57.0
+          "wspeed_mod": 6.6,
+          "wsdir_mod": 58.0
         },
         {
           "time": "2026-10-28T05:00:00Z",
@@ -12962,8 +12962,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.91,
-          "wsdir_mod": 56.0
+          "wspeed_mod": 5.39,
+          "wsdir_mod": 59.0
         },
         {
           "time": "2026-10-28T06:00:00Z",
@@ -12979,8 +12979,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.66,
-          "wsdir_mod": 49.0
+          "wspeed_mod": 6.89,
+          "wsdir_mod": 62.0
         },
         {
           "time": "2026-10-28T07:00:00Z",
@@ -12996,8 +12996,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.56,
-          "wsdir_mod": 53.0
+          "wspeed_mod": 6.77,
+          "wsdir_mod": 71.0
         },
         {
           "time": "2026-10-28T08:00:00Z",
@@ -13013,8 +13013,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 8.85,
-          "wsdir_mod": 63.0
+          "wspeed_mod": 5.6,
+          "wsdir_mod": 74.0
         },
         {
           "time": "2026-10-28T09:00:00Z",
@@ -13030,8 +13030,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 7.57,
-          "wsdir_mod": 75.0
+          "wspeed_mod": 5.08,
+          "wsdir_mod": 80.0
         },
         {
           "time": "2026-10-28T10:00:00Z",
@@ -13047,8 +13047,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 6.11,
-          "wsdir_mod": 75.0
+          "wspeed_mod": 4.54,
+          "wsdir_mod": 104.0
         },
         {
           "time": "2026-10-28T11:00:00Z",
@@ -13064,8 +13064,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.63,
-          "wsdir_mod": 84.0
+          "wspeed_mod": 4.98,
+          "wsdir_mod": 112.0
         },
         {
           "time": "2026-10-28T12:00:00Z",
@@ -13081,8 +13081,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.91,
-          "wsdir_mod": 77.0
+          "wspeed_mod": 4.02,
+          "wsdir_mod": 117.0
         },
         {
           "time": "2026-10-28T13:00:00Z",
@@ -13098,8 +13098,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.1,
-          "wsdir_mod": 77.0
+          "wspeed_mod": 3.01,
+          "wsdir_mod": 111.0
         },
         {
           "time": "2026-10-28T14:00:00Z",
@@ -13115,8 +13115,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.0,
-          "wsdir_mod": 87.0
+          "wspeed_mod": 2.66,
+          "wsdir_mod": 110.0
         },
         {
           "time": "2026-10-28T15:00:00Z",
@@ -13132,8 +13132,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.23,
-          "wsdir_mod": 97.0
+          "wspeed_mod": 2.41,
+          "wsdir_mod": 85.0
         },
         {
           "time": "2026-10-28T16:00:00Z",
@@ -13149,8 +13149,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 5.64,
-          "wsdir_mod": 83.0
+          "wspeed_mod": 3.32,
+          "wsdir_mod": 74.0
         },
         {
           "time": "2026-10-28T17:00:00Z",
@@ -13166,8 +13166,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 4.8,
-          "wsdir_mod": 90.0
+          "wspeed_mod": 4.0,
+          "wsdir_mod": 87.0
         },
         {
           "time": "2026-10-28T18:00:00Z",
@@ -13183,8 +13183,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.88,
-          "wsdir_mod": 102.0
+          "wspeed_mod": 4.11,
+          "wsdir_mod": 94.0
         },
         {
           "time": "2026-10-28T19:00:00Z",
@@ -13200,8 +13200,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 3.31,
-          "wsdir_mod": 115.0
+          "wspeed_mod": 3.81,
+          "wsdir_mod": 104.0
         },
         {
           "time": "2026-10-28T20:00:00Z",
@@ -13217,8 +13217,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.9,
-          "wsdir_mod": 134.0
+          "wspeed_mod": 3.11,
+          "wsdir_mod": 123.0
         },
         {
           "time": "2026-10-28T21:00:00Z",
@@ -13234,8 +13234,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.42,
-          "wsdir_mod": 156.0
+          "wspeed_mod": 3.08,
+          "wsdir_mod": 144.0
         },
         {
           "time": "2026-10-28T22:00:00Z",
@@ -13251,8 +13251,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.21,
-          "wsdir_mod": 175.0
+          "wspeed_mod": 2.92,
+          "wsdir_mod": 158.0
         },
         {
           "time": "2026-10-28T23:00:00Z",
@@ -13268,8 +13268,8 @@
           "sea_level_obs": null,
           "hs_obs": null,
           "wspeed_obs": null,
-          "wspeed_mod": 2.34,
-          "wsdir_mod": 200.0
+          "wspeed_mod": 2.84,
+          "wsdir_mod": 170.0
         },
         {
           "time": "2026-10-29T00:00:00Z",
